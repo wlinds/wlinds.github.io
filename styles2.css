@@ -13,11 +13,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {font-size: 36px;}
-
 h2 {font-size: 24px;}
-
 h3 {font-size: 18px;}
-
 p {margin: 0 0 10px;}
 
 /* Links */
@@ -50,7 +47,7 @@ nav {
 	background-color: #0fa4b5;
 }
 
-#back-to-top-btn {
+.back-to-top-btn {
 	display: none; /* initially hidden */
 	position: fixed;
 	bottom: 20px;
@@ -64,7 +61,7 @@ nav {
 	cursor: pointer;
   }
   
-  #back-to-top-btn:hover {
+.back-to-top-btn:hover {
 	background-color: #555;
   }	  
 
