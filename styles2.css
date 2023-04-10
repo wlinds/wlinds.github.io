@@ -151,7 +151,7 @@ header {
       margin-right: 20px;
     }
 	.cards-main {
-		/*margin-left: 200px;
+		margin-left: 200px;
 
 	}
   }
@@ -165,21 +165,14 @@ header {
       margin-bottom: 20px;
     }
   }
+}
 
 /* About */
 .about-me {
 	padding: 60px 0;
 	background-color: #f4f4f4;
-    text-align: center;
-}
-
-.about-content {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 40px;
-    
+	margin: 10px 80;
+	color: #f6f6f6;
 }
 
 .about-2 {
@@ -191,5 +184,6 @@ header {
 	margin: 10px 35px;
 	justify-items: center;
 	text-justify: auto;
+	text-align: center;
 
 }
