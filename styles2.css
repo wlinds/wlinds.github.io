@@ -1,0 +1,178 @@
+/* Typography */
+body {
+	font-family: 'Helvetica', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #444;
+	background-color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	margin: 0;
+}
+
+h1 {font-size: 36px;}
+
+h2 {font-size: 24px;}
+
+h3 {font-size: 18px;}
+
+p {margin: 0 0 10px;}
+
+/* Links */
+a {
+	color: #1eaedb;
+	text-decoration: none;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  nav a {
+	display: block;
+  }
+
+
+/* Buttons */
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #1eaedb;
+	color: #fff;
+	border-radius: 3px;
+	transition: background-color 0.3s;
+}
+
+.button:hover {
+	background-color: #0fa4b5;
+}
+
+#back-to-top-btn {
+	display: none; /* initially hidden */
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99;
+	font-size: 16px;
+	padding: 12px 20px;
+	border-radius: 4px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+  }
+  
+  #back-to-top-btn:hover {
+	background-color: #555;
+  }	  
+
+
+/* Header */
+header {
+	color: #ffffff;
+	background-color: #28342bee;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+/* Cards */
+  
+  .card {
+	flex: 1 1 30%;
+	margin: 10px 15px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+	background-color: #f4f4f4;
+	
+  }
+  
+  .card img {
+	width: 100%;
+	border-radius: 5px;
+	margin-bottom: 10px;
+  }
+
+  .card:hover {
+	transform: scale(1.009);
+  }
+  
+  .card h3 {
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+  }
+  
+  .card p {
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+  }
+  
+  .card a {
+	display: block;
+	text-align: right;
+	color: #337ab7;
+	font-weight: bold;
+	text-decoration: none;
+  }
+  
+    
+
+/* Style rules for screens that are at least 600px wide */
+@media only screen and (min-width: 768px) {
+    /* Add your styles for desktop here */
+    .card {
+      display: inline-block;
+      width: 300px;
+      margin-right: 20px;
+    }
+	.cards-main {
+		margin-left: 200px;
+
+	}
+  }
+  
+  /* Style rules for screens that are less than 600px wide */
+  @media only screen and (max-width: 767px) {
+    /* Add your styles for mobile here */
+    .card {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+/* About */
+.about-me {
+	padding: 60px 0;
+	background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+    
+}
+
+.about-2 {
+	color: #f6f6f6;
+	background-color: #000000ee;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+	justify-items: center;
+	text-justify: auto;
+
+}

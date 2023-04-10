@@ -154,7 +154,18 @@ header {
 	margin-bottom: 10px;
 }
 
+@media (min-width: 768px) {
+	.container {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+  }
+
 .card {
+	flex: 1 1 10%;
+  	margin: 10px;
+  	text-align: center;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -191,12 +202,12 @@ header {
 .about-us {
 	padding: 60px 0;
 	background-color: #f4f4f4;
+	text-align: center;
 }
 
 .about-content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
 	margin-bottom: 40px;
+	text-align: center;
 }
