@@ -82,7 +82,7 @@ header {
   
   .card {
 	flex: 1 1 30%;
-	margin: 10px 15px;
+	margin: 10px 0px;
 	text-align: center;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -90,6 +90,8 @@ header {
 	padding: 10px;
 	margin-bottom: 20px;
 	background-color: #f4f4f4;
+	perspective: 1000px;
+	transition: 0.36s;
 	
   }
   
@@ -100,7 +102,9 @@ header {
   }
 
   .card:hover {
-	transform: scale(1.009);
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.414);
+	background-color: white;
   }
   
   .card h3 {
@@ -121,7 +125,22 @@ header {
 	text-decoration: none;
   }
   
-    
+  .card2 {
+	width: 20em;
+	margin-right: -1px;
+	border-radius: 16px;
+	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+	  rgba(0, 0, 0, 0.359) 0px 0px 0px 1.2px;
+	padding: 2rem 2rem;
+	perspective: 1000px;
+	transition: 0.36s;
+  }
+  
+  .card2:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.414);
+	background-color: white;
+  }
 
 /* Style rules for screens that are at least 600px wide */
 @media only screen and (min-width: 768px) {
@@ -132,7 +151,7 @@ header {
       margin-right: 20px;
     }
 	.cards-main {
-		margin-left: 200px;
+		/*margin-left: 200px;
 
 	}
   }
@@ -169,6 +188,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 40px;
+	margin: 10px 35px;
 	justify-items: center;
 	text-justify: auto;
 
