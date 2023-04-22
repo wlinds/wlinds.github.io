@@ -1,3 +1,12 @@
+/* Hamburger menu styles */
+.hamburger {
+	display: none;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+  }
+
 /* Typography */
 body {
 	font-family: 'Helvetica', sans-serif;
