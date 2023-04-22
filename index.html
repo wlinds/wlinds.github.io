@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>wlinds/projects 👨‍💻</title>
@@ -15,9 +16,17 @@
 </head>
 
 <body>
+  <script src="script.js"></script>
   <header>
     <h1 style="margin-left: 10px;">wlinds/projects 👨‍💻</h1>
-  </header>
+    <button class="hamburger-menu">&#9776;</button>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+</header>
 
   <main class="container">
     
@@ -84,22 +93,6 @@
       </div>
     </section>
 
-    <section>
-      <div class="about-me">
-      <br>
-      <h2>About Me</h2>
-      <p>Hello.</p>
-      <p>I do stuff. <a href="https://docs.google.com/document/d/1J3_8WZNq-0LhkvuOXyyiey8daai6fBn-qaDqkZY7yv8/edit?usp=sharing">Here's my resume</a>. I'll get notified if it gets scraped.</p>
-      <p>I have a background in design, journalism and marketing, started coding in 2022, interested in AI, data science and cryptography.</p>
-      </div>
-    </section>
-
-    <p>Here's some dataviz i did for another school project. Sized for mobile.</p>
-
-    <div style="max-width: 100%;">
-        <img src="Images/iris copy.png" style="max-width: 100%;">
-      </div>
-
   </main>
   <footer>
     
@@ -107,7 +100,6 @@
     <p>&copy; 2023 wlinds / William Akilles Lindstedt. All rights reserved.</p>
     
     <button id="back-to-top-btn" class="invisible">Back to top</button>
-    <script src="script.js"></script>
     </div>
     
   </footer>
