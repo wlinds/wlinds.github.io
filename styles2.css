@@ -1,10 +1,30 @@
-/* Hamburger menu styles */
-.hamburger {
-	display: none;
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	padding: 10px;
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+	.navbar {
+	  display: none;
+	  position: absolute;
+	  top: 60px;
+	  right: 0;
+	  width: 100%;
+	  background-color: white;
+	  z-index: 1;
+	  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	}
+  
+	.navbar ul {
+	  display: flex;
+	  flex-direction: column;
+	}
+  
+	.navbar li {
+	  margin-left: 0;
+	  margin-bottom: 10px;
+	}
+  
+	.hamburger {
+	  display: block;
+	}
   }
 
 /* Typography */
@@ -77,15 +97,68 @@ nav {
 
 /* Header */
 header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	color: #ffffff;
-	background-color: #28342bee;
+	background-color: #28342b;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 9999;
+  }
+
+header button.hamburger-menu {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 34px;
+    float: right;
+    margin-right: 10px;
 }
+
+header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #28342bee;
+}
+
+header nav.show {
+	display: block;
+  }
+  
+  header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+  }
+  
+  header nav li {
+	margin-right: 20px;
+  }
+  
+  header nav a {
+	display: block;
+	padding: 10px;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease;
+  }
+  
+  header nav a:hover {
+	background-color: #ffffff;
+	color: #28342bee;
+  }
+
 
 /* Cards */
   
@@ -173,6 +246,7 @@ header {
       width: 100%;
       margin-bottom: 20px;
     }
+
   }
 }
 
