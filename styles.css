@@ -163,30 +163,29 @@ header {
 
 
 /* Media query for screens that are at least 768px wide */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 	.cards-main {
 	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the minimum and maximum widths */
+	  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Adjust the number of columns and minimum/maximum widths */
 	  grid-gap: 20px; /* Add margin between cards */
 	  justify-items: center; /* Center the grid items horizontally */
 	}
+  }
   
-	.card {
-	  flex: 1 0 0;
-	  text-align: center;
-	  border: 1px solid #ccc;
-	  border-radius: 6px;
-	  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-	  padding: 10px; /* Add padding to increase card size */
-	  background-color: #f4f4f4;
-	  min-width: 240px;
+  /* Media query for screens that are at least 1024px wide */
+  @media only screen and (min-width: 1024px) {
+	.cards-main {
+	  display: grid;
+	  grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Adjust the number of columns and minimum/maximum widths */
+	  grid-gap: 20px; /* Add margin between cards */
+	  justify-items: center; /* Center the grid items horizontally */
 	}
   }
   
   /* Media query for smaller screens */
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
 	.cards-main {
-	  display:block; /* Change to block layout */
+	  display: block;
 	  margin-left: auto;
 	  margin-right: auto;
 	  margin-top: 1.6rem; /* Add space between header and content */
@@ -197,12 +196,13 @@ header {
 	  max-width: 400px;
 	  margin: 50px auto;
 	}
-  	
+  
 	.card p {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
+	  font-size: 1.1rem;
+	  margin-bottom: 2rem;
 	}
   }
+  
 
 /* About */
 .about-2 {
