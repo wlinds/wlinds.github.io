@@ -120,6 +120,22 @@ header {
 	background-color: #d9e3d9;
   }
 
+.container-short {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20em;
+	background-color: #d9e3d9;
+  }
+
+.container-hello {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20em;
+	background-color: #d9e3d9;
+  }
+
   .cards-main {
 	max-width: 1200px; /* Set a maximum width for the grid */
 	margin-top: 3.6rem; /* Add space between header and content */
@@ -216,3 +232,51 @@ header {
 	text-justify: auto;
 	text-align: center;
 }
+
+/* Pineapple front page thing */
+.ananas-container {
+	text-align: center;
+  }
+  
+.pineapple-img {
+	width: 400px;
+	height: auto;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+  }
+  
+.pineapple-img.rotating {
+	animation: rotate 2s linear infinite;
+  }
+  
+@keyframes rotate {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  
+
+#rotation-slider {
+	/* Set the track color */
+	background-color: #ccc;
+  }
+  
+#rotation-slider::-webkit-slider-thumb {
+	/* Set the thumb color */
+	background-color: #1bb05b;
+  }
+  
+#rotation-slider::-moz-range-thumb {
+	/* Set the thumb color (for Firefox) */
+	background-color: #1bb05b;
+  }
+  
+.image-text {
+	margin-top: 10px;
+	font-size: 16px;
+	color: #333;
+  }
