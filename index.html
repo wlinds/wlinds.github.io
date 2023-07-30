@@ -23,57 +23,17 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="playground.html">Playground</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="resume.html">Resume</a></li>
       </ul>
   </nav>
 </header>
 
-<div class="container">
-  <button id="show-pineapple-btn">How about some fruit?</button>
-  <div id="pineapple-section" style="display: none;">
-    <div class="ananas-container">
-      <img src="Images/pineapple-wireframe.png" class="pineapple-img">
-      <h1 class="image-text">Hello.</h1>
-      <p class="image-text">Here's a pineapple. </p>
-      <input type="range" id="rotation-slider" min="0" max="10" step="1" value="0">
-      <p id="rotation-value">Rotation: 0°</p>
-    </div>
-  </div>
-</div>
-
-
 </div>
   <div class="container"> 
-    <h3>I'm still thinking about what to add here.</h3>
+    <h3>Developer & designer.</h3>
 </div>
-
-
-<script>
-const showPineappleBtn = document.getElementById("show-pineapple-btn");
-const pineappleSection = document.getElementById("pineapple-section");
-
-showPineappleBtn.addEventListener("click", () => {
-  showPineappleBtn.style.display = "none";
-  pineappleSection.classList.add("fade-in");
-  pineappleSection.style.display = "block";
-});
-
-const slider = document.getElementById("rotation-slider");
-const pineappleImg = document.querySelector(".pineapple-img");
-const rotationValue = document.getElementById("rotation-value");
-
-slider.addEventListener("input", () => {
-  const rotationAngle = slider.value * 36;
-  pineappleImg.style.transform = `rotate(${rotationAngle}deg)`;
-  rotationValue.textContent = `Rotation: ${rotationAngle}°`;
-
-  if (rotationAngle === 360) {
-    // Display confetti
-    confetti();
-  }
-});
-
-</script>
 
 </body>
