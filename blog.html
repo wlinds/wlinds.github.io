@@ -28,16 +28,18 @@
         </ul>
     </nav>
 </header>
-
-<br><br>
-
-<p><center>Nothing here yet.. Check back tomorrow. ;)</p></center>
-
-<footer>  
-<div class="about-2">
-<p>&copy; 2023 wlinds / William Akilles Lindstedt. All rights reserved.</p>
-<button id="back-to-top-btn" class="invisible">I'm a button</button>
+<div class="container"> 
+  <h3>Nothing here yet.. Check back tomorrow. ;)</h3>
 </div>
-</footer>
+
+<div id="footer-placeholder"></div>
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  });
+</script>
+
 </body>
 </html>
