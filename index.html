@@ -32,8 +32,17 @@
 </header>
 
 </div>
-  <div class="container"> 
-    <h3>Developer & designer.</h3>
+  <div class="landing-container"> 
+    <h3>Developer | Designer | Creator</h3>
 </div>
+
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
 
 </body>
