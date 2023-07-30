@@ -1,0 +1,47 @@
+
+/* Pineapple thing */
+.ananas-container {
+	text-align: center;
+  }
+  
+.pineapple-img {
+	width: 400px;
+	height: auto;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+  }
+  
+.pineapple-img.rotating {
+	animation: rotate 2s linear infinite;
+  }
+  
+@keyframes rotate {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+
+#rotation-slider {
+	/* Set the track color */
+	background-color: #ccc;
+  }
+  
+#rotation-slider::-webkit-slider-thumb {
+	/* Set the thumb color */
+	background-color: #1bb05b;
+  }
+  
+#rotation-slider::-moz-range-thumb {
+	/* Set the thumb color (for Firefox) */
+	background-color: #1bb05b;
+  }
+  
+.pineapple-text {
+	margin-top: 10px;
+	font-size: 16px;
+	color: #333;
+  }
