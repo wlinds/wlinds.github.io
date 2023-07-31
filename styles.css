@@ -127,6 +127,40 @@ header {
 	background-color: #d9e3d9;
   }
 
+
+.container_b {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 10px;
+	background-color: #1b1b1b;
+  }
+
+  
+.title_b {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  min-height: 30vh;
+	  padding: 10px;
+	  padding-top: 100px;
+	  background-color: #1b1b1b;
+	}
+
+.title_b p {
+	color: #777777;
+}
+
+.container_c {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 10px;
+	background-color: #1b1b1b;
+  }
+
 .landing-container {
 	display: flex;
 	justify-content: center;
@@ -192,6 +226,52 @@ header {
 	margin-bottom: 2rem;
 }
 
+.card2 {
+	flex: 1 0 0;
+	text-align: center;
+
+	transition: 0.12s;
+  }
+
+  .card2 img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.card2:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.114);
+}
+
+
+.card2 p {
+	color: #f1f2f2;
+	font-size: 0.8rem;
+	margin-bottom: 2rem;
+}
+
+/* Used for audio */
+
+.card3 {
+	flex: 1 0 0;
+	text-align: center;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	margin: 30px;
+	margin-bottom: 1px;
+	flex-basis: 50%;
+  }
+
+.card3 img {
+	width: 100%;
+	border-radius: 5px;
+}
+.card3 p {
+	color: #f1f2f2;
+	font-size: 0.8rem;
+	margin-bottom: 2rem;
+}
+
 
 /* Media query for screens that are at least 768px wide */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -227,6 +307,18 @@ header {
 	  max-width: 400px;
 	  margin: 50px auto;
 	}
+
+	.card2 {
+		width: 60%;
+		max-width: 400px;
+		margin: 10px auto;
+	  }
+	
+	.card3 {
+		width: 90%;
+		max-width: 400px;
+		margin: 0px auto;
+	  }
   
 	.card p {
 	  font-size: 1.1rem;
@@ -250,9 +342,19 @@ header {
       left: 51%; /* Position the h3 50% from the left of the container */
 	}
 
+	.container_c {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1.6rem; /* Add space between header and content */
+	  }
+
   }
   
-  
+.player {
+	color: #ffffff;
+
+}
 
 /* About & Footer */
 .about-2 {
