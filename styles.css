@@ -272,6 +272,29 @@ header {
 	margin-bottom: 2rem;
 }
 
+.card-wide {
+	display: flex;
+	flex-direction: column;
+  }
+
+.image-right {
+	flex: 1 1 auto;
+  }
+
+.text-right {
+	flex: 3 1 auto;
+	padding-left: 10px;
+  }
+
+.card-wide img {
+	width: 45%;
+	border-radius: 5px;
+}
+.card-wide p {
+	color: #f1f2f2;
+	font-size: 0.8rem;
+	margin-bottom: 2rem;
+}
 
 /* Media query for screens that are at least 768px wide */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
