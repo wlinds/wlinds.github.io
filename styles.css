@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 12px;
 }
 
 h5 {
@@ -167,7 +167,7 @@ header {
 	align-items: center;
 	min-height: 100vh;
 	padding: 10px;
-	background-image: url('Images/bg1_placeholder.jpg');
+	background-color: #1b1b1b;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -176,12 +176,10 @@ header {
 /* Customize the h3 inside .landing-container */
 .landing-container h3 {
 	color: #ffffff;
-	font-size: 28px; /* Adjust the font size */
+	font-size: 14 px; /* Adjust the font size */
 	margin: 0; /* Remove default margin */
-	position: absolute;
 	top: 50%; /* Position the top edge of the h3 at 50% from the top of the .landing-container */
 	right: 0%; /* Position the left edge of the h3 at 50% from the left of the .landing-container */
-	transform: translate(-50%, -50%); /* Center the h3 both horizontally and vertically */
   }
 
 .container_c {
@@ -336,10 +334,10 @@ header {
 	  
 	  header nav a {
 		display: block;
-		padding: 7px;
+		padding: 2px;
 		color: #7a7474;
 		text-decoration: none;
-		font-size: 13px;
+		font-size: 12px;
 		font-weight: bold;
 		text-transform: uppercase;
 		transition: background-color 0.1s ease;
@@ -380,16 +378,15 @@ header {
 		justify-content: center;
 		align-items: center;
 		min-height: 100vh;
-		background-image: url('Images/bg1_placeholder.jpg');
-		background-size: cover;
-		background-position: left;
+		background-color: #1b1b1b;
+
 	  }
 
 	.landing-container h3 {
 	  color: #ffffff;
-	  font-size: 18px;
-	  top: 60%; /* Position the h3 50% from the top of the container */
-      left: 51%; /* Position the h3 50% from the left of the container */
+	  font-size: 14px;
+	  top: 60%;
+      left: 51%;
 	}
 
 	.container_c {
