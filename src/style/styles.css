@@ -78,6 +78,10 @@ h2, h3, h4, p, ul, a {
     line-height: 48px;
 }
 
+.header-content a {
+    color: #e9ecf2;
+}
+
 .header-strapline {
     font-size: 11px;
     line-height: 16px;
