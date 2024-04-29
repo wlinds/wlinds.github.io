@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wlinds</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#28342bee">
+  <meta property="og:title" content="William Lindstedt | Full Stack Developer">
+  <meta property="og:description" content="Data Science, Machine Learning, UX & Frontend, Web design.">
+  <meta property="og:image" content="seo-image.png">
+  <meta property="og:url" content="https://www.wlinds.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<script src="script.js"></script>
+
+<body>
+<header>
+    <h5 style="margin-left: 25px;">wlinds/</h5>
+    <button class="hamburger-menu">&#9776;</button>
+  <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="playground.html">Playground</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+  </nav>
+</header>
+
+
+</div>
+  <div class="landing-container"> 
+    <h3>Developer | Designer | Creator</h3>
+</div>
+
+<div class="container_c" style="background-color: #414145";> 
+
+  <div class="card-wide">
+    <div class="text-right">
+    <h2 style="color: #feaa72">Your IT Partner for Success</h2>
+    <p>I'm a seasoned developer with years of experience in the IT industry, digital marketing and design. Proven ability to deliver high-quality, on-time projects. Expertise in a variety of programming languages and technologies. Passionate about helping clients achieve their business goals.</p>
+  </div>
+
+</div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+
+</body>

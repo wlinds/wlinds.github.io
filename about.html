@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wlinds | Your IT partner for success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/styles.css">
+    <link rel="stylesheet" href="src/style/sidebar.css">
+    <meta property="og:title" content="William Lindstedt | Full Stack Developer">
+    <meta property="og:description" content="AI, Data Science, Machine Learning, UX & Frontend">
+    <meta property="og:url" content="https://www.wlinds.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#181825">
+</head>
+
+<body class="main-body">
+    <div class="main-header">
+        <div class="header-content">
+            <div>
+                <a class="header-title", href="/">wlinds</a>
+                <h2 class="header-strapline">Your IT partner for success.</h2>
+            </div>
+        </div>
+    </div>
+
+<div class="main-content">
+<div class="left-main-content"> 
+
+<div class="my-coding">
+    <h2 class="main-h2">About me</h2>
+    <p>In publishing and graphic design, Lorem ipsum (/ˌlɔː.rəm ˈɪp.səm/) is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.</p>
+</div>
+
+<div class="my-coding">
+    <h2 class="main-h2">Values</h2>
+    <p>Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. The first two words themselves are a truncation of dolorem ipsum ("pain itself").</p>
+</div>
+
+<div class="my-coding">
+    <h2 class="main-h2">Contact</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="footyboy">
+</div>
+<script>
+    function includeHTML(url, containerId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById(containerId).innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching HTML:', error));
+    }
+    includeHTML('footer.html', 'footyboy');
+</script>
+
+</body>
+
+</html>
