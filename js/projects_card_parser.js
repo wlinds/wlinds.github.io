@@ -1,4 +1,3 @@
-// Fetch the JSON data
 fetch('data/projects.json')
     .then(response => response.json())
     .then(data => {
