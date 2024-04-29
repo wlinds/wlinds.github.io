@@ -122,55 +122,20 @@
     </div>
     </div>
 
-    <footer class="footy">
-        <div class="footer-container">
-            <div class="footer-main-container">
-                <div class="source-code-box">
-                    <h4>wlinds</h4>
-                    <p>©️ 2024</p>
-                    <a href="https://github.com/wlinds/wlinds.github.io" class="footer-link">Source Code</a>
-                </div>
+    <div id="footyboy">
+    </div>
+    <script>
+        function includeHTML(url, containerId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(containerId).innerHTML = html;
+                })
+                .catch(error => console.error('Error fetching HTML:', error));
+        }
+        includeHTML('footer.html', 'footyboy');
+    </script>
 
-                <div class="footer-columns">
-                    <div class="footer-column">
-                        <h3 class="footer-title">About</h3>
-                        <a href="/" class="footer-link">Home</a>
-                        <a href="/articles/blog.html" class="footer-link">Blog</a>
-                        <a href="/contact" class="footer-link">Contact</a>
-                        <a href="/resume" class="footer-link">Resume</a>
-                    </div>
-
-                    <div class="footer-column">
-                      <h3 class="footer-title">Audio</h3>
-                      <a href="/audio" class="footer-link">Drum Packs</a>
-                      <a href="/audio" class="footer-link">Synth Presets</a>
-                      <a href="/downloads" class="footer-link">M4L Devices</a>
-                    </div>
-
-                    <div class="footer-column">
-                      <h3 class="footer-title">Assets</h3>
-                      <a href="/downloads" class="footer-link">Image Textures</a>
-                      <a href="/audio" class="footer-link">PDFs</a>
-                    </div>
-
-                    <div class="footer-column">
-                        <h3 class="footer-title">Services</h3>
-                        <a href="" class="footer-link">TPME</a>
-                        <a href="" class="footer-link">MCCP</a>
-                        <a href="" class="footer-link">UCI Dataset Loader</a>
-                    </div>
-                    
-                </div>
-                
-                <div class="mobile-source-code">
-                    <p>wlinds ©️ 2024 | <a href="https://github.com/wlinds/wlinds.github.io" class="footer-link">Source Code</a> | William Akilles Lindstedt </p>
-                </div>
-        
-            </div>
-        
-        </div>
-        
-    </footer>
 </body>
 
 </html>
