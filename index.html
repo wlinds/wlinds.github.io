@@ -1,59 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>wlinds</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="theme-color" content="#28342bee">
-  <meta property="og:title" content="William Lindstedt | Full Stack Developer">
-  <meta property="og:description" content="Data Science, Machine Learning, UX & Frontend, Web design.">
-  <meta property="og:image" content="seo-image.png">
-  <meta property="og:url" content="https://www.wlinds.github.io">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wlinds | Your IT partner for success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/styles.css">
+    <link rel="stylesheet" href="src/style/sidebar.css">
+    <meta property="og:title" content="William Lindstedt | Full Stack Developer">
+    <meta property="og:description" content="AI, Data Science, Machine Learning, UX & Frontend">
+    <meta property="og:url" content="https://www.wlinds.github.io">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
-<script src="script.js"></script>
 
-<body>
-<header>
-    <h5 style="margin-left: 25px;">wlinds/</h5>
-    <button class="hamburger-menu">&#9776;</button>
-  <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="audio.html">Audio</a></li>
-        <li><a href="playground.html">Playground</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-  </nav>
-</header>
+<body class="main-body">
+    <div class="main-header">
+        <div class="header-content">
+            <div>
+                <a class="header-title", href="/">wlinds</a>
+                <h2 class="header-strapline">Your IT partner for success.</h2>
+            </div>
+        </div>
+    </div>
 
-
-</div>
-  <div class="landing-container"> 
-    <h3>Developer | Designer | Creator</h3>
-</div>
-
-<div class="container_c" style="background-color: #414145";> 
-
-  <div class="card-wide">
-    <div class="text-right">
-    <h2 style="color: #feaa72">Your IT Partner for Success</h2>
-    <p>I'm a seasoned developer with years of experience in the IT industry, digital marketing and design. Proven ability to deliver high-quality, on-time projects. Expertise in a variety of programming languages and technologies. Passionate about helping clients achieve their business goals.</p>
+<div class="main-content"><script src="js/content_parser.js"></script>
+  
+    <div class="left-main-content">   
+        <div class="hero-container">
+            <div class="hero-blur"></div>
+            <h1 id="title"></h1>
+            <p id="description"></p>
+            <div class="tags-container"></div>
+        </div>
+    
+        <div class="my-coding">
+          <div class="text-embedded-img">
+              <img alt="" width="1000" height="500" class="text-embedded-img" src="">
+          </div>
+          <div>
+              <h2 class="main-h2"></h2>
+              <p></p>
+              <a href="projects.html">
+              <button class="btn-0"></button></a>
+          </div>
+        </div>
+        <div class="my-music">
+            <div class="text-embedded-img">
+              <img alt="" width="1280" height="720" class="text-embedded-img" src="">
+            </div>
+            <div>
+                <h2 class="main-h2"></h2>
+                <p></p>
+                <a href="audio.html">
+                <button class="btn-0"></button></a>
+            </div>
+        </div>
+        <div class="my-stack">
+            <h2 class="main-h2"></h2>
+            <p></p>
+            <p></p>
+        </div>
   </div>
 
-</div>
-</div>
+    <div class="right-main-content">
+        <div class="right-main-container">
 
-<div id="footer-placeholder"></div>
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
 
+
+            <div class="column-cards">
+              <div class="column-card">
+                  <a href="audio.html">
+                    <div>
+                        <h2 class="column-card-title">Latest music</h2>
+                        <div class="column-card-img-and-text"><img alt="" width="64" height="64" img src="src/assets/td1.jpg" /></img>
+                            <div class="column-card-content">
+                                <h3 class="right-col-card-h3">Technical Debt</h3>
+                                <p class="right-col-card-date">2023-04-20 | 👽 Dubstep
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                </a>
+
+                <div class="column-card">
+                  <a href="articles/blog.html">
+                  <div>
+                      <h2 class="column-card-title">Recent blog post</h2>
+                      <div class="column-card-img-and-text" id="latestBlogPost">
+                        <img alt="" width="64" height="64" id="latestBlogIcon" />
+                          <div class="column-card-content">
+                              <h3 class="right-col-card-h3" id="latestBlogTitle">Loading...</h3>
+                              <p class="right-col-card-date" id="latestBlogDate">Loading...</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </a>
+                  
+                <script src="js/fetch_blog.js"></script>
+                
+          </div>
+    </div>
+    
+    </div>
+    </div>
+
+    <footer class="footy">
+        <div class="footer-container">
+            <div class="footer-main-container">
+                <div class="source-code-box">
+                    <h4>wlinds</h4>
+                    <p>©️ 2024</p>
+                    <a href="https://github.com/wlinds/wlinds.github.io" class="footer-link">Source Code</a>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3 class="footer-title">About</h3>
+                        <a href="/" class="footer-link">Home</a>
+                        <a href="/articles/blog.html" class="footer-link">Blog</a>
+                        <a href="/contact" class="footer-link">Contact</a>
+                        <a href="/resume" class="footer-link">Resume</a>
+                    </div>
+
+                    <div class="footer-column">
+                      <h3 class="footer-title">Audio</h3>
+                      <a href="/audio" class="footer-link">Drum Packs</a>
+                      <a href="/audio" class="footer-link">Synth Presets</a>
+                      <a href="/downloads" class="footer-link">M4L Devices</a>
+                    </div>
+
+                    <div class="footer-column">
+                      <h3 class="footer-title">Assets</h3>
+                      <a href="/audio" class="footer-link">Design Templates</a>
+                      <a href="/downloads" class="footer-link">Image Textures</a>
+                      <a href="/audio" class="footer-link">PDFs</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3 class="footer-title">Services</h3>
+                        <a href="" class="footer-link">TPME</a>
+                        <a href="" class="footer-link">MCCP</a>
+                        <a href="" class="footer-link">UCI Dataset Loader</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
+</html>

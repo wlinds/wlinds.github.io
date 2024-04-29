@@ -1,0 +1,25 @@
+{
+    "hero": {
+      "title": "Hi! I'm William.",
+      "description": "I code, make music and design things.",
+      "tags": ["AI / ML", "Data Science", "Visualization", "DevOps"]
+    },
+    "my-coding": {
+      "image": "src/assets/vscode-change-this.png",
+      "title": "My skills as a software developer",
+      "description": "As of 2022 I'm studying Machine Learning & AI at <a href='test'>IT-Högskolan</a> in Sweden. I've worked with deep learning and computer vision in anomaly detection, and I'm proficient in Azure DevOps and Azure AI Services. I like developing neat utility scripts, APIs and larger machine learning models with Python. \n\n While I'm currently in favor of backend development, I do have a passion for user interface and design. I enjoy building mockups and wireframes in Figma, creating digital marketing material and experimenting with different web frameworks.",
+      "buttonText": "My repos & projects"
+    },
+    "my-music": {
+      "image": "src/assets/ableton.png",
+      "title": "I also produce music",
+      "description": "There are many variations of electronic music and with AI there are endless possibilities in synthetic compositions. I've been creating electroc music for over 10 years and I enjoy all aspects of it, from the creative composition and chord improvisation to the mathematical signal processing and mixing techniques. \n\n The genres I'm moving between are mainly dubstep, hip hop, some drum & bass and house. I've experimented with psy-trance and lofi hip hop, produced some video game music, but really, you should check it out yourself.",
+      "buttonText": "My music"
+    },
+    "my-stack": {
+      "title": "What I work with",
+      "description1": "Short answer: Python, JavaScript, C#, SQL\n\n",
+      "description2": "Long answer: As a Data Engineer I've created pipelines with Airflow. I really like scraping to gather data, I know selenium, bs4, flask, numpy. I also enjoy Pandas, I think Pandas and Polars are great for data science and statistics. Speaking of which, when visualizing data I'm prodiient with matplotlib, seaborn and plotly. We haven't even gotten to the fun part yet: I have experience with both Tensorflow and PyTorch, but I prefer sklearn and Tensorflow with Keras to build and maintain ML models. For databases, I'm used to postgreSQL, graphQL, MongoDB. I have built web APIs with Flask connected to SQL with SQLAlchemy. In terms of front end I have worked with Anvil, React and Node.js, but my favorite framework for Data Science is by far streamlit. I have major experience with Linux and like working within a CLI. What else, GIT of course. Docker. Azure DevOps. AI AI AI. RAG RAG RAG"
+    }
+  }
+  

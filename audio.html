@@ -4,33 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>wlinds</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="src/style/styles.css">
+  <link rel="stylesheet" href="old/styles.css">
   <meta name="theme-color" content="#28342bee">
   <meta property="og:title" content="William Lindstedt | Full Stack Developer">
   <meta property="og:description" content="Data Science, Machine Learning, UX & Frontend, Web design.">
   <meta property="og:image" content="seo-image.png">
   <meta property="og:url" content="https://www.wlinds.github.io">
   <meta name="twitter:card" content="summary_large_image">
+
 </head>
-<script src="script.js"></script>
-<body>
-<header>
-    <h5 style="margin-left: 25px;">wlinds/audio</h5>
-    <button class="hamburger-menu">&#9776;</button>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="audio.html">Audio</a></li>
-      <li><a href="playground.html">Playground</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      </ul>
-  </nav>
 
-</header>
+<script src="old/script.js"></script>
 
-<main>
+<body class="main-body">
+  <div class="main-header">
+      <div class="header-content">
+          <div>
+              <a class="header-title", href="/">wlinds</a>
+              <h2 class="header-strapline">Your IT partner for success.</h2>
+          </div>
+      </div>
+  </div>
   
 <div class="title_b">
   <h1><font color="#777777">Electronic</font> <font color="#f2f2f2">Music</font></h1>
@@ -40,14 +35,14 @@
     
         <div class="card2">
           <a href="audio/bitsocker.html">   
-          <img src="Images/bitsocker1.gif" alt="">
+          <img src="audio/assets/bitsocker1.gif" alt="">
           <p>.bitsocker GEN_0 (2022)</p>
           </a>
         </div>
 
         <div class="card2">       
           <a href="audio/bitsocker_gen_2.html">
-          <img src="Images/bitsocker_2-copy.png" alt="">
+          <img src="audio/assets/bitsocker_2-copy.png" alt="">
           </a>
           <p>.bitsocker GEN_2 (2022)</p>
         </div>
@@ -165,7 +160,7 @@
 
             <div class="image-right">
               <a href="https://apps.apple.com/se/app/shapeup-arcade/id1533259511?l=en-GB">
-                <img src="Images/shapeup_arcade.webp"/>
+                <img src="audio/assets/shapeup_arcade.webp"/>
               </a>
             </div>
 
@@ -176,7 +171,7 @@
           </div>
           
           <a href="https://apps.apple.com/se/app/shapeup-arcade/id1533259511?l=en-GB">
-            <img src="Images/app_store_blk.svg" width="20%" min-width: 100px; height: 50%; max-height: 100px;>
+            <img src="src/assets/Icon/app_store_blk.svg" width="20%" min-width: 100px; height: 50%; max-height: 100px;>
 
           </a>
         </div>
@@ -190,14 +185,6 @@
 </div>
 </div>
 
-<div id="footer-placeholder"></div>
-<script>
-fetch('footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
-  });
-</script>
 
 </body>
 

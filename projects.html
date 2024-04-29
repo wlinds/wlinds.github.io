@@ -1,175 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>wlinds/projects</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="theme-color" content="#28342bee">
-  <meta property="og:title" content="William Lindstedt | Full Stack Developer">
-  <meta property="og:description" content="Data Science, Machine Learning, UX & Frontend, Web design.">
-  <meta property="og:image" content="seo-image.png">
-  <meta property="og:url" content="https://www.wlinds.github.io">
-  <meta name="twitter:card" content="summary_large_image">
-</head>
+    <meta charset="utf-8">
+    <title>wlinds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/styles.css">
+    <link rel="stylesheet" href="src/style/cards.css">
 
-<body>
-<script src="script.js"></script>
-<header>
-  <h5 style="margin-left: 25px;">wlinds/projects</h5>
-    <button class="hamburger-menu">&#9776;</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="audio.html">Audio</a></li>
-        <li><a href="playground.html">Playground</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        </ul>
-    </nav>
-</header>
+  </head>
 
-<div class="cards-container">
-  <div class="cards-main">
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/uci-dataset-loader">
-      <img src="Images/uci.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=uci-dataset-loader" alt="">
-      </a>
-      <p>Explore over 600 datasets fit for ML.</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/ghs">
-      <img src="Images/ghs_banner.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=ghs" alt="">
-      </a>
-      <p>Dashboard with fun stats!</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/dadub">
-      <img src="Images/dadub_banner.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=dadub" alt="">
-      </a>
-      <p>Easily download files from Discord.</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/card_wars">
-      <img src="Images/card_wars_banner.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=card_wars" alt="">
-      </a>
-      <p>Simulate fantasy card battles.</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/iMessage-StatTracker">
-      <img src="Images/stattracker-1.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=imessage-stattracker" alt="">
-      </a>
-      <p>Analyze and plot your iMessages!</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/mccp">
-      <img src="Images/mccp_banner.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=mccp" alt="">
-      </a>
-      <p>Camera Manager & Image Augmentor</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/boten_anna">
-      <img src="Images/boten_anna-social.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=boten_anna" alt="">
-      </a>
-      <p>Utility bot for Telegram.</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/amazun">
-      <img src="Images/amazun-social.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=amazun" alt="">
-      </a>
-      <p>Flask webapp hooked to SQL backend.</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/ccdb">
-      <img src="Images/ccdb copy.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=ccdb" alt="">
-      </a>
-      <p> SQL project.</p>
+  <body class="main-body">
+    <div class="main-header">
+        <div class="header-content">
+            <div>
+                <a class="header-title", href="/">wlinds</a>
+                <h2 class="header-strapline">Your IT partner for success.</h2>
+            </div>
+        </div>
     </div>
     
-    <div class="card">       
-      <a href="https://github.com/wlinds/RedViz">
-      <img src="Images/redviz1.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=RedViz" alt="">
-      </a>
-      <p><em>Discontinued due to <a href="https://www.forbes.com/sites/antoniopequenoiv/2023/06/13/reddit-stands-by-controversial-api-changes-as-subreddit-protest-continues/?sh=e51d4012d5d2">API controversy</a></em></p>
+    <div class="cards-container">
+        <div class="cards-main" id="cardsContainer"></div>
     </div>
-
-    <div class="card">
-      <a href="https://github.com/wlinds/tpme">
-      <img src="Images/tpme.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=tpme" alt="">
-      </a>
-      <p>Synthetic data generation.</p>
-    </div>
-
-    <div class="card">       
-      <a href="https://github.com/wlinds/ITHS-AI22-TF">
-      <img src="Images/deep_learning_banner.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=ITHS-AI22-TF" alt="">
-      </a>
-      <p>Multiple models with TensorFlow & PyTorch.</p>
-    </div>
-    
-    <div class="card">       
-      <a href="https://github.com/wlinds/ITHS-AI-22-ML">
-      <img src="Images/machine_learning_banner.png" alt="">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=ITHS-AI22-ML" alt="">
-      </a>
-      <p>ML Essential Concepts & Model Implemenentations</p>
-    </div>
-
-    <div class="card">
-      <a href="https://github.com/wlinds/bf_symphony">
-      <img src="Images/bg_symphony.png" alt="">
-      <a href="https://github.com/wlinds/by_symphony">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=bf_symphony" alt="Repo Card">
-      </a>
-      <p>Mandelbrot generation with linear algebra.</p>
-    </div>
-
-    <div class="card">
-      <br>
-      <a href="https://github.com/wlinds/wth">
-      <img src="Images/example.gif" alt="">
-      <a href="https://github.com/wlinds/wth">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=wth" alt="Repo Card">
-      </a>
-      <p>Color screen inspector.</p>
-    </div>
-  </div>
-  </div>
-
-</main>
-
-</div>
-
-<div id="footer-placeholder"></div>
-<script>
-fetch('footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
-  });
-</script>
+    <script src="js/card_parser.js"></script>
+</body>
+</html>
 
 </body>
 </html>
