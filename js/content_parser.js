@@ -21,7 +21,7 @@ fetch('data/textcopy.json')
         // document.querySelector('.my-ethics img').src = myEthics.image;
         document.querySelector('.my-ethics h2').textContent = myEthics.title;
         document.querySelector('.my-ethics p').innerHTML = myEthics.description.replace(/\n/g, '<br>');
-        document.querySelector('.my-ethics button').textContent = myEthics.buttonText;
+        // document.querySelector('.my-ethics button').textContent = myEthics.buttonText;
 
         const myMusic = data['my-music'];
         document.querySelector('.my-music img').src = myMusic.image;
