@@ -80,7 +80,19 @@
 </div>
 </div>
 
-
+<div id="footyboy">
+</div>
+<script>
+    function includeHTML(url, containerId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById(containerId).innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching HTML:', error));
+    }
+    includeHTML('footer.html', 'footyboy');
+</script>
 </body>
 
 </html>
