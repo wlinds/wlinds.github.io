@@ -244,6 +244,7 @@ h2, h3, h4, p, ul, a {
 }
 
 .right-main-container {
+    position: relative;
     flex-direction: column;
     width: 18rem;
     gap: 16px;
@@ -293,9 +294,17 @@ h2, h3, h4, p, ul, a {
 
 
 .column-cards {
+    position: absolute;
     border: 0px solid #e9ecf2;
     padding-top: 10px;
+    top: -100%;
+    opacity: 0;
+    transition: top 1.5s ease, opacity 2.5s ease; 
+}
 
+.show-cards {
+    top: 0; /* Move cards to their original position */
+    opacity: 1; /* Show cards */
 }
 
 
@@ -562,6 +571,7 @@ h2, h3, h4, p, ul, a {
     }
 
     .column-cards {
+        position: relative;
         border: 0px solid #e9ecf2;
         padding-top: 0px;
     
