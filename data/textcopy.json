@@ -2,18 +2,26 @@
     "hero": {
       "title": "Hi! I'm William.",
       "description": "I code, make music and design things.",
-      "tags": ["AI / ML", "Data Science", "Visualization", "DevOps"]
+      "tags": ["AI / ML", "Data Science", "DevOps", "MLOps"]
     },
     "my-coding": {
       "image": "src/assets/vscode-change-this.png",
       "title": "My skills as a software developer",
       "description": "As of 2022 I'm studying Machine Learning & AI at <a href='test'>IT-Högskolan</a> in Sweden. I've worked with deep learning and computer vision in anomaly detection, and I'm proficient in Azure DevOps and Azure AI Services. I like developing neat utility scripts, APIs and larger machine learning models with Python. \n\n While I'm currently in favor of backend development, I do have a passion for user interface and design. I enjoy building mockups and wireframes in Figma, creating digital marketing material and experimenting with different web frameworks.",
-      "buttonText": "My repos & projects"
+      "buttonText": "My repos"
     },
+
+    "my-ethics": {
+      "image": "",
+      "title": "AI Ethics",
+      "description": "I believe responsible AI is about owning up to the consequences of what we create. Whether it's avoiding bias in algorithms or being upfront about how AI decisions are made, it's all about being accountable. \n\n Then there's data integrity. Think of it as the backbone of ethical AI. I make sure the data we're feeding into these models is solid, reliable, and fair. No funky business allowed. Because if the data's messed up, well, you can bet the AI's gonna be messed up too.",
+      "buttonText": "My values"
+    },
+
     "my-music": {
       "image": "src/assets/ableton.png",
       "title": "I also produce music",
-      "description": "There are many variations of electronic music and with AI there are endless possibilities in synthetic compositions. I've been creating electroc music for over 10 years and I enjoy all aspects of it, from the creative composition and chord improvisation to the mathematical signal processing and mixing techniques. \n\n The genres I'm moving between are mainly dubstep, hip hop, some drum & bass and house. I've experimented with psy-trance and lofi hip hop, produced some video game music, but really, you should check it out yourself.",
+      "description": "There are many variations of electronic music and with AI there are endless possibilities in synthetic compositions. I've been creating electronic music for over 10 years and I enjoy all aspects of it, from the creative composition and chord improvisation to the mathematical signal processing and mixing techniques. \n\n The genres I'm moving between are mainly dubstep, hip hop, some drum & bass and house. I've experimented with psy-trance and lofi hip hop, produced some video game music, but really, you should check it out yourself.",
       "buttonText": "My music"
     },
     "my-stack": {
