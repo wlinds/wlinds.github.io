@@ -94,6 +94,11 @@
     margin-bottom: 30px;
 }
 
+.blog-article h2 {
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
 .blog-article img {
     max-width: 100%;
     height: auto;
