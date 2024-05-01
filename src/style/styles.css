@@ -460,7 +460,7 @@ h2, h3, h4, p, ul, a {
     color: rgb(193, 142, 252);
 }
 
-
+/* TODO REPLACE THIS GPT 3.5 BUTTON */
 .btn-0 {
     margin-top: 12px;
     background-color: #4CAF50; /* Green background */
@@ -482,7 +482,58 @@ h2, h3, h4, p, ul, a {
 }
 
 
+/* For Downloads page */
+.d-title {
+    padding: 30px;
+    background-color:#0d0d13;
+}
 
+.dow-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.d-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    height: auto;
+}
+
+.d-column h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+
+.d-column img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px; 
+}
+
+.d-column p {
+    margin-top: 0px;
+    font-size: 14px;
+    color: #bdb6b6;
+    margin-top: auto;
+}
+
+.d-column a {
+    margin-top: auto;
+}
+
+.empty-block-400{
+    height: 400px;
+}
 
 @media screen and (max-width: 1000px) {
 
@@ -634,6 +685,14 @@ h2, h3, h4, p, ul, a {
     .right-main-container-variant-box {
         margin-top: 40px;
         background-color: rgba(30, 30, 46, 0);
+    }
+
+
+
+
+
+    .dow-div {
+        justify-content: center;
     }
 
 
