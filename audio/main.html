@@ -7,9 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style/styles.css">
-    <link rel="stylesheet" href="src/style/sidebar.css">
-    <link rel="stylesheet" href="old/styles.css">
+    <link rel="stylesheet" href="../src/style/styles.css">
+    <link rel="stylesheet" href="../src/style/sidebar.css">
+    <link rel="stylesheet" href="../old/styles.css">
     <meta property="og:title" content="William Lindstedt | Full Stack Developer">
     <meta property="og:description" content="AI, Data Science, Machine Learning, UX & Frontend">
     <meta property="og:url" content="https://www.wlinds.github.io">
@@ -17,27 +17,18 @@
     <meta name="theme-color" content="#181825">
 </head>
 
-<script src="old/script.js"></script>
-
 <body class="main-body">
-  <div class="main-header">
-      <div class="header-content">
-          <div>
-              <a class="header-title", href="/">wlinds</a>
-              <h2 class="header-strapline">Your IT partner for success.</h2>
-          </div>
-      </div>
-  </div>
-  
-<div class="title_b">
-  <h1><font color="#777777">Electronic</font> <font color="#f2f2f2">Music</font></h1>
-</div>
+    <div id="header-t"></div>
+    <div class="title_b">
+      <h1><font color="#777777">Electronic</font> <font color="#f2f2f2">Music</font></h1>
+    </div>
+
 <div class="container_b">
   <div class="cards-main" id="cardsContainer">
   </div>
 </div>
 
-<script src="js/audio_card_parser.js"></script>
+<script src="../js/audio_card_parser.js"></script>
 
       
       </div>
@@ -49,13 +40,10 @@
     </div>
 
     <div class="container_b" style="background-color: #414145";> 
-
-
         <div class="card-wide">
-
             <div class="image-right">
               <a href="https://apps.apple.com/se/app/shapeup-arcade/id1533259511?l=en-GB">
-                <img src="audio/assets/shapeup_arcade.webp"/>
+                <img src="assets/shapeup_arcade.webp"/>
               </a>
             </div>
 
@@ -66,7 +54,7 @@
           </div>
           
           <a href="https://apps.apple.com/se/app/shapeup-arcade/id1533259511?l=en-GB">
-            <img src="src/assets/Icon/app_store_blk.svg" width="20%" min-width: 100px; height: 50%; max-height: 100px;>
+            <img src="../src/assets/Icon/app_store_blk.svg" width="20%" min-width: 100px; height: 50%; max-height: 100px;>
 
           </a>
         </div>
@@ -91,7 +79,8 @@
             })
             .catch(error => console.error('Error fetching HTML:', error));
     }
-    includeHTML('footer.html', 'footyboy');
+    includeHTML('../footer.html', 'footyboy');
+    includeHTML('../header.html', 'header-t')
 </script>
 </body>
 
