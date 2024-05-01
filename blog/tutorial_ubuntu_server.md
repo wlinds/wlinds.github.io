@@ -252,6 +252,7 @@ To show all active sessions:
 tmux list-sessions
 ```
 
+>Check out this [tmux cheat sheet](tmux_cheat_sheet.html) for all commands.
 
 
 With Ubuntu, SSH, firewall configurations, port forwarding, power management tweaks you're well on your way to turning your old hardware into something useful.
