@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>wlinds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style/styles.css">
+    <link rel="stylesheet" href="../src/style/blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/remarkable@2/dist/remarkable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/remarkable-math/dist/remarkable-math.min.js"></script>
+ 
+
+    <!-- TODO Latex support for .md -->
+
+</head>
+
+<body class="main-body-blog">
+<div class="main-header">
+    <div class="header-content">
+        <div>
+            <a class="header-title" href="/">wlinds</a>
+            <h2 class="header-strapline">Your IT partner for success.</h2>
+        </div>
+    </div>
+</div>
+
+<div class="main-blog-container">
+<div id="blog-article">
+<script>
+async function fetchAndRenderMarkdown() {
+    try {
+        const response = await fetch('../data/post_index.json');
+        const filesData = await response.json();
+        const sortedFiles = filesData.sort((a, b) => b.index - a.index);
+
+        // for each Markdown file, create an article
+        for (const fileData of sortedFiles) {
+            const filePath = `${fileData.fileName}`;
+            const response = await fetch(filePath);
+            const markdownText = await response.text();
+            const tags = fileData.tags.split(',');
+            
+            // Convert Markdown to HTML
+            const md = new remarkable.Remarkable();
+            const htmlContent = md.render(markdownText);
+
+            // Create a new div element for each blog article
+            const blogArticleDiv = document.createElement('div');
+            blogArticleDiv.className = 'blog-article';
+            blogArticleDiv.innerHTML = htmlContent;
+            
+            // Extract tags from JSON and create container for them
+            const tagsContainer = document.createElement('div');
+            tagsContainer.className = 'tags-container-left';
+            
+            // Publish date
+            const publishDateElement = document.createElement('div');
+            publishDateElement.textContent = fileData.publishDate;
+
+            const h1Element = blogArticleDiv.querySelector('h1');
+            if (h1Element) h1Element.parentNode.insertBefore(publishDateElement, h1Element);
+            
+            // Create a tag element for each tag
+            tags.forEach(tag => {
+                const tagElement = document.createElement('div');
+                tagElement.className = 'blog-tags';
+                tagElement.textContent = tag.trim();
+                tagsContainer.appendChild(tagElement);
+            });
+            
+            // Order
+            if (h1Element) {
+                publishDateElement.className = 'publish-date';
+                publishDateElement.textContent = "Published " + fileData.publishDate;
+                h1Element.insertAdjacentElement('afterend', publishDateElement);
+                h1Element.insertAdjacentElement('afterend', tagsContainer);
+                h1Element.classList.add('blog-h1');
+            }
+            
+            // Append the blog article div to the main content container
+            document.getElementById('blog-article').appendChild(blogArticleDiv);
+        }
+    } catch (error) {
+        console.error('Error fetching and rendering Markdown:', error); }
+}
+fetchAndRenderMarkdown();
+</script>
+</div>
+</div>
+
+<div id="footyboy">
+</div>
+<script>
+    function includeHTML(url, containerId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById(containerId).innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching HTML:', error));
+    }
+    includeHTML('../footer.html', 'footyboy');
+</script>
+</body>
+</html>
