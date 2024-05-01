@@ -1,6 +1,6 @@
 async function fetchLatestBlogPost() {
     try {
-        const response = await fetch('articles/post_index.json');
+        const response = await fetch('data/post_index.json');
         const postIndex = await response.json();
 
         // Sort posts by index
@@ -11,7 +11,7 @@ async function fetchLatestBlogPost() {
         const latestPost = sortedPosts[0];
 
         // Fetch content of latest blog post
-        const postResponse = await fetch(`articles/${latestPostFileName}`);
+        const postResponse = await fetch(`blog/${latestPostFileName}`);
         const postContent = await postResponse.text();
 
         // Parse Markdown content to extract title and date

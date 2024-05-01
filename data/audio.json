@@ -7,12 +7,12 @@
     },
     {
       "link": "audio/bitsocker.html",
-      "image": "audio/assets/bitsocker1.gif",
+      "image": "../audio/assets/bitsocker1.gif",
       "text": ".bitsocker GEN_0 (2022)"
     },
     {
       "link": "audio/bitsocker_gen_2.html",
-      "image": "audio/assets/bitsocker_2-copy.png",
+      "image": "../audio/assets/bitsocker_2-copy.png",
       "text": ".bitsocker GEN_2 (2022)"
     },
     {

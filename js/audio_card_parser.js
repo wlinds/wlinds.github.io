@@ -1,4 +1,4 @@
-fetch('data/audio.json')
+fetch('../data/audio.json')
     .then(response => response.json())
     .then(data => {
         // Access the array of cards from the JSON data
