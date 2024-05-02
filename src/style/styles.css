@@ -723,15 +723,21 @@ h2, h3, h4, p, ul, a {
     .footer-columns {
         margin-left: 0;
         justify-content: center;
-        gap: 16px;
+        gap: 24px;
+    }
+
+    .footer-column {
+        padding-left: 10px;
     }
 
     .footer-title {
-        font-size: 12px;
+        font-size: 13px;
+        line-height: 13px;
     }
 
     .footer-column a {
-        font-size: 12px;
+        margin-top: 5px;
+        font-size: 13px;
     }
 
 
