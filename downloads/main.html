@@ -18,39 +18,30 @@
 
 <body class="main-body">
     <div id="header-t"></div>
-    
+
     <div class="d-title"><h2>Free downloads</h2></div>
     <div class="dow-div">
-        
-        <!-- <div class="d-column">
-            <h3>Free synth presets</h3>
-            <img src="assets/vital_synth_pack.png" alt="Synthesizer">
-            <a href="https://drive.google.com/drive/folders/1klo87e7zQKjK-ZBJ1DekhgyslEYwIFpk?usp=share_link">WLINDS_FREE_VITAL_00</a>
-            <p>10 free Vital presets</p>
-        </div> -->
-       
+
         <div class="d-column">
             <h3>Drum One-Shot Samples</h3>
-            <img src="assets/kick_sample_img.png" alt="Drum Image">
+            <img src="assets/kick_sample_img.png" alt="Drum kick waveform">
             <a href="https://drive.google.com/drive/folders/1Dk5I7PevZcTvcC6vSpVGYVggYY1FmUNP?usp=share_link">Bitsocker 8-bit Vol 00</a>
             <p>Lo-fi / 8-bit inspired, WAV, 44.1 KHz</p>
         </div>
         
         <div class="d-column">
             <h3>Drum Loops</h3>
-            <img src="assets/drum_loops_waveforms.png" alt="Drum Image">
+            <img src="assets/drum_loops_waveforms.png" alt="Drum loops waveform">
             <a href="https://drive.google.com/drive/folders/1PscKoju9lZu0DRo5BHtqaJHtLKLuKTwe?usp=share_link">Drum Loops Vol 00</a>
             <p>Various drum loops, WAV, 44.1 KHz</p>
         </div>
         
-        
         <div class="d-column">
             <h3>NI Synth Presets</h3>
-            <img src="assets/ni_massive.png" alt="Drum Image">
+            <img src="assets/ni_massive.png" alt="Native Instruments Massive logo">
             <a href="https://drive.google.com/drive/folders/1dn2Nb6hNcJ4J1iUbJXTQKvW9LHk2AZCu?usp=share_link">2010 Dubstep Massive Preset Pack</a>
             <p>21 NI Massive presets. "Old school" dubstep wobbles, some leads and plucks.</p>
         </div>
-        
         
         <div class="d-column">
             <h3>Image Textures</h3>
@@ -58,12 +49,9 @@
             <a href="https://drive.google.com/drive/folders/1klo87e7zQKjK-ZBJ1DekhgyslEYwIFpk?usp=share_link">WLINDS_FREE_TEXTURES_00</a>
             <p>198 free high-res image textures</p>
         </div>
-
     </div>
 
     <div class="empty-block-400"></div>
-
-    </div>   
 
     <div id="footyboy">
     </div>
@@ -73,8 +61,8 @@
                 .then(response => response.text())
                 .then(html => {document.getElementById(containerId).innerHTML = html;})
                 .catch(error => console.error('Error fetching HTML:', error));}
-        includeHTML('../../footer.html', 'footyboy');
-        includeHTML('../header.html', 'header-t')
+        includeHTML('../src/footer.html', 'footyboy');
+        includeHTML('../src/header.html', 'header-t')
     </script>
 </body>
 

@@ -17,14 +17,7 @@
 </head>
 
 <body class="main-body-blog">
-<div class="main-header">
-    <div class="header-content">
-        <div>
-            <a class="header-title" href="/">wlinds</a>
-            <h2 class="header-strapline">Your IT partner for success.</h2>
-        </div>
-    </div>
-</div>
+    <div id="t-header"></div>
 
 <div class="main-blog-container">
 <div id="blog-article">
@@ -101,7 +94,8 @@ fetchAndRenderMarkdown();
             })
             .catch(error => console.error('Error fetching HTML:', error));
     }
-    includeHTML('../footer.html', 'footyboy');
+    includeHTML('../src/footer.html', 'footyboy');
+    includeHTML('../src/header.html', 't-header');
 </script>
 </body>
 </html>
