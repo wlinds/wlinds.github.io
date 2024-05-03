@@ -386,18 +386,17 @@ h2, h3, h4, p, ul, a {
     display: flex;
     z-index: 10;
     position: sticky;
-    border-top: 1px solid rgba(193, 142, 252, 0.756);
+    border-top: 1px solid rgba(193, 142, 252, 0.656);
 }
 
 
 .footer-container {
     padding: 32px;
-    background-color: rgb(30, 30, 46);
-    border-width: 0px;
-    justify-content: center;
+    background-color: rgba(30, 30, 46, 0.426);
     width: 100%;
     display: flex;
-    box-shadow: inset 10px 0 10px rgba(13, 13, 19, 0.744);
+    box-shadow: inset 10px 0 10px rgba(13, 13, 19, 0.137);
+
 }
 
 
@@ -405,25 +404,14 @@ h2, h3, h4, p, ul, a {
     flex-direction: row;
     font-size: 14px;
     line-height: 20px;
-    gap: 16px;
     width: 100%;
     display: flex;
     margin-left: 0px;
     margin-right: 0px;
+
 }
-
-
-.mobile-source-code {
-    margin-top: 16px;
-    padding-bottom: 16px;
-    font-size: 10px;
-    text-align: center;
-}
-
 
 .footer-columns {
-    justify-content: center;
-    gap: 128px;
     width: 100%;
     display: flex;
 }
@@ -432,6 +420,10 @@ h2, h3, h4, p, ul, a {
 .footer-column {
     flex-direction: column;
     display: flex;
+    padding: 20px;
+    width: inherit;
+    padding-left: 0;
+    margin-right: 11px;
 }
 
 
@@ -439,25 +431,31 @@ h2, h3, h4, p, ul, a {
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
+    color: #fffff9;
 }
 
 
 .footer-link {
     color: rgb(250, 147, 255);
-    text-decoration: none solid rgb(250, 147, 255);
+    text-decoration: none solid rgba(250, 147, 255, 0.679);
     
 }
 
 .persistent-footer {
     font-size: 12px;
+    background-color: rgba(21, 21, 40, 0.135);
+    display: flex;
+    justify-content: center;
+
 }
 
 .persistent-footer p {
     font-size: 12px;
+    color: #61616d;
 }
 
 .persistent-footer a {
-    color: rgb(193, 142, 252);
+    color: rgb(135, 116, 158);
 }
 
 /* TODO REPLACE THIS GPT 3.5 BUTTON */
@@ -698,46 +696,49 @@ h2, h3, h4, p, ul, a {
 
 
     .footer-container {
-        padding: 2px, 0px, 0px, 32px;
-        padding-bottom: 32px;
-        background-color: rgb(30, 30, 46);
-        border-width: 0px;
+        padding-bottom: 64px;
         justify-content: center;
-        width: 100%;
         display: flex;
         box-shadow: inset 10px 0 10px rgba(13, 13, 19, 0.744);
+        margin: 0;
+        padding: 0;
     }
 
 
     .footer-main-container {
         flex-direction: row;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 12px;
         gap: 0px;
-        margin-left: 0px;
+        margin-left: 4px;
         margin-right: 0px;
         flex-wrap: wrap;
+        padding-bottom: 20px;
+        
         }
 
 
     .footer-columns {
+        justify-content: space-between;
         margin-left: 0;
-        justify-content: center;
-        gap: 24px;
+        gap: 2px;
+        padding: 0;
     }
 
     .footer-column {
-        padding-left: 10px;
+        padding: 2px;
+        margin: 0;
     }
 
     .footer-title {
-        font-size: 13px;
-        line-height: 13px;
+        padding-top: 8px;
+        font-size: 12px;
+        line-height: 12px;
     }
 
     .footer-column a {
         margin-top: 5px;
-        font-size: 13px;
+        font-size: 12px;
     }
 
 
