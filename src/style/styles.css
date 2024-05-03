@@ -602,6 +602,9 @@ h2, h3, h4, p, ul, a {
         line-height: 60px;
         text-align: center;
         margin: 0px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 
     .hero-blur {
@@ -623,13 +626,26 @@ h2, h3, h4, p, ul, a {
 
 
     .my-coding {
+        padding-top: 64px;
         flex-direction: column;
         align-items: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    .my-ethics {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 
     .my-music {
         flex-direction: column;
         align-items: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 
     .text-embedded-img {
@@ -643,6 +659,9 @@ h2, h3, h4, p, ul, a {
     .my-stack {
         flex-direction: column;
         align-items: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 
     .my-stack h2 {
