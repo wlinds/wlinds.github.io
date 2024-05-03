@@ -32,7 +32,6 @@ fetch('data/textcopy.json')
         const myStack = data['my-stack'];
         document.querySelector('.my-stack h2').textContent = myStack.title;
         document.querySelector('.my-stack p:nth-of-type(1)').innerHTML = myStack.description1.replace(/\n/g, '<br>');;
-        document.querySelector('.my-stack p:nth-of-type(2)').textContent = myStack.description2;
     })
     .catch(error => {
         console.error('Error fetching JSON:', error);

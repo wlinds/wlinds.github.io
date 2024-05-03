@@ -35,7 +35,6 @@ h2, h3, h4, p, ul, a {
     padding: 0px;
     padding-left: 0px;
     line-height: 24px;
-    border: 0px solid #e9ecf2;
 }
 
 
@@ -91,8 +90,6 @@ h2, h3, h4, p, ul, a {
 
 
 .main-content {
-    padding-left: 32px;
-    padding-right: 32px;
     gap: 32px;
     justify-content: center;
     flex-direction: row;
@@ -107,7 +104,9 @@ h2, h3, h4, p, ul, a {
     flex-direction: column;
     height: auto;
     display: flex;
-    border: 0px solid rgb(255, 255, 255);
+    padding-left: 32px;
+    padding-right: 32px;
+    border: 0px solid #e9ecf2;
     
 }
 
@@ -228,16 +227,51 @@ h2, h3, h4, p, ul, a {
     line-height: 32px;
     margin: 0px;
     margin-bottom: 16px;
-    
-    border: 0px solid #e9ecf2;
 }
 
 .my-stack {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.057), rgba(255, 255, 255, 0));
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 32px;
+    padding-top: 128px;
+    padding-bottom: 28px;
+    width: auto;
     border: 0px solid #e9ecf2;
+}
+
+.my-stack h2 {
+    order: 1;
+}
+
+.logo-stack {
+    flex-basis: 33%;
+    order: 1;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    padding-bottom: 40px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+
+.my-stack p {
+    flex-basis: 66%; 
+    padding: 8px;
+    order: 2;
+    margin-right: 32px;
 }
 
 
@@ -301,15 +335,10 @@ h2, h3, h4, p, ul, a {
     position: absolute;
     border: 0px solid #e9ecf2;
     padding-top: 10px;
-    top: -100%;
-    opacity: 0;
     transition: top 1.5s ease, opacity 2.5s ease; 
 }
 
-.show-cards {
-    top: 0; /* Move cards to their original position */
-    opacity: 1; /* Show cards */
-}
+
 
 
 .column-card {
@@ -329,6 +358,13 @@ h2, h3, h4, p, ul, a {
     box-shadow: rgba(40, 40, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(33, 44, 128, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
     width: 100%;
     height: auto;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.show-card {
+    top: 0;
+    opacity: 1;
 }
 
 .column-card a {
@@ -379,6 +415,9 @@ h2, h3, h4, p, ul, a {
     line-height: 16px;
     margin: 0px;
 }
+
+
+
 
 
 .footy {
@@ -597,6 +636,24 @@ h2, h3, h4, p, ul, a {
         text-align: center;
     }
 
+    .my-stack {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my-stack h2 {
+        padding-bottom: 20px;
+    }
+
+    .my-stack p {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .logo-stack {
+        order: 0;
+        flex-basis: 50%;
+    }
     .right-main-content {
         order: -1;
         display: flex;

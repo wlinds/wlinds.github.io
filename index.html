@@ -18,8 +18,8 @@
 
 <body class="main-body">
     <div id="header-t"></div>
-
     <div class="main-content"><script src="js/content_parser.js"></script>
+        
         <div class="left-main-content">   
             <div class="hero-container">
                 <div class="hero-blur"></div>
@@ -29,15 +29,15 @@
             </div>
         
             <div class="my-coding">
-            <div class="text-embedded-img">
-                <img alt="" width="1000" height="500" class="text-embedded-img" src="">
-            </div>
-            <div>
-                <h2 class="main-h2"></h2>
-                <p></p>
-                <a href="projects.html">
-                <button class="btn-0"></button></a>
-            </div>
+                <div class="text-embedded-img">
+                    <img alt="" width="1000" height="500" class="text-embedded-img" src="">
+                </div>
+                <div>
+                    <h2 class="main-h2"></h2>
+                    <p></p>
+                    <a href="projects.html">
+                    <button class="btn-0"></button></a>
+                </div>
             </div>
 
             <div class="my-ethics">
@@ -51,7 +51,7 @@
 
             <div class="my-music">
                 <div class="text-embedded-img">
-                <img alt="" width="1280" height="720" class="text-embedded-img" src="">
+                    <img alt="" width="1280" height="720" class="text-embedded-img" src="">
                 </div>
                 <div>
                     <h2 class="main-h2"></h2>
@@ -60,12 +60,8 @@
                     <button class="btn-0"></button></a>
                 </div>
             </div>
-            <div class="my-stack">
-                <h2 class="main-h2"></h2>
-                <p></p>
-                <p></p>
-            </div>
-    </div>
+  
+        </div>  
 
     <div class="right-main-content">
         <div class="right-main-container">
@@ -101,14 +97,42 @@
                 <script src="js/fetch_blog.js"></script>
                 <script> // Animation
                     document.addEventListener("DOMContentLoaded", function() {
-                        var columnCards = document.querySelector('.column-cards');
-                        columnCards.classList.add('show-cards');
+                        var columnCards = document.querySelectorAll('.column-card');
+                        columnCards.forEach(function(card, index) {
+                            card.style.transitionDelay = (index * 0.3) + "s";
+                            card.classList.add('show-card');
+                        });
                     });
                 </script>
             </div>
             </div>
         
         </div>
+    </div>
+
+    <div class="my-stack">
+        <div class="logo-stack">
+            <h2 class="main-h2"></h2>
+            <div class="logo-container">
+                <img src="https://skillicons.dev/icons?i=python" title="Python">
+                <img src="https://skillicons.dev/icons?i=tensorflow" title="TensorFlow">
+                <img src="https://skillicons.dev/icons?i=pytorch" title="PyTorch">
+                <img src="https://skillicons.dev/icons?i=mongo" title="MongoDB">
+                <img src="https://skillicons.dev/icons?i=sqlite" title="SQLite">
+                <img src="https://skillicons.dev/icons?i=docker" title="Docker">
+                <img src="https://skillicons.dev/icons?i=html" title="HTML">
+                <img src="https://skillicons.dev/icons?i=javascript" title="JavaScript">
+                <img src="https://skillicons.dev/icons?i=react" title="React">
+                <img src="https://skillicons.dev/icons?i=azure" title="Azure">
+                <img src="https://skillicons.dev/icons?i=ableton" title="Ableton">
+                <img src="https://skillicons.dev/icons?i=bash" title="Bash">
+                <img src="https://skillicons.dev/icons?i=flask" title="Flask">
+                <img src="https://skillicons.dev/icons?i=git" title="Git">
+                <img src="https://skillicons.dev/icons?i=linux" title="Linux">
+                <img src="https://skillicons.dev/icons?i=figma" title="Figma">
+            </div>
+        </div>
+        <p></p>
     </div>
 
     <div id="footyboy">
