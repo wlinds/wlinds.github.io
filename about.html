@@ -22,20 +22,60 @@
 <div class="main-content">
 <div class="left-main-content"> 
 
-<div class="my-coding">
-    <h2 class="main-h2">About me</h2>
-    <p>In publishing and graphic design, Lorem ipsum (/ˌlɔː.rəm ˈɪp.səm/) is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design.</p>
+    <div class="my-about">        
+        <h2 class="my-about-h2">About me</h2>
+        <p>I'm a developer interested in machine learning, data science and software design. Whether you're looking for someone to help give you advice on your next ML pipelines or just looking to build a simple static website, I've got you covered.</p>
+        <p>If you have a vision for a new project, but need talent to make that happen — I'm here to help. When you hire me, you tap into years of experience in everything from developing mobile & web applications, to Cloud Services administration and custom API development and integrations.</p>
+        <p>If you're struggling to maintain or upgrade your existing projects — I'll help with that too. I will work with you to create new user experiences and improve your marketing. I help you identify inefficiencies in your business operations and build custom software to automate your workflows.</p>
 </div>
 
-<div class="my-coding">
-    <h2 class="main-h2">Values</h2>
-    <p>Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. The first two words themselves are a truncation of dolorem ipsum ("pain itself").</p>
+<div class="my-about">
+    <h2 class="my-about-h2">Values</h2>
+
+    <p>At the core of everything I do is a commitment to responsible AI development. Here's what that means to me:</p>
+    <ul>
+      <li><strong>Data Integrity:</strong> I believe in using clean, unbiased data to train AI systems. This means scrutinizing data sources for errors and ensuring they represent the real world accurately.</li>
+      <li><strong>Safety and Reliability:</strong> AI systems should be dependable and safe. I prioritize building robust AI  that delivers consistent, trustworthy results.</li>
+      <li><strong>Avoiding Bias:</strong> AI should be fair and impartial. I actively work to identify and mitigate potential biases in training data and algorithms. We all have biases, but AI shouldn't inherit them.  </li>
+    </ul>
+    
+    <p>By focusing on these values, I aim to create AI solutions that are not only powerful, but also ethical and trustworthy. We can build a future where AI empowers everyone, without discrimination or bias.  </p>
+
 </div>
 
-<div class="my-coding">
-    <h2 class="main-h2">Contact</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="my-contact">
+    <section id="contact">
+
+        <h2 class="my-about-h2">Contact</h2>
+        <br>
+        <ul class="contact-info">
+          <li>
+            <a href="#" onclick="copyToClipboard(event, this)">william.lindstedt@iths.se</a>
+            <br>
+            <span class="info2">Click to copy email address</span>
+            <span class="verification"></span>
+          </li>
+        </ul>
+      </section>
+      
+      <script>
+        function copyToClipboard(event, element) {
+          // Prevent default link behavior (opening email client)
+          event.preventDefault();
+      
+          const text = element.textContent.trim();
+          navigator.clipboard.writeText(text).then(() => {
+            element.parentElement.querySelector('.info2').textContent = 'Email copied to clipboard!';
+          }, () => {
+            element.parentElement.querySelector('.info2').textContent = 'Copy Failed!';
+          });
+        }
+      </script>
+    </section>
 </div>
+</div>
+
+
 
 </div>
 </div>
