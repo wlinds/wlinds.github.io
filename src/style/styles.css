@@ -521,32 +521,30 @@ h2, h3, h4, p, ul, a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2px;
     margin-left: 5%;
     margin-right: 5%;
 }
 
 .d-column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    padding: 10px;
-    height: auto;
+    width: calc(25% - 20px);
+    margin-bottom: 40px;
 }
 
 .d-column h3 {
-    margin-top: 0;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
     font-size: 20px;
 }
 
+.d-column h3 {
+    margin-bottom: 10px;
+}
 
 .d-column img {
-    max-width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px; 
+    width: 100%;
+    height: auto;
 }
 
 .d-column p {
@@ -564,7 +562,7 @@ h2, h3, h4, p, ul, a {
     height: 400px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
 
     .main-body {
         overflow-x: hidden;
@@ -583,6 +581,10 @@ h2, h3, h4, p, ul, a {
         display: flex;
         width: auto;
         overflow-x: hidden;
+    }
+
+    .main-h2 {
+        font-size: 27px;
     }
 
     .left-main-content {
@@ -626,7 +628,7 @@ h2, h3, h4, p, ul, a {
 
 
     .my-coding {
-        padding-top: 64px;
+        padding-top: 200px;
         flex-direction: column;
         align-items: center;
         position: -webkit-sticky;
@@ -771,6 +773,10 @@ h2, h3, h4, p, ul, a {
 
     .dow-div {
         justify-content: center;
+    }
+
+    .d-column {
+        width: 100%;
     }
 
 
