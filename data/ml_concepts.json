@@ -2,8 +2,8 @@
     "Linear Regression": {
       "year": "1800s",
       "type": "supervised",
-      "img": "",
-      "img_description": "none",
+      "img": "../src/assets/ml/linreg_dark.png",
+      "img_description": "Linear Regression model from one of my projects, UCI Dataset Loader",
       "tags": ["Regression", "Classic", "Supervised", "Linear Model", "Simple", "Interpretability"],
       "subheading": "lorem ipsum",
       "paragraph":"Linear regression is a supervised learning algorithm that models the relationship between a continuous target variable and one or more independent variables by fitting a linear equation to the data. <br><br> In a simple linear regression, we assume a model \\( \\mathbf{Y} = \\beta_0 + \\beta_1 \\mathbf{X} + \\epsilon \\), where \\( \\beta_0 \\) and \\( \\beta_1 \\) are two unknown constants that represent the intercept and the slope, also knows as coefficients or parameters, and \\( \\epsilon \\) is the error term. Taking the above scatterplot as an example, a linear regression model tries to fit a regression line to the data points that best represent the relationships or correlations. With this method, the best regression line is found by minimizing the sum of squared errors (SSE) of the distance between the data points and the regression line.<br><br>",
@@ -50,7 +50,7 @@
     "K-Nearest Neighbors (KNN)": {
       "year": "1950s",
       "type": "supervised",
-      "img": "",
+      "img": "../src/assets/ml/knn_plot_dark.png",
       "img_description": "none",
       "tags": ["Classification", "Distance-Based", "Lazy Learning", "Non-parametric", "Instance-Based"],
       "subheading": "lorem ipsum",
