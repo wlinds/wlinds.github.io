@@ -157,6 +157,33 @@ h2, h3, h4, p, ul, a {
     margin-top: 16px;
 }
 
+.ml-tags {
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 8px;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.ml-tag {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
+    color: rgb(205, 214, 244);
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(49, 50, 68);
+    border-radius: 6px;
+    gap: 4px;
+    align-items: center;
+    user-select: none;
+    width: fit-content;
+    display: flex;
+    border: 0px solid rgba(229, 231, 235, 0.073);
+}
+
+
 .hero-tag {
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
     color: rgb(205, 214, 244);
@@ -622,6 +649,37 @@ h2, h3, h4, p, ul, a {
     height: 400px;
 }
 
+
+
+/* Models */
+
+.model-box {
+    flex-direction: column;
+    margin-top: 32px;
+    display: flex;
+    padding-top: 128px;
+    gap: 10px;
+    padding-bottom: 28px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.model-box h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
 @media screen and (max-width: 768px) {
 
     .main-body {
@@ -840,6 +898,8 @@ h2, h3, h4, p, ul, a {
 
 
 
+
+
     .dow-div {
         justify-content: center;
     }
@@ -897,5 +957,32 @@ h2, h3, h4, p, ul, a {
     }
 
 
+
+    .model-box {
+        flex-direction: column;
+        margin-top: 32px;
+        display: flex;
+        padding-top: 128px;
+        gap: 32px;
+        padding-bottom: 28px;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .model-box h2 {
+        text-align: center;
+
+    }
+
+    .model-box p {
+        text-align: justify;
+    }
+
+    .ml-tag {
+        font-size: 14px;
+        line-height: 14px;
+    }
 
 }
