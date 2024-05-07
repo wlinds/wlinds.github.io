@@ -1,0 +1,183 @@
+{
+    "Linear Regression": {
+      "year": "1800s",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Regression", "Classic", "Supervised", "Linear Model", "Simple", "Interpretability"],
+      "subheading": "lorem ipsum",
+      "paragraph":"Linear regression is a supervised learning algorithm that models the relationship between a continuous target variable and one or more independent variables by fitting a linear equation to the data. <br><br> In a simple linear regression, we assume a model \\( \\mathbf{Y} = \\beta_0 + \\beta_1 \\mathbf{X} + \\epsilon \\), where \\( \\beta_0 \\) and \\( \\beta_1 \\) are two unknown constants that represent the intercept and the slope, also knows as coefficients or parameters, and \\( \\epsilon \\) is the error term. Taking the above scatterplot as an example, a linear regression model tries to fit a regression line to the data points that best represent the relationships or correlations. With this method, the best regression line is found by minimizing the sum of squared errors (SSE) of the distance between the data points and the regression line.<br><br>",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Logistic Regression": {
+      "year": "1950s",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Classification", "Supervised", "Linear Model", "Probabilistic", "Binary Classification"],
+      "subheading": "lorem ipsum",
+      "paragraph": "The formula for logistic regression involves using the logistic function to model the probability that a given input belongs to a particular category or class. Logistic regression is a simple yet effective classification algorithm and it is commonly used for many binary classification tasks: Things like spam email, website or ad click predictions are some examples of the areas where logistic regression can offer a powerful solution. <br><br> The logistic function, also called the sigmoid function, which takes any real value number and maps it to a value between 0 and 1. Logistic regression models takes a linear equation as input and uses a logistic function and log odds to perform a binary classification task. As such we get the famous shaped graph of logistic regression. <br><br>In logistic regression, the output represents the probability of a certain event occurring. For instance, it might indicate that there's a 95% probability that an email is classified as spam or a 70% probability that a customer will click on an ad. However, in practical applications, these probabilities are often used to make binary classifications. For example, if the probability exceeds 50%, the prediction is typically assigned to the positive class (one); otherwise, it's assigned to the negative class (zero).",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Support Vector Machine (SVM)": {
+      "year": "1960s",
+      "type": "supervised",
+      "img": "../src/assets/ml/SVM_sigmoid_dark.png",
+      "img_description": "none",
+      "tags": ["Classification", "Supervised", "Margin Maximization", "Kernel Trick", "Large Margin"],
+      "subheading": "lorem ipsum",
+      "paragraph": "SVM is a supervised learning algorithm mostly used for classification tasks but is also suitable for regression tasks. SVM distinguishes classes by drawing a decision boundary. How to draw or determine the decision boundary is the most critical part in SVM algorithms. Before creating the decision boundary, each observation or data point is plotted in an N-dimensional space, with N being the number of features used. For example, if we use length and width to classify different cells, observations are plotted in a two-dimensional space, and the decision boundary is a line. If we use three features, the decision boundary is a plane in three-dimensional space. If we use more than three features, the decision boundary becomes a hyperplane.<br><br> The decision boundary is drawn in a way that the distance to support vectors is maximized. If the decision boundary is too close to a support vector, it'll be highly sensitive to noises and not generalize well. Even very small changes to independent variables may cause a misclassification. SVM is especially effective in cases where the number of dimensions is more than the number of samples. When finding the decision boundary, SVM uses a subset of training points rather than all points, which makes it memory-efficient. On the other hand, training time increases for large datasets, which negatively affects the performance.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Naive Bayes (NB)": {
+      "year": "1800s",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Classification", "Probabilistic", "Supervised", "Text Classification", "Spam Filtering"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Naive Bayes (NB) is a supervised learning algorithm used for classification tasks; hence, it is also called Naive Bayes classifier. Naive Bayes assumes that features are independent of each other and that there is no correlation between features. However, this is not the case in real life. This naive assumption of features being uncorrelated is the reason why this algorithm is called <i>naive</i>. <br><br> The intuition behind the naive Bayes algorithm is the Bayes theorem. \\( P(A|B) \\) is the probability of event \\(A \\) given event \\( B \\) has already occurred. \\( P(B|A) \\) is the probability of event \\(B \\) given event \\(A \\) has already occurred. \\( P(A) \\) is the probability of event \\( A\\), and \\( P(B) \\) is the probability of event \\( B\\). The naive Bayes classifier calculates the probability of a class given a set of feature values under the assumption that all features are independent. This makes naive Bayes algorithm very fast when compared to complicated algorithms. In some cases, speed is preferred over higher accuracy.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "K-Nearest Neighbors (KNN)": {
+      "year": "1950s",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Classification", "Distance-Based", "Lazy Learning", "Non-parametric", "Instance-Based"],
+      "subheading": "lorem ipsum",
+      "paragraph": "K Nearest Neighbors, or KNN for short, is a supervised learning algorithm that can be used to solve both classification and regression tasks. The main idea behind KNN is that the value of a class or of a data point is determined by the data points around it. KNN classifier determines the class of a data point by majority voting principle. For instance, if K is set to five, the classes of five closest points are checked, and prediction is done according to the majority class. Similarly, KNN regression takes the mean value of five closest points.<br><br>It is important to determine an optimal K value. If K is too low, the model is too specific and not generalized well. On the other hand, if K is too large, the model is too generalized and is not a good predictor on both train and test sets. KNN is simple and easy to interpret. It does not make any assumptions, so it can be implemented in nonlinear tasks. <br><br> KNN does become very slow as the number of data points increases because the model needs to store all data points, thus it is not memory efficient. Another downside of KNN is that it is sensitive to outliers.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Decision Trees": {
+      "year": "1960s",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Classification", "Regression", "Supervised", "Tree-Based", "Interpretability", "Non-linear"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Decision Tree (DT), is versatile learning algorithm used for both classification and regression tasks. The algorithm recursively splits the dataset into smaller and smaller subsets based on feature values, ultimately leading to a tree-like structure of decisions.<br><br>Decision Trees consist of internal nodes, representing features and their splits, and leaf nodes, representing the final decision or prediction. Each leaf node corresponds to a specific class label in classification tasks or a predicted value in regression tasks. The tree's structure can be visualized and easily understood, providing insights into which features are most influential in determining the outcome.<br><br>Decision Trees are highly interpretable, making them ideal for understanding the decision-making process of the model. The resulting tree structure can be visualized and easily understood, providing insights into which features are most influential in determining the outcome.<br><br>One of the main advantages of Decision Trees is their ability to handle both numerical and categorical data without the need for feature scaling or transformation. However, Decision Trees are prone to overfitting, especially when the tree depth is not properly controlled or when the dataset contains noisy or irrelevant features. To mitigate overfitting, pruning techniques, such as limiting the maximum depth of the tree or setting a minimum number of samples per leaf node, can be applied.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Random Forest": {
+      "year": "2001",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Ensemble Learning", "Classification", "Supervised", "Tree-Based", "Bagging"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Random Forest is an ensemble of many decision trees. Random forests are built using a method called bagging, in which decision trees are used as parallel estimators. If used for a classification problem, the result is based on majority vote of the results received from each decision tree.<br><br>For regression, the prediction of a leaf node is the mean value of the target values in that leaf. Random Forest regression takes mean values of results from decision trees. Random forests reduce the risk of overfitting and accuracy is much higher than a single decision tree. Furthermore, decision trees in a random forest run in parallel so that the time does not become a bottleneck.<br><br>The success of a random forest highly depends on using uncorrelated decision trees. If we use the same or very similar trees, the overall result will not be much different than the result of a single decision tree. Random forests achieve to have uncorrelated decision trees by bootstrapping and feature randomness. Bootstrapping is randomly selecting samples from training data with replacement (bootstrap samples).<br><br>Feature randomness is achieved by selecting features randomly for each decision tree. The number of features used for each tree in a random forest can be controlled with `max_features` parameter. Random Forest is a highly accurate model on many different problems and does not require normalization or scaling. However, it is not a good choice for high dimensional datasets compared to fast linear models.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Gradient Boosted Decision Trees (GBDT)": {
+      "year": "2001",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Ensemble Learning", "Classification", "Regression", "Supervised", "Boosting", "Gradient Boosting"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Gradient Boosted Decision Trees, or GBDT for short, is an ensemble algorithm which uses boosting methods to combine individual decision trees. Boosting means combining a learning algorithm in series to achieve a strong learner from many sequentially connected weak learners. In the case of GBDT, the weak learners are the decision trees. Each tree attempts to minimize the errors of the previous tree. Trees in boosting are weak learners, but adding many trees in series and each focusing on the errors from the previous one make boosting a highly efficient and accurate model.<br><br>Unlike bagging, boosting does not involve bootstrap sampling. Every time a new tree is added, it fits on a modified version of the initial dataset. Since trees are added sequentially, boosting algorithms learn slowly. In statistical learning, models that learn slowly perform better. GBDT is very efficient on both classification and regression tasks and provides more accurate predictions compared to random forest. It can handle mixed types of features and no pre-processing is needed. GBDT does require careful tuning of hyperparameters in order to prevent the model from overfitting.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Principal Component Analysis (PCA)": {
+      "year": "1901",
+      "type": "unsupervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Dimensionality Reduction", "Unsupervised", "Feature Engineering", "Linear Transformation", "Data Preprocessing"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Principal Component Analysis, or PCA, is a dimensionality reduction algorithm which basically derives new features from the existing ones while keeping as much information as possible. PCA is an unsupervised learning algorithm, but it is also widely used as a pre-processing step for supervised learning algorithms. PCA derives new features by finding the relations among features in a dataset. The aim of PCA is to explain the variance within the original dataset as much as possible by using fewer features. The new derived features are called principal components. The order of principal components is determined according to the fraction of variance of the original dataset they explain. The advantage of PCA is that a significant amount of variance of the original dataset is retained using a much smaller number of features than the original dataset. Principal components are ordered according to the amount of variance that they explain.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "K-Means Clustering": {
+      "year": "1957",
+      "type": "unsupervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Clustering", "Unsupervised", "Centroid-Based", "Partitioning", "Clustering Algorithm"],
+      "subheading": "lorem ipsum",
+      "paragraph": "A lot of data is unlabeled/unannoted. Annotating costs time and/or money, K-Means clustering aims to partition data into K clusters in a way that data points in the same cluster are similar and data points in different clusters are further apart, this is called partition-based clustering. Similarity of two points is determined by the distance between them. K-Means is an iterative process built on expectation maximization algorithm. After the number of clusters are determined. We randomly selects the centroids or the center of cluster for each cluster. Then we calculates the distance of all data points to the centroids and assigns the data points to the closest cluster.<br><br>We finds the new centroids of each cluster by taking the mean of all data points in the cluster, we then repeat the process until all points converge and cluster centers stop moving.<br><br>K Means clustering is relatively fast and easy to interpret. It is also able to choose the positions of initial centroids in a smart way that speeds up the convergence. The one challenge with K Means is that the number of clusters must be predetermined. K Means algorithm is not able to guess how many clusters exist in the data. If there is a nonlinear structure separating groups in the data, K Means might not be a good choice.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Convolutional Neural Networks (CNN)": {
+      "year": "1980s",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Deep Learning", "Image Recognition", "Supervised", "Convolutional Layers", "Feature Learning"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Convolutional Neural Networks (CNNs) are cornerstones in the field of supervised deep learning. They are specialized neural networks designed primarily to process grid-like data (such as images). CNNs excel in tasks like image classification, object detection, and image segmentation. Utilizing convolutional layers, pooling layers, and fully connected layers, CNNs extract hierarchical representations of features from input images, progressively capturing abstract features. This hierarchical feature extraction enables CNNs to detect complex patterns and structures within images. With its ability to automatically learn features from raw data, CNNs have revolutionized various domains, including computer vision, medical imaging, and autonomous driving.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Recurrent Neural Networks (RNN)": {
+      "year": "1982",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Deep Learning", "Sequence Modeling", "Supervised", "Recurrent Connections", "Time Series Analysis"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Recurrent Neural Network (RNN) is a class of artificial neural networks designed to efficiently handle sequential data by capturing temporal dependencies. Unlike feedforward neural networks, RNNs possess cyclic connections within their architecture. This cyclic connectivity enables RNNs to retain memory of past information while processing current inputs, making them particularly suited for tasks involving sequential data such as time series prediction, speech recognition, and natural language processing. The hallmark of RNNs lies in their ability to process input sequences of varying lengths and to generate output sequences of variable lengths, making them versatile tools in modeling sequential data with flexible structures.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Gated Recurrent Units (GRU)": {
+      "year": "2014",
+      "type": "supervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Deep Learning", "Sequence Modeling", "Supervised", "Recurrent Neural Network", "Gating Mechanism"],
+      "subheading": "asdf",
+      "paragraph": "Gated Recurrent Unit (GRU) is a pivotal model within the domain of RNNs, specifically crafted to overcome challenges inherent in traditional RNNs, notably the vanishing gradient problem. GRU introduces a gating mechanism, enabling RNNs to effectively capture long-term dependencies within sequential data.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Generative Adversarial Network (GAN)": {
+      "year": "2014",
+      "type": "unsupervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Deep Learning", "Generative Modeling", "Unsupervised", "Adversarial Networks", "Image Generation"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Generative Adversarial Networks (GANs) were introduced by Ian Goodfellow and his colleagues in 2014. GANs are a class of artificial intelligence algorithms used in unsupervised machine learning, particularly for generating realistic images or other data types. The basic idea behind GANs is to train two neural networks, a generator and a discriminator, simultaneously in a competitive setting.<br><br>The generator network learns to generate data, such as images, from random noise. Its objective is to produce data that is indistinguishable from real data. The discriminator network, on the other hand, learns to distinguish between real data and data generated by the generator. Its objective is to correctly classify real data as real and generated data as fake.<br><br>During training, the generator tries to improve its ability to generate realistic data by fooling the discriminator, while the discriminator tries to improve its ability to distinguish real from fake data. This adversarial process continues until the generator produces data that is difficult for the discriminator to differentiate from real data. <br><br>     <p>GANs have shown remarkable success in generating high-quality, realistic data across various domains, including images, text, and audio. They have been used for tasks such as image synthesis, style transfer, and data augmentation. However, training GANs can be challenging and unstable, requiring careful tuning of hyperparameters and network architectures.",
+      "link": "/",
+      "link_desc": "none"
+    
+    },
+    "Transformers": {
+      "year": "2017",
+      "type": "unsupervised",
+      "img": "",
+      "img_description": "none",
+      "tags": ["Deep Learning", "Natural Language Processing", "Unsupervised", "Attention Mechanism", "Sequence Transduction"],
+      "subheading": "lorem ipsum",
+      "paragraph": "Transformers represent a groundbreaking advancement in the field of natural language processing (NLP) and have revolutionized various sequence-based tasks. Unlike traditional RNNs and CNNs, Transformers rely solely on a self-attention mechanisms to weigh the significance of different input tokens, enabling parallel processing of tokens in an input sequence. This parallelization leads to significant speed-ups in training and inference compared to sequential models.<br><br>Transformers also consist of encoder and decoder components, each with multiple layers of self-attention and feedforward neural networks. Notably, the Transformer architecture powers state-of-the-art models such as BERT (Bidirectional Encoder Representations from Transformers) for tasks like language understanding, GPT (Generative Pre-trained Transformer) for text generation, and T5 (Text-to-Text Transfer Transformer) for versatile text-based tasks.",
+      "link": "/",
+      "link_desc": "none"
+   
+    }
+  }
+  
