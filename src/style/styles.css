@@ -678,6 +678,11 @@ h2, h3, h4, p, ul, a {
     justify-content: space-between;
 }
 
+.model-box img {
+    border-radius: 6px;
+
+}
+
 
 
 @media screen and (max-width: 768px) {
