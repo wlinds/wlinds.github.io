@@ -33,26 +33,10 @@ fetch('data/ml_concepts.json')
 
             modelElement.appendChild(infoContainer);
 
-
-
-            // Images
-            const imageElement = document.createElement('img');
-            if (concept.img && concept.img.trim() !== '') {
-                imageElement.src = concept.img;
-                imageElement.alt = concept.img_description;
-                modelElement.appendChild(imageElement);
-            }
-
-            // Subheading
-            // const subheadingElement = document.createElement('h2');
-            // subheadingElement.textContent = concept.subheading;
-            // modelElement.appendChild(subheadingElement);
-
-
             // Tags
             const tagsContainer = document.createElement('div');
             tagsContainer.classList.add('ml-tags');
-
+            
             concept.tags.forEach(tag => {
                 const tagElement = document.createElement('div');
                 tagElement.classList.add('ml-tag');
@@ -61,6 +45,30 @@ fetch('data/ml_concepts.json')
             });
 
             modelElement.appendChild(tagsContainer);
+
+            // Images, img alt and img caption
+            const imageElement = document.createElement('img');
+            if (concept.img && concept.img.trim() !== '') {
+                imageElement.src = concept.img;
+                imageElement.alt = concept.img_alt;
+                modelElement.appendChild(imageElement);
+            }
+
+            const imageCaptionElement = document.createElement('p');
+            if (concept.img_description.trim() !== '') {
+                imageCaptionElement.innerHTML = concept.img_description;
+                imageCaptionElement.classList.add('image-caption')
+                modelElement.appendChild(imageCaptionElement);
+
+            }
+
+            // Subheading
+            // const subheadingElement = document.createElement('h2');
+            // subheadingElement.textContent = concept.subheading;
+            // modelElement.appendChild(subheadingElement);
+
+
+
 
             // Parse paragraphs with html tags and latex
             const paragraphElement = document.createElement('p');
