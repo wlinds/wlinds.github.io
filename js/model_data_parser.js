@@ -1,12 +1,16 @@
-fetch('data/ml_concepts.json')
-    .then(response => response.json())
-    .then(data => {
-        const concepts = data;
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('data/ml_concepts.json');
+        if (!response.ok) {
+            throw new Error(response.statusText);
+        }
+        const data = await response.json();
+        console.log('Data fetched successfully:', data);
 
         const container = document.querySelector('.article-container');
 
-        Object.keys(concepts).forEach(key => {
-            const concept = concepts[key];
+        Object.keys(data).forEach(key => {
+            const concept = data[key];
 
             const modelElement = document.createElement('div');
             modelElement.classList.add('model-box');
@@ -17,18 +21,18 @@ fetch('data/ml_concepts.json')
 
             const infoContainer = document.createElement('div');
             infoContainer.classList.add('info-container');
-
-
+            
+            
             // Create elements for year and type (supervised/unsupervised)
             const yearElement = document.createElement('p');
             yearElement.textContent = `Introduced: ${concept.year}`;
-            yearElement.classList.add('ml-year-div')
+            yearElement.classList.add('ml-year-div');
             infoContainer.appendChild(yearElement);
 
             const typeElement = document.createElement('p');
-            const capitalizedType = concept.type.charAt(0).toUpperCase() + concept.type.slice(1); // Capitalize first letter
+            const capitalizedType = concept.type.charAt(0).toUpperCase() + concept.type.slice(1);
             typeElement.textContent = `Type: ${capitalizedType}`;
-            yearElement.classList.add('ml-type-div')
+            typeElement.classList.add('ml-type-div');
             infoContainer.appendChild(typeElement);
 
             modelElement.appendChild(infoContainer);
@@ -36,7 +40,7 @@ fetch('data/ml_concepts.json')
             // Tags
             const tagsContainer = document.createElement('div');
             tagsContainer.classList.add('ml-tags');
-            
+
             concept.tags.forEach(tag => {
                 const tagElement = document.createElement('div');
                 tagElement.classList.add('ml-tag');
@@ -57,7 +61,7 @@ fetch('data/ml_concepts.json')
             const imageCaptionElement = document.createElement('p');
             if (concept.img_description.trim() !== '') {
                 imageCaptionElement.innerHTML = concept.img_description;
-                imageCaptionElement.classList.add('image-caption')
+                imageCaptionElement.classList.add('image-caption');
                 modelElement.appendChild(imageCaptionElement);
 
             }
@@ -86,7 +90,7 @@ fetch('data/ml_concepts.json')
 
             container.appendChild(modelElement);
         });
-    })
-    .catch(error => {
+    } catch (error) {
         console.error('Error fetching JSON:', error);
-    });
+    }
+});
