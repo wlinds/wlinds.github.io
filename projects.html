@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style/styles.css?v=1.1">
-    <link rel="stylesheet" href="src/style/cards.css?v=1.1">
+    <link rel="stylesheet" href="src/style/styles.css?v=1.2">
+    <link rel="stylesheet" href="src/style/cards.css?v=1.2">
 
   </head>
 
@@ -17,21 +17,21 @@
         <div class="cards-main" id="cardsContainer"></div>
     </div>
     
-    <script src="js/projects_card_parser.js?v=1.1"></script>
-
+    
     <div id="footyboy">
-    <script>
-        function includeHTML(url, containerId) {
-            fetch(url)
+        <script>
+            function includeHTML(url, containerId) {
+                fetch(url)
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById(containerId).innerHTML = html;
                 })
                 .catch(error => console.error('Error fetching HTML:', error));
-        }
-        includeHTML('../src/footer.html', 'footyboy');
-        includeHTML('../src/header.html', 't-header');
-    </script>
+            }
+            includeHTML('../src/footer.html', 'footyboy');
+            includeHTML('../src/header.html', 't-header');
+            </script>
 
+    <script src="js/projects_card_parser.js?v=1.2"></script>
 </body>
 </html>

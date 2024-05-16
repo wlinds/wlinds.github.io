@@ -274,8 +274,8 @@ h2, h3, h4, p, ul, a {
     padding-bottom: 28px;
     text-align: justify;
     opacity: 0;
-    animation: main-fade 1.4s ease forwards;
-    animation-delay: 1.4s;
+    animation: main-fade 1.8s ease forwards;
+    animation-delay: 0.3s;
 }
 
 @keyframes main-fade {
@@ -286,7 +286,6 @@ h2, h3, h4, p, ul, a {
         opacity: 1;
     }
 }
-
 
 
 .text-embedded-img {
@@ -303,6 +302,9 @@ h2, h3, h4, p, ul, a {
     flex-direction: column;
     display: flex;
     text-align: justify;
+    opacity: 0;
+    animation: main-fade 2s ease forwards;
+    animation-delay: 0.7s;
 }
 
 
@@ -394,7 +396,7 @@ h2, h3, h4, p, ul, a {
     width: 100%;
     height: auto;
     opacity: 0;
-    animation: fadeInWithShadow 2.66s ease forwards;
+    animation: fadeInWithShadow 1.66s ease forwards;
 }
 
 @keyframes fadeInCard {
