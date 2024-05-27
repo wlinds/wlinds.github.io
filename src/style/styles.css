@@ -831,8 +831,8 @@ h2, h3, h4, p, ul, a {
     }
 
     .main-content {
-        padding-left: 2%;
-        padding-right: 2%;
+        padding-left: 5%;
+        padding-right: 5%;
         gap: 32px;
         justify-content: center;
         flex-direction: column;
