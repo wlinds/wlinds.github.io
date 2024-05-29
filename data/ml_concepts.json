@@ -129,6 +129,20 @@
       "link_desc": ""
     
     },
+
+    "Multi Layer Perceptron (MLP)": {
+        "year": "1980s",
+        "type": "supervised",
+        "img": "",
+        "img_alt": "",
+        "img_description": "",
+        "tags": ["Deep Learning", "Feedforward Neural Network", "Supervised", "Universal Approximation", "Classification", "Regression"],
+        "subheading": "lorem ipsum",
+        "paragraph": "Multi Layer Perceptron (MLP) is a foundational architecture in within neural networks, widely recognized for its ability to approximate a wide variety of functions. An MLP consists of multiple layers of nodes, each layer fully connected to the next one. The architecture typically includes an input layer, one or more hidden layers, and an output layer. Each node (or neuron) in the network applies a weighted sum of its inputs followed by a non-linear activation function. MLPs are supervised learning models used for both classification and regression tasks, and they play a crucial role in deep learning, providing the basis for more complex neural network architectures. Their capacity as universal approximators allows them to model intricate patterns and relationships in data, making them versatile tools in various applications, from image and speech recognition to financial forecasting.",
+        "link": "/",
+        "link_desc": ""
+      },
+      
     "Convolutional Neural Networks (CNN)": {
       "year": "1980s",
       "type": "supervised",
@@ -162,7 +176,7 @@
       "img_alt": "",
       "img_description": "",
       "tags": ["Deep Learning", "Sequence Modeling", "Supervised", "Recurrent Neural Network", "Gating Mechanism"],
-      "subheading": "asdf",
+      "subheading": "",
       "paragraph": "Gated Recurrent Unit (GRU) is a pivotal model within the domain of RNNs, specifically crafted to overcome challenges inherent in traditional RNNs, notably the vanishing gradient problem. GRU introduces a gating mechanism, enabling RNNs to effectively capture long-term dependencies within sequential data.",
       "link": "/",
       "link_desc": ""
@@ -193,6 +207,19 @@
       "link": "/",
       "link_desc": ""
    
-    }
+    },
+    "Kolmogorov-Arnold Networks (KAN)": {
+        "year": "2024",
+        "type": "unsupervised",
+        "img": "../src/assets/ml/KAN-MLP_comparison.png",
+        "img_alt": "",
+        "img_description": "The dataset is a 1D regression task with 5 gaussian peaks (top row). Data around each peak is presented sequentially (instead of all at once) to KANs and MLPs. KANs can perfectly avoid catastrophic forgetting, while MLP display severe catastrophic forgetting.",
+        "tags": ["Deep Learning", "Natural Language Processing", "Unsupervised", "Sequence Transduction"],
+        "subheading": "lorem ipsum",
+        "paragraph": "Kolmogorov-Arnold Networks (KANs) are a recent development in the field of neural networks, proposed in a <a href=\"https://arxiv.org/abs/2404.19756\">research paper</a> published in April 2024. While MLPs use fixed activation functions on each node/neuron, KANs have learnable activation functions placed on the edges (connections) between nodes. These functions act like weights and activations simultaneously, adapting during the learning process. Unlike MLPs with linear weights, KANs completely replace them with learnable univariate functions (often splines). The biggest bottleneck of KANs lies in its slow training. KANs are usually 10x slower than MLPs, given the same number of parameters.",
+        "link": "/",
+        "link_desc": ""
+     
+      }
   }
   
