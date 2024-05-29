@@ -784,7 +784,7 @@ h2, h3, h4, p, ul, a {
 .image-caption {
     justify-content: left;
     text-align: left;
-    color: #8b8b90;
+    color: #9e9ea1;
     padding-top: -10px;
     margin-top: -10px;
     margin-bottom: 8px;
@@ -932,6 +932,7 @@ h2, h3, h4, p, ul, a {
         align-items: center;
         
         
+        
         top: 0;
     }
 
@@ -942,6 +943,7 @@ h2, h3, h4, p, ul, a {
     .my-stack p {
         padding-left: 5%;
         padding-right: 5%;
+        text-align: justify;
     }
 
     .logo-stack {
@@ -1148,6 +1150,7 @@ h2, h3, h4, p, ul, a {
     .image-caption {
         margin: 0;
         padding: 0;
+        line-height: normal;
     }
 
 }
