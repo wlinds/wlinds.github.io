@@ -1,32 +1,32 @@
 {
     "hero": {
-      "title": "Hi! I'm William.",
+      "title": "Hi! I'm Akilles.",
       "description": "I code, make music and design things.",
       "tags": ["AI / ML", "Data Science", "DevOps", "MLOps"]
     },
     "my-coding": {
       "image": "src/assets/vscode-change-this.png",
-      "title": "My skills as a software developer",
-      "description": "As of 2022 I'm studying Machine Learning & AI at <a href='test'>IT-Högskolan</a> in Sweden. I've worked with deep learning and computer vision in anomaly detection, and I'm proficient in Azure DevOps and Azure AI Services. I like developing neat utility scripts, APIs and larger machine learning models with Python. \n\n While I'm currently in favor of backend development, I do have a passion for user interface and design. I enjoy building mockups and wireframes in Figma, creating digital marketing material and experimenting with different web frameworks.",
+      "title": "My skills as a full stack developer",
+      "description": "As of 2024, I'm working full-time as a Full Stack Developer in fintech. I like to create neat utility scripts, write APIs, visualize data with plots and experiment with machine learning models using Python.\n\nI'm also maintaining <a href='https://github.com/OpenAOI/anodet'>anodet</a>, an open source convolutional neural net anomaly detection model based on ResNet and PatchCore.\n\nWhile I'm currently in favor of backend development, I do have a passion for user interface and visual design. I enjoy building mockups and wireframes, creating digital marketing material and experimenting with different web frameworks.\n\nIn 2024 I finished my studies at <a href='https://www.iths.se'>IT-Högskolan 🇸🇪</a>, where I graduated in machine learning.",
       "buttonText": "My repos"
     },
 
     "my-ethics": {
       "image": "",
       "title": "AI Ethics",
-      "description": "I believe responsible AI is about owning up to the consequences of what we create. Whether it's avoiding bias in algorithms or being upfront about how AI decisions are made, it's all about being accountable. \n\n Then there's data integrity. Think of it as the backbone of ethical AI. I make sure the data we're feeding into these models is solid, reliable, and fair. No funky business allowed. Because if the data's messed up, well, you can bet the AI's gonna be messed up too.",
+      "description": "I believe responsible AI is about owning up to the consequences of what we create. Whether it's avoiding bias in algorithms or being upfront about how data driven decisions are made, it's all about being accountable.\n\nThen there's data integrity, the backbone of ethical AI. I make sure the data we feed our models is solid, reliable, and fair. Let's keep the data clean; garbage in, garbage out.",
       "buttonText": "My values"
     },
 
     "my-music": {
       "image": "src/assets/ableton.png",
       "title": "I also produce music",
-      "description": "There are many variations of electronic music and with AI there are endless possibilities in synthetic compositions. I've been creating electronic music for over 10 years and I enjoy all aspects of it, from the creative composition and chord improvisation to the mathematical signal processing and mixing techniques. \n\n The genres I'm moving between are mainly dubstep, hip hop, some drum & bass and house. I've experimented with psy-trance and lofi hip hop, produced some video game music, but really, you should check it out yourself.",
+      "description": "I've been creating electronic music for over 10 years and I enjoy all aspects of it, from the creative composition and chord improvisation to the mathematical signal processing and mixing techniques. \n\n The genres I'm moving between are mainly dubstep, hip hop, some drum & bass and house. I've experimented with psy-trance and lofi hip hop and produced some video game music.",
       "buttonText": "My music"
     },
     "my-stack": {
       "title": "What I work with",
-      "description1": "Short answer: Python, JavaScript, C#, SQL\n\n Long answer: Within the machine learning domain, I have hands-on experience with both Tensorflow and PyTorch, although I favor sklearn and Tensorflow with Keras for developing and managing ML models. My database experience includes postgreSQL, graphQL, and MongoDB. I've developed web APIs using Flask and SQLAlchemy. \n\n As a Data Engineer, I've constructed pipelines with Airflow. I'm used to cleaning and processing data. My data collection experience extends to web scraping, utilizing tools like Selenium and bs4. Statistically, I find Pandas and Polars invaluable for Data Science and analysis. When it comes to visualizing data, I excel with matplotlib, seaborn, and plotly. \n\n While my frontend skills include Anvil, React, and Node.js, my preferred framework for Data Science remains Streamlit. I have Linux knowledge and thrive in command-line environments. Additionally, I'm well-versed in version control with GIT, containerization with Docker, and deployment through Azure DevOps. AI is a domain I actively engage in, with a particular focus on RAG (Retrieval-Augmented Generation)."
+      "description1": "Short answer: Python, JavaScript/TS, C#, SQL\n\n Long answer:\n\n<h3>Machine Learning and Data Science</h3>\nAs a developer interested machine learning, I have experience working with Tensorflow, Keras, PyTorch and sklearn for building and managing machine learning models. As my work involves cleaning and processing data, I’m well-versed in data pipelines.\n\nMy data collection skills extend to web scraping with tools like Selenium and bs4. For statistical analysis I rely heavily on Pandas. When it comes to data visualization, I’m proficient with matplotlib, seaborn, and plotly, consistently using these libraries to create informative and appealing plots.\n\n<h3>Web Development and Engineering</h3>\nIn terms of backend development, I’ve created APIs with Flask and SQLAlchemy, and I’m comfortable managing databases with PostgreSQ, MongoDB and GraphQL. As a Data Engineer, I’ve designed and managed scalable data pipelines and infrastructure using Azure DevOps and Google BigQuery.\n\nThough my work primarily focuses on data, I also enjoy web development, where I use frameworks like Anvil, Streamlit and React+Node.js. But I’m also comfortable with the oldschool stack of JS, HTML & CSS.\n\n<h3>Frontend and Design </h3>\nIn Swedish we have this word, <em>formge</em>. (<em>form</em> = shape, <em>ge</em> = give). It roughly translates to design, but really it means to give [something] shape. I’ve always been fascinated with this concept. To create something, sometimes from nothing. I apply this interest in everything from writing code, designing presentations, websites or interfaces, audio engineering and composing."
     }
   }
   
