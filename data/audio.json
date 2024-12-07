@@ -1,89 +1,417 @@
 [
     {
-    "link": "https://soundcloud.com/lindstedt/sets/technical-debt",
-    "image": "https://i1.sndcdn.com/artworks-RjGzSOK5HzuTdR7Z-AygegA-t500x500.jpg",
-    "text": "Technical Debt (2024)"
-
+        "title": "Shovelware vol 2",
+        "date": "2024-11-30",
+        "image": "https://i1.sndcdn.com/artworks-8BvH7qbxY3yUz0iy-UnSRCw-t500x500.jpg",
+        "text": "Shovelware Vol 2 - Basmatiris (2024)",
+        "link": "https://soundcloud.com/lindstedt/sets/shovelware-vol-2-basmatiris",
+        "genre": "Electronic",
+        "tracks": 22
+      },
+    {
+        "title": "Shovelware vol 1",
+        "date": "2024-06-12",
+        "image": "https://i1.sndcdn.com/artworks-ePd9iF0GnwLKjyUC-9S171A-t500x500.jpg",
+        "text": "Shovelware Vol 1 - Tabasco L1 (2024)",
+        "link": "https://soundcloud.com/lindstedt/sets/shovelware-vol-1-tabasco-l1",
+        "genre": "Electronic",
+        "tracks": 11
+      },
+    {
+      "title": "Technical Debt",
+      "date": "2024-03-15",
+      "image": "https://i1.sndcdn.com/artworks-RjGzSOK5HzuTdR7Z-AygegA-t500x500.jpg",
+      "text": "Technical Debt (2024)",
+      "link": "https://soundcloud.com/lindstedt/sets/technical-debt",
+      "genre": "Dubstep",
+      "tracks": 8
     },
     {
-      "link": "audio/bitsocker.html",
-      "image": "../audio/assets/bitsocker1.gif",
-      "text": ".bitsocker GEN_0 (2022)"
+      "title": ".bitsocker GEN_0",
+      "date": "2022-06-01",
+      "image": "assets/images/albums/bitsocker1.gif",
+      "text": ".bitsocker GEN_0 (2022)",
+      "link": "https://soundcloud.com/lindstedt/sets/bitsocker0",
+      "genre": "Chiptune/Electronic",
+      "tracks": 12
     },
     {
-      "link": "audio/bitsocker_gen_2.html",
-      "image": "../audio/assets/bitsocker_2-copy.png",
-      "text": ".bitsocker GEN_2 (2022)"
-    },
-    {
-      "link": "audio/midsommar_iii.html",
-      "image": "https://i1.sndcdn.com/artworks-glsvPIZwURKnIFxx-Vj3boA-t500x500.jpg",
-      "text": "Midsommar III (2022)"
-    },
-    {
-      "link": "audio/orthos.html",
-      "image": "https://i1.sndcdn.com/artworks-JmrEvogjixjk0iOi-lweqNg-t500x500.jpg",
-      "text": "Orthós (2023)"
-    },
-    {
-      "link": "https://open.spotify.com/album/1iwkA0h2BmLyCDTiNDljPh",
-      "image": "https://i1.sndcdn.com/artworks-pZZF2IQ2Lj3XsDb3-zGWCxA-t500x500.jpg",
-      "text": "Curves In Context (2011)"
-    },
-    {
-      "link": "https://open.spotify.com/album/5Zc8R1EqRPjMGuXwSqBmhJ",
-      "image": "https://i1.sndcdn.com/artworks-3MSV4jNUyaUzfrDo-zGyqCQ-t500x500.jpg",
-      "text": "Internal Perception (2012)"
-    },
-    {
-      "link": "https://open.spotify.com/album/3WIeziYRh7a78RPEqGQm9c",
-      "image": "https://i1.sndcdn.com/artworks-TaqI8gK31a5WTXmj-reyzFg-t500x500.jpg",
-      "text": "misc EP (2013)"
-    },
-    {
-      "link": "https://soundcloud.com/lindstedt/sets/basberoende-restoration",
-      "image": "https://i1.sndcdn.com/artworks-juzcfvuJFAUDhd3w-pquepQ-t500x500.jpg",
-      "text": "basberoende re:storation (2014)"
-    },
-    {
-      "link": "https://open.spotify.com/album/0Ea9yam5v9Ks5gO56PLLLO",
-      "image": "https://i1.sndcdn.com/artworks-QKlGRylyyNpiN6u8-wost9w-t500x500.jpg",
-      "text": "Lost Levels (2015)"
-    },
-    {
-      "link": "https://soundcloud.com/lindstedt/sets/gaest",
+      "title": "Gäst",
+      "date": "2023-07-16",
       "image": "https://i1.sndcdn.com/artworks-ZP23FqM8uh5eebeQ-mSJCLw-t500x500.jpg",
-      "text": "Gäst (2022)"
+      "text": "Gäst(2023)",
+      "link": "https://soundcloud.com/lindstedt/sets/gaest",
+      "genre": "Electronic/House",
+      "tracks": 3
     },
     {
-      "link": "https://soundcloud.com/lindstedt/sets/linds-dt-psytr-nce",
-      "image": "https://i1.sndcdn.com/artworks-nNpjvvkLLH2XVRop-cBp1oA-t500x500.jpg",
-      "text": "[lind.dtʇ*] 👽 (Electronic, Psytrance) (2022)"
+      "title": "Orthós",
+      "date": "2023-06-15",
+      "image": "https://i1.sndcdn.com/artworks-JmrEvogjixjk0iOi-lweqNg-t500x500.jpg",
+      "text": "Orthós (2023)",
+      "link": "https://soundcloud.com/lindstedt/sets/may-june-2023",
+      "genre": "Electronic/EDM",
+      "tracks": 10
     },
     {
-      "link": "https://soundcloud.com/lindstedt/sets/hip-hop",
-      "image": "https://i1.sndcdn.com/artworks-GDpmXDMwiFDqm64j-mVtagA-t500x500.jpg",
-      "text": "Playlist: Hip Hop Collection"
+        "title": "Chillin",
+        "date": "2024-06-20",
+        "image": "https://i1.sndcdn.com/artworks-T0SdS8Ybh2OiUKGk-bZGqRA-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/chillin",
+        "text": "Chillin - Lindstedt",
+        "genre": "",
+        "tracks": 8
     },
     {
-      "link": "https://soundcloud.com/lindstedt/sets/ambient",
-      "image": "https://i1.sndcdn.com/artworks-QCqn7xphDy8N5Ga9-oTSuyA-t500x500.jpg",
-      "text": "Playlist: Ambient Collection"
+        "title": "brostep",
+        "date": "2024-06-20",
+        "image": "https://i1.sndcdn.com/avatars-8fYDSRmgdW9zLcGE-B2NlzQ-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/br0step",
+        "text": "brostep - Lindstedt",
+        "genre": "",
+        "tracks": 16
     },
     {
-      "link": "https://soundcloud.com/lindstedt/sets/jams",
-      "image": "https://i1.sndcdn.com/artworks-zlgioihx3VbrFcYp-wT94UQ-t500x500.jpg",
-      "text": "Playlist: JAMS"
+        "title": "Shovelware Vol 1 - Tabasco L1 (Maj, Juni 2024)",
+        "date": "2024-06-12",
+        "image": "https://i1.sndcdn.com/artworks-TRxHqyPWkMhHPvCd-ajwPdg-t50x50.png",
+        "link": "https://soundcloud.com/lindstedt/sets/shovelware-vol-1-tabasco-l1",
+        "text": "Shovelware Vol 1 - Tabasco L1 (Maj, Juni 2024) - Lindstedt",
+        "genre": "",
+        "tracks": 11
     },
     {
-      "link": "https://soundcloud.com/lindstedt/sets/house-ish-120-130-bpm",
-      "image": "https://i1.sndcdn.com/artworks-zQQAn9tsAOuvXPht-Cyk7dQ-t500x500.jpg",
-      "text": "Untitled Playlist [±120 BPM] [House, Electro] 🏠"
+        "title": "Technical Debt [WIP, April 2024]",
+        "date": "2024-04-19",
+        "image": "https://i1.sndcdn.com/avatars-8fYDSRmgdW9zLcGE-B2NlzQ-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/technical-debt",
+        "text": "Technical Debt [WIP, April 2024] - Lindstedt",
+        "genre": "",
+        "tracks": 5
     },
     {
-      "link": "https://soundcloud.com/lindstedt",
-      "image": "https://d21buns5ku92am.cloudfront.net/26628/images/419678-1x1_SoundCloudLogo_wordmark-341a25-medium-1645807040.jpg",
-      "text": "Discover my latest tracks on SoundCloud"
+        "title": "2024 January",
+        "date": "2024-06-20",
+        "image": "https://i1.sndcdn.com/artworks-Uyjfjzlx9NEEzqzY-JdGAkA-t500x500.png",
+        "link": "https://soundcloud.com/lindstedt/sets/2024-january",
+        "text": "2024 January - Lindstedt",
+        "genre": "",
+        "tracks": 5
+    },
+    {
+        "title": "2023 December",
+        "date": "2023-12-31",
+        "image": "https://i1.sndcdn.com/artworks-6Cp5a6MohDUU9amU-tcoCjg-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/2023-december",
+        "text": "2023 December - Lindstedt",
+        "genre": "",
+        "tracks": 18
+    },
+    {
+        "title": ".bitsocker 👾 GEN3: Data Lake (Preview)",
+        "date": "2024-06-20",
+        "image": "https://i1.sndcdn.com/artworks-6s4PxGO1zk07YfSi-734eUg-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/bitsocker3",
+        "text": ".bitsocker 👾 GEN3: Data Lake (Preview) - Lindstedt",
+        "genre": "",
+        "tracks": 15
+    },
+    {
+        "title": "Gäst [House]",
+        "date": "2023-07-16",
+        "image": "https://i1.sndcdn.com/artworks-ZP23FqM8uh5eebeQ-mSJCLw-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/gaest",
+        "text": "Gäst [House] - Lindstedt",
+        "genre": "",
+        "tracks": 3
+    },
+    {
+        "title": "finish at some point",
+        "date": "2023-07-16",
+        "image": "https://i1.sndcdn.com/artworks-mf4xePEvCVCTtyfm-Tk2RWQ-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/finish-at-some-point",
+        "text": "finish at some point - Lindstedt",
+        "genre": "",
+        "tracks": 18
+    },
+    {
+        "title": "JAMS",
+        "date": "2023-07-16",
+        "image": "https://i1.sndcdn.com/artworks-zlgioihx3VbrFcYp-wT94UQ-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/jams",
+        "text": "JAMS - Lindstedt",
+        "genre": "",
+        "tracks": 20
+    },
+    {
+        "title": "Orthós [May+June 2023]",
+        "date": "2023-07-02",
+        "image": "https://i1.sndcdn.com/artworks-MmqOdeUyIvzofxXM-Q7xsiA-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/may-june-2023",
+        "text": "Orthós [May+June 2023] - Lindstedt",
+        "genre": "",
+        "tracks": 6
+    },
+    {
+        "title": "MECHESCAPE_VOL_1",
+        "date": "2024-06-20",
+        "image": "https://i1.sndcdn.com/artworks-4Scd4mkyw7uxKsY1-yeUheg-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/mechescape_vol_1",
+        "text": "MECHESCAPE_VOL_1 - Lindstedt",
+        "genre": "",
+        "tracks": 12
+    },
+    {
+        "title": "2023 January ^ M E C H - E S C A P E [VOL1]",
+        "date": "2023-01-03",
+        "image": "https://i1.sndcdn.com/artworks-jqYFhGJiQnjpJq8a-Bu2Qew-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/january-2023",
+        "text": "2023 January ^ M E C H - E S C A P E [VOL1] - Lindstedt",
+        "genre": "",
+        "tracks": 8
+    },
+    {
+        "title": "Dark & Grainy",
+        "date": "2022-12-08",
+        "image": "https://i1.sndcdn.com/artworks-1gH1gbAUH6lsmUvE-YbzfFQ-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/dark",
+        "text": "Dark & Grainy - Lindstedt",
+        "genre": "",
+        "tracks": 21
+    },
+    {
+        "title": "Electronics",
+        "date": "2022-12-08",
+        "image": "https://i1.sndcdn.com/artworks-czOzKOZaOpcqvsen-A8SrnA-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/electronics",
+        "text": "Electronics - Lindstedt",
+        "genre": "",
+        "tracks": 27
+    },
+    {
+        "title": "Ambient",
+        "date": "2022-12-08",
+        "image": "https://i1.sndcdn.com/artworks-QCqn7xphDy8N5Ga9-oTSuyA-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/ambient",
+        "text": "Ambient - Lindstedt",
+        "genre": "",
+        "tracks": 15
+    },
+    {
+        "title": "Hip Hop",
+        "date": "2022-12-08",
+        "image": "https://i1.sndcdn.com/artworks-UVqzZPE2CWfD56gM-qQFP8g-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/hip-hop",
+        "text": "Hip Hop - Lindstedt",
+        "genre": "",
+        "tracks": 47
+    },
+    {
+        "title": "safg",
+        "date": "2022-12-07",
+        "image": "https://i1.sndcdn.com/avatars-8fYDSRmgdW9zLcGE-B2NlzQ-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/safg",
+        "text": "safg - Lindstedt",
+        "genre": "",
+        "tracks": 3
+    },
+    {
+        "title": "2022 December",
+        "date": "2022-12-06",
+        "image": "https://i1.sndcdn.com/avatars-8fYDSRmgdW9zLcGE-B2NlzQ-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/2022-december",
+        "text": "2022 December - Lindstedt",
+        "genre": "",
+        "tracks": 17
+    },
+    {
+        "title": "2022 November",
+        "date": "2022-11-04",
+        "image": "https://i1.sndcdn.com/artworks-SbIeMk4FzhzUjnct-2e36mA-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/1004a",
+        "text": "2022 November - Lindstedt",
+        "genre": "",
+        "tracks": 15
+    },
+    {
+        "title": "2022 Oktober TYPENORM",
+        "date": "2022-10-22",
+        "image": "https://i1.sndcdn.com/artworks-NyNzIfp1a28eRFdd-GiJhsA-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/typenorm-2022-october",
+        "text": "2022 Oktober TYPENORM - Lindstedt",
+        "genre": "",
+        "tracks": 8
+    },
+    {
+        "title": "2022 September",
+        "date": "2022-09-26",
+        "image": "https://i1.sndcdn.com/artworks-yZ4ESPvQDiRZ1P52-2DxSLw-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/2022-september-1",
+        "text": "2022 September - Lindstedt",
+        "genre": "",
+        "tracks": 7
+    },
+    {
+        "title": "Untitled Playlist [±120 BPM] [House, Electro] 🏠",
+        "date": "2022-08-10",
+        "image": "https://i1.sndcdn.com/artworks-zQQAn9tsAOuvXPht-Cyk7dQ-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/house-ish-120-130-bpm",
+        "text": "Untitled Playlist [±120 BPM] [House, Electro] 🏠 - Lindstedt",
+        "genre": "Electronic",
+        "tracks": 51
+    },
+    {
+        "title": ".bitsocker 👾 GEN2",
+        "date": "2022-08-10",
+        "image": "https://i1.sndcdn.com/artworks-i83SxTipMZyxIwBZ-lAANyw-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/bitsocker2",
+        "text": ".bitsocker 👾 GEN2 - Lindstedt",
+        "genre": "",
+        "tracks": 17
+    },
+    {
+        "title": "2022 Augusti",
+        "date": "2022-08-08",
+        "image": "https://i1.sndcdn.com/artworks-Ik2J0LRAzwQ0ry9u-E1xYMA-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/2022-augusti-1",
+        "text": "2022 Augusti - Lindstedt",
+        "genre": "",
+        "tracks": 12
+    },
+    {
+        "title": "2022 Juli",
+        "date": "2022-08-08",
+        "image": "https://i1.sndcdn.com/artworks-ux6SLVN3AvPzecIR-CtmJQA-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/2022-juli",
+        "text": "2022 Juli - Lindstedt",
+        "genre": "",
+        "tracks": 19
+    },
+    {
+        "title": "2022 Juni",
+        "date": "2022-08-08",
+        "image": "https://i1.sndcdn.com/artworks-zZXRhDOYyN6CSJKD-sgkwcA-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/2022-juni",
+        "text": "2022 Juni - Lindstedt",
+        "genre": "",
+        "tracks": 17
+    },
+    {
+        "title": "2022 Maj",
+        "date": "2022-08-08",
+        "image": "https://i1.sndcdn.com/artworks-bfW6TOUPih4npVJr-fKTJUQ-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/2022-may",
+        "text": "2022 Maj - Lindstedt",
+        "genre": "",
+        "tracks": 14
+    },
+    {
+        "title": "Söndag till Onsdag",
+        "date": "2022-07-05",
+        "image": "https://i1.sndcdn.com/artworks-vD4VSjfwpqlYKQOD-nvTUQw-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/soendag",
+        "text": "Söndag till Onsdag - Lindstedt",
+        "genre": "",
+        "tracks": 4
+    },
+    {
+        "title": "Midsommar III",
+        "date": "2022-06-23",
+        "image": "https://i1.sndcdn.com/artworks-glsvPIZwURKnIFxx-Vj3boA-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/midsommar-iii",
+        "text": "Midsommar III - Lindstedt",
+        "genre": "",
+        "tracks": 8
+    },
+    {
+        "title": "lofi.wav + boom_bap [2022] Chill Study Relax Lofi Hip Hop",
+        "date": "2022-06-13",
+        "image": "https://i1.sndcdn.com/artworks-000256587299-1ya8gj-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/lofiwav-boom_bap-2022",
+        "text": "lofi.wav + boom_bap [2022] Chill Study Relax Lofi Hip Hop - Lindstedt",
+        "genre": "",
+        "tracks": 26
+    },
+    {
+        "title": "Riddim & Dubstep [Cyberpolice!] [±140/2 BPM] 🚨",
+        "date": "2022-06-06",
+        "image": "https://i1.sndcdn.com/artworks-l5em1FBcLjtfx0Ls-VxZHtw-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/riddim-dubstep-2022",
+        "text": "Riddim & Dubstep [Cyberpolice!] [±140/2 BPM] 🚨 - Lindstedt",
+        "genre": "",
+        "tracks": 28
+    },
+    {
+        "title": "Psytrance [+140 BPM] [lind.dtʇ*] (Electronic, Psytrance, Psy) [2022] 👽",
+        "date": "2022-05-26",
+        "image": "https://i1.sndcdn.com/artworks-nNpjvvkLLH2XVRop-cBp1oA-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/linds-dt-psytr-nce",
+        "text": "Psytrance [+140 BPM] [lind.dtʇ*] (Electronic, Psytrance, Psy) [2022] 👽 - Lindstedt",
+        "genre": "Electronic",
+        "tracks": 9
+    },
+    {
+        "title": "basberoende - re:storation | Pre-Release",
+        "date": "2022-05-25",
+        "image": "https://i1.sndcdn.com/artworks-juzcfvuJFAUDhd3w-pquepQ-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/basberoende-restoration",
+        "text": "basberoende - re:storation | Pre-Release - Lindstedt",
+        "genre": "",
+        "tracks": 9
+    },
+    {
+        "title": ".bitsocker 👾 GEN0",
+        "date": "2022-05-22",
+        "image": "https://i1.sndcdn.com/artworks-WK1p4li7F3TdyAAZ-gNOGkg-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/bitsocker0",
+        "text": ".bitsocker 👾 GEN0 - Lindstedt",
+        "genre": "",
+        "tracks": 17
+    },
+    {
+        "title": "Lost Levels | Pre-Release",
+        "date": "2022-05-18",
+        "image": "https://i1.sndcdn.com/artworks-RadWBvv7llAhen7F-OLXp5Q-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/lost-levels-2015",
+        "text": "Lost Levels | Pre-Release - Lindstedt",
+        "genre": "",
+        "tracks": 12
+    },
+    {
+        "title": ".misc 2",
+        "date": "2015-08-30",
+        "image": "https://i1.sndcdn.com/artworks-000039489790-dlnb7o-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/misc-2",
+        "text": ".misc 2 - Lindstedt",
+        "genre": "",
+        "tracks": 16
+    },
+    {
+        "title": "\"Patriarkatets Förfall\"",
+        "date": "2015-08-30",
+        "image": "https://i1.sndcdn.com/artworks-000114932197-n0bx6f-t50x50.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/patriarkatets-f-rfall",
+        "text": "\"Patriarkatets Förfall\" - Lindstedt",
+        "genre": "",
+        "tracks": 5
+    },
+    {
+        "title": "Native Instruments Massive",
+        "date": "2015-08-30",
+        "image": "https://i1.sndcdn.com/artworks-000130161622-ejdql3-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/native-instruments-massive",
+        "text": "Native Instruments Massive - Lindstedt",
+        "genre": "",
+        "tracks": 11
+    },
+    {
+        "title": "Sampling",
+        "date": "2015-08-30",
+        "image": "https://i1.sndcdn.com/artworks-000121346802-a6u5gx-t500x500.jpg",
+        "link": "https://soundcloud.com/lindstedt/sets/sampling",
+        "text": "Sampling - Lindstedt",
+        "genre": "",
+        "tracks": 12
     }
+
   ]
-  

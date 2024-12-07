@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Machine Learning Concepts | William Akilles Lindstedt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/styles.css?v=1.2">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/ml-concepts.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body class="main-body">
+    <header><div id="header-placeholder"></div></header>
+
+    <div class="network-container">
+        <svg id="network"></svg>
+    </div>
+
+    <div class="detail-panel">
+        <button class="close-btn">×</button>
+        <div class="detail-content"></div>
+    </div>
+        
+    <div class="controls">
+        <button class="control-btn" id="zoomOut">−</button>
+        <button class="control-btn" id="reset">Reset</button>
+        <button class="control-btn" id="zoomIn">+</button>
+        <button class="control-btn" id="togglePhysics">Toggle Physics</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            fetch('../components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerPlaceholder.innerHTML = data;
+                    const menuToggle = document.getElementById('menu-toggle');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (menuToggle && mobileMenu) {
+                        menuToggle.addEventListener('click', () => {
+                            mobileMenu.classList.toggle('hidden');
+                        });
+                    }
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+
+    <script src="../scripts/footer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    
+    <script>
+        function initializeResizePanel() {
+            const panel = document.querySelector('.detail-panel');
+            
+            // Resize handle
+            const handle = document.createElement('div');
+            handle.className = 'resize-handle';
+            panel.insertBefore(handle, panel.firstChild);
+
+            let isResizing = false;
+            let startX;
+            let startWidth;
+
+            handle.addEventListener('mousedown', startResize);
+
+            function startResize(e) {
+                isResizing = true;
+                startX = e.clientX;
+                startWidth = parseInt(getComputedStyle(panel).width, 10);
+                panel.classList.add('resizing');
+                document.addEventListener('mousemove', resize);
+                document.addEventListener('mouseup', stopResize);
+                e.preventDefault();
+            }
+
+            function resize(e) {
+                if (!isResizing) return;
+                
+                const width = startWidth + (startX - e.clientX);
+                const constrainedWidth = Math.max(300, Math.min(800, width));
+                panel.style.width = `${constrainedWidth}px`;
+            }
+
+            function stopResize() {
+                isResizing = false;
+                panel.classList.remove('resizing');
+                document.removeEventListener('mousemove', resize);
+                document.removeEventListener('mouseup', stopResize);
+            }
+        }
+
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        let simulation;
+        let svg;
+        let container;
+        let nodes = [];
+        let links = [];
+        let physicsEnabled = true;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadD3().then(() => {
+                return loadMathJax();
+            }).then(() => {
+                initializeNetwork();
+                initializeResizePanel();
+            });
+        });
+
+        function loadD3() {
+            if (window.d3) return Promise.resolve();
+            return new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js';
+                script.onload = resolve;
+                document.head.appendChild(script);
+            });
+        }
+
+        function loadMathJax() {
+            if (window.MathJax) return Promise.resolve();
+            return new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+                script.id = 'MathJax-script';
+                script.async = true;
+                script.onload = resolve;
+                document.head.appendChild(script);
+            });
+        }
+
+        async function initializeNetwork() {
+            try {
+                const response = await fetch('../data/ml_concepts.json');
+                const data = await response.json();
+                setupNetwork(data);
+                initializeControls();
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+
+        function setupNetwork(data) {
+            svg = d3.select('#network')
+                .attr('width', width)
+                .attr('height', height);
+
+            container = svg.append('g')
+                .attr('class', 'container');
+
+            // Process data
+            nodes = Object.entries(data).map(([name, concept]) => ({
+                id: name,
+                ...concept,
+                radius: getNodeRadius(concept)
+            }));
+
+            links = createLinks(nodes);
+
+            simulation = d3.forceSimulation(nodes)
+                .force('charge', d3.forceManyBody().strength(-200))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(d => d.radius + 10))
+                .force('link', d3.forceLink(links).id(d => d.id).distance(100))
+                .on('tick', ticked);
+
+            const link = container.append('g')
+                .attr('class', 'links')
+                .selectAll('line')
+                .data(links)
+                .enter().append('line')
+                .attr('class', 'link');
+
+            const node = container.append('g')
+                .attr('class', 'nodes')
+                .selectAll('.node')
+                .data(nodes)
+                .enter().append('g')
+                .attr('class', 'node')
+                .call(d3.drag()
+                    .on('start', dragstarted)
+                    .on('drag', dragged)
+                    .on('end', dragended));
+
+            node.append('circle')
+                .attr('class', 'node-circle')
+                .attr('r', d => d.radius)
+                .style('fill', d => getNodeColor(d));
+
+            node.append('text')
+                .attr('class', 'node-text')
+                .attr('dy', '.35em')
+                .text(d => d.id)
+                .style('font-size', d => Math.max(8, d.radius / 3) + 'px');
+
+            node.on('click', showDetail);
+
+            const zoom = d3.zoom()
+                .scaleExtent([0.1, 4])
+                .on('zoom', zoomed);
+
+            svg.call(zoom);
+        }
+
+        function getNodeRadius(concept) {
+            const baseSize = 30;
+            const tagBonus = concept.tags.length * 2;
+            const yearBonus = (2024 - parseInt(concept.year)) / 20;
+            return baseSize + tagBonus + yearBonus;
+        }
+
+        function getNodeColor(node) {
+            return node.type === 'supervised' 
+                ? 'rgba(40, 200, 245, 0.1)'
+                : 'rgba(72, 200, 245, 0.2)';
+        }
+
+        function createLinks(nodes) {
+            const links = [];
+            nodes.forEach((node, i) => {
+                nodes.slice(i + 1).forEach(otherNode => {
+                    if (areConceptsRelated(node, otherNode)) {
+                        links.push({ source: node.id, target: otherNode.id });
+                    }
+                });
+            });
+            return links;
+        }
+
+        function areConceptsRelated(a, b) {
+            return a.tags.some(tag => b.tags.includes(tag)) || 
+                Math.abs(parseInt(a.year) - parseInt(b.year)) < 10;
+        }
+
+        function showDetail(event, d) {
+            const panel = document.querySelector('.detail-panel');
+            const content = panel.querySelector('.detail-content');
+
+            content.innerHTML = `
+                <h2 class="detail-title">${d.id}</h2>
+                <div class="detail-year">${d.year}</div>
+                <div class="detail-tags">
+                    ${d.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                ${d.img ? `
+                    <img src="${d.img}" alt="${d.id}" class="detail-image">
+                    <p>${d.img_description}</p>
+                ` : ''}
+                <p>${d.paragraph}</p>
+            `;
+
+            panel.classList.add('active');
+            
+            // Handle LaTeX content
+            MathJax.typesetPromise([content]).catch((err) => console.log('MathJax error:', err));
+        }
+
+        function ticked() {
+            container.selectAll('line')
+                .attr('x1', d => d.source.x)
+                .attr('y1', d => d.source.y)
+                .attr('x2', d => d.target.x)
+                .attr('y2', d => d.target.y);
+
+            container.selectAll('.node')
+                .attr('transform', d => `translate(${d.x},${d.y})`);
+        }
+
+        function dragstarted(event) {
+            if (!event.active && physicsEnabled) simulation.alphaTarget(0.3).restart();
+            event.subject.fx = event.subject.x;
+            event.subject.fy = event.subject.y;
+        }
+
+        function dragged(event) {
+            event.subject.fx = event.x;
+            event.subject.fy = event.y;
+        }
+
+        function dragended(event) {
+            if (!event.active && physicsEnabled) simulation.alphaTarget(0);
+            event.subject.fx = null;
+            event.subject.fy = null;
+        }
+
+        function zoomed(event) {
+            container.attr('transform', event.transform);
+        }
+
+        function initializeControls() {
+            document.querySelector('.close-btn').addEventListener('click', () => {
+                document.querySelector('.detail-panel').classList.remove('active');
+            });
+
+            document.getElementById('zoomIn').addEventListener('click', () => {
+                svg.transition().call(zoom.scaleBy, 1.5);
+            });
+
+            document.getElementById('zoomOut').addEventListener('click', () => {
+                svg.transition().call(zoom.scaleBy, 0.75);
+            });
+
+            document.getElementById('reset').addEventListener('click', () => {
+                svg.transition().call(zoom.transform, d3.zoomIdentity);
+            });
+
+            document.getElementById('togglePhysics').addEventListener('click', () => {
+                physicsEnabled = !physicsEnabled;
+                if (physicsEnabled) {
+                    simulation.restart();
+                } else {
+                    simulation.stop();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

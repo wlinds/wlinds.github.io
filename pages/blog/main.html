@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Lindstedt - Developer & ML Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/remarkable@2/dist/remarkable.min.js?v=1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/remarkable-math/dist/remarkable-math.min.js?v=1.1"></script>
+    <!-- TODO Latex support for .md Actually -- Rework entire blog or use provider?? -->
+</head>
+
+<body class="main-body-blog">
+<header><div id="header-placeholder"></div></header>
+<div id="t-header"></div>
+
+<div class="main-blog-container">
+<div id="blog-article">
+<script>
+async function fetchAndRenderMarkdown() {
+    try {
+        const response = await fetch('../../data/blog/post_index.json');
+        const filesData = await response.json();
+        const sortedFiles = filesData.sort((a, b) => b.index - a.index);
+
+        // for each Markdown file, create an article
+        for (const fileData of sortedFiles) {
+            const filePath = `${fileData.fileName}`;
+            const response = await fetch(filePath);
+            const markdownText = await response.text();
+            const tags = fileData.tags.split(',');
+            
+            // Convert Markdown to HTML
+            const md = new remarkable.Remarkable();
+            const htmlContent = md.render(markdownText);
+
+            // Create a new div element for each blog article
+            const blogArticleDiv = document.createElement('div');
+            blogArticleDiv.className = 'blog-article';
+            blogArticleDiv.innerHTML = htmlContent;
+            
+            // Extract tags from JSON and create container for them
+            const tagsContainer = document.createElement('div');
+            tagsContainer.className = 'tags-container-left';
+            
+            // Publish date
+            const publishDateElement = document.createElement('div');
+            publishDateElement.textContent = fileData.publishDate;
+
+            const h1Element = blogArticleDiv.querySelector('h1');
+            if (h1Element) h1Element.parentNode.insertBefore(publishDateElement, h1Element);
+            
+            // Create a tag element for each tag
+            tags.forEach(tag => {
+                const tagElement = document.createElement('div');
+                tagElement.className = 'blog-tags';
+                tagElement.textContent = tag.trim();
+                tagsContainer.appendChild(tagElement);
+            });
+            
+            // Order
+            if (h1Element) {
+                publishDateElement.className = 'publish-date';
+                publishDateElement.textContent = "Published " + fileData.publishDate;
+                h1Element.insertAdjacentElement('afterend', publishDateElement);
+                h1Element.insertAdjacentElement('afterend', tagsContainer);
+                h1Element.classList.add('blog-h1');
+            }
+            
+            // Append the blog article div to the main content container
+            document.getElementById('blog-article').appendChild(blogArticleDiv);
+        }
+    } catch (error) {
+        console.error('Error fetching and rendering Markdown:', error); }
+}
+fetchAndRenderMarkdown();
+</script>
+</div>
+</div>
+
+<footer id="footer">
+</footer>
+
+<script src="../../scripts/footer.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    
+    fetch('../../components/header.html')
+        .then(response => {
+            return response.text();
+        })
+        .then(data => {
+            headerPlaceholder.innerHTML = data;
+
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        })
+        .catch(error => console.error('Error loading header:', error));
+});
+</script>
+</body>
+</html>

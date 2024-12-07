@@ -1,0 +1,217 @@
+{
+    "hero": {
+      "title": "Hi! I'm Akilles.",
+      "description": "I code, make music and design things.",
+      "tags": ["AI / ML", "Data Science", "DevOps", "MLOps"],
+      "background_blur": {
+        "color": "rgba(133, 72, 245, 0.468)",
+        "position": "right",
+        "animation": true
+      }
+    },
+    "my_coding": {
+    "image": "assets/images/vscode-showcase.png",
+    "title": "My skills as a full stack developer",
+    "description": "As of 2024, I'm working full-time as a Full Stack Developer in fintech. I like to create neat utility scripts, write APIs, visualize data with plots and experiment with machine learning models using Python.<br><br>I'm also maintaining <a href='https://github.com/OpenAOI/anodet'>anodet</a>, an open source convolutional neural net anomaly detection model based on ResNet and PatchCore.<br><br>While I'm currently in favor of backend development, I do have a passion for user interface and visual design. I enjoy building mockups and wireframes, creating digital marketing material and experimenting with different web frameworks.<br><br>In 2024 I finished my studies at <a href='https://www.iths.se'>IT-Högskolan 🇸🇪</a>, where I graduated in machine learning.",
+    "buttonText": "My repos",
+    "featured_projects": [
+        {
+            "name": "anodet",
+            "description": "Open source anomaly detection",
+            "link": "https://github.com/OpenAOI/anodet",
+            "icon": "https://avatars.githubusercontent.com/u/20857232?s=200&v=4"
+        },
+        {
+            "name": "UCI Dataset Loader",
+            "description": "Interface for performing data analysis tasks.",
+            "link": "https://github.com/wlinds/uci-dataset-loader",
+            "icon": "assets/icons/UCI.jpg"
+        }
+    ]
+},
+    "my_ethics": {
+      "title": "AI Ethics",
+      "description": "I believe responsible AI is about owning up to the consequences of what we create. Whether it's avoiding bias in algorithms or being upfront about how data driven decisions are made, it's all about being accountable.<br><br>Then there's data integrity, the backbone of ethical AI. I make sure the data we feed our models is solid, reliable, and fair. Let's keep the data clean; garbage in, garbage out.",
+      "principles": [
+        {
+          "title": "Data Integrity",
+          "description": "Using clean, unbiased data to train AI systems",
+          "icon": "assets/icons/data-integrity.svg"
+        },
+        {
+          "title": "Transparency",
+          "description": "Being clear about AI decision-making processes",
+          "icon": "assets/icons/transparency.svg"
+        },
+        {
+          "title": "Accountability",
+          "description": "Taking responsibility for AI outcomes",
+          "icon": "assets/icons/accountability.svg"
+        }
+      ]
+    },
+
+    "my_music": {
+      "image": "assets/images/ableton-showcase.png",
+      "title": "I also produce music",
+      "description": "I've been creating electronic music for over 10 years and I enjoy all aspects of it, from the creative composition and chord improvisation to the mathematical signal processing and mixing techniques.<br><br>The genres I'm moving between are mainly dubstep, hip hop, some drum & bass and house. I've experimented with psy-trance and lofi hip hop and produced some video game music.<br><br>Click an album below to have a listen, or follow me on SoundCloud to keep up with my latest releases!",
+      "buttonText": "Followe me on SoundCloud",
+      "genres": [
+        {
+          "name": "Dubstep",
+          "icon": "assets/icons/wave.svg",
+          "color": "#6B46C1"
+        },
+        {
+          "name": "Hip Hop",
+          "icon": "assets/icons/beat.svg",
+          "color": "#D53F8C"
+        },
+        {
+          "name": "Electronic",
+          "icon": "assets/icons/synth.svg",
+          "color": "#2B6CB0"
+        }
+      ],
+      "featured_tracks": [
+        {
+          "title": "Technical Debt",
+          "genre": "Dubstep",
+          "year": "2024",
+          "link": "https://soundcloud.com/lindstedt/sets/technical-debt"
+        }
+      ]
+    },
+
+    "my_stack": {
+      "title": "#my-stack | What I work with",
+      "description": "<h3>Machine Learning and Data Science</h3>As a developer interested in machine learning, I have experience working with TensorFlow, Keras, PyTorch and scikit-learn for building and managing machine learning models. As my work involves cleaning and processing data, I'm well-versed in data pipelines.<br><br>My data collection skills extend to web scraping with tools like Selenium and BeautifulSoup. For statistical analysis I rely heavily on Pandas. When it comes to data visualization, I'm proficient with matplotlib, seaborn, and plotly.<br><br><h3>Web Development and Engineering</h3>In terms of backend development, I've created APIs with Flask and SQLAlchemy, and I'm comfortable managing databases with PostgreSQL, MongoDB and GraphQL. As a Data Engineer, I've designed and managed scalable data pipelines and infrastructure using Azure DevOps and Google BigQuery.<br><br>Though my work primarily focuses on data, I also enjoy web development, where I use frameworks like Anvil, Streamlit and React+Node.js. But I'm also comfortable with the oldschool stack of JS, HTML & CSS.",
+      "skills_categories": [
+        {
+          "name": "Languages",
+          "items": [
+            {
+              "name": "Python",
+              "icon": "https://skillicons.dev/icons?i=python",
+              "level": "Expert",
+              "years": 3
+            },
+            {
+              "name": "JavaScript",
+              "icon": "https://skillicons.dev/icons?i=javascript",
+              "level": "Proficient",
+              "years": 3
+            },
+            {
+              "name": "TypeScript",
+              "icon": "https://skillicons.dev/icons?i=typescript",
+              "level": "Intermediate",
+              "years": 1
+            },
+            {
+              "name": "PostgreSQL",
+              "icon": "https://skillicons.dev/icons?i=postgres",
+              "level": "Advanced",
+              "years": 2
+            }
+          ]
+        },
+        {
+          "name": "Machine Learning",
+          "items": [
+            {
+              "name": "TensorFlow",
+              "icon": "https://skillicons.dev/icons?i=tensorflow",
+              "level": "Advanced",
+              "years": 2
+            },
+            {
+              "name": "PyTorch",
+              "icon": "https://skillicons.dev/icons?i=pytorch",
+              "level": "Advanced",
+              "years": 2
+            },
+            {
+              "name": "Scikit-Learn",
+              "icon": "https://skillicons.dev/icons?i=sklearn",
+              "level": "Advanced",
+              "years": 2
+            },
+            {
+              "name": "OpenCV",
+              "icon": "https://skillicons.dev/icons?i=opencv",
+              "level": "Basic",
+              "years": 1
+            }
+          ]
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Machine Learning Graduate",
+          "issuer": "IT-Högskolan",
+          "year": "2024",
+          "link": "https://www.iths.se"
+        }
+      ]
+    },
+
+    "testimonials": {
+      "title": "What others say",
+      "items": [
+        {
+          "text": "William delivered an excellent anomaly detection solution that exceeded our expectations.",
+          "author": "Technical Lead",
+          "company": "Plejd AB",
+          "image": "https://homepage-cdn.plejd.com/plejd-website-app-v2/f7087fab-2f96-41c0-9704-05a8df8df812"
+        },
+        {
+            "text": "William delivered an excellent anomaly detection solution that exceeded our expectations.",
+            "author": "Technical Lead",
+            "company": "BrightSkills AB",
+            "image": "https://brightskills.se/img/brightskills_logo_invoice_11.png?824"
+          }
+      ]
+    },
+    "professional_experience": {
+      "title": "Professional Experience",
+      "positions": [
+        {
+          "title": "Full Stack Developer",
+          "company": "CPS Sweden",
+          "period": "2024-present",
+          "link": "https://cpssweden.se",
+          "description": "Developing and maintaining financial analysis applications",
+          "technologies": ["Python", "TypeScript", "React", "SQL"]
+        },
+        {
+          "title": "ML Engineer Intern",
+          "company": "Plejd AB",
+          "period": "2023-2024",
+          "link": "https://plejd.se",
+          "description": "Developed computer vision solutions for quality control",
+          "technologies": ["PyTorch", "OpenCV", "Matplotlib"]
+        },
+        {
+          "title": "ML Engineer Intern",
+          "company": "Bright Skills AB",
+          "period": "2023",
+          "link": "https://brightskills.se",
+          "description": "Integrated AI solutions and wrote APIs in low-code environments",
+          "technologies": ["Azure DevOps", "Python", "C#"]
+        }
+      ]
+    },
+    "blog_highlights": {
+      "title": "Featured Articles",
+      "description": "Technical tutorials and insights",
+      "featured": [
+        {
+          "title": "Turn your old laptop into an Ubuntu server",
+          "excerpt": "A comprehensive guide to setting up a home server",
+          "link": "/blog/ubuntu-server-guide.html",
+          "date": "2024-04-24"
+        }
+      ]
+    }
+  }

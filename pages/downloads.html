@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Downloads | William Akilles Lindstedt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/styles.css?v=1.2">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/downloads.css">
+</head>
+
+<body class="main-body">
+    <header><div id="header-placeholder"></div></header>
+
+    <div class="downloads-container">
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Looking for something special...? 👀 ">
+        </div>
+        <table class="downloads-table">
+            <thead>
+                <tr>
+                    <th>Preview</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody id="downloadsTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <footer id="footer"/>
+    <script src="../scripts/footer.js"></script>
+    <script>
+        // Load header
+        document.addEventListener('DOMContentLoaded', () => {
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            fetch('../components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerPlaceholder.innerHTML = data;
+                    const menuToggle = document.getElementById('menu-toggle');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (menuToggle && mobileMenu) {
+                        menuToggle.addEventListener('click', () => {
+                            mobileMenu.classList.toggle('hidden');
+                        });
+                    }
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load and display downloads
+            loadDownloads();
+        });
+
+        let downloadsData = [];
+
+        async function loadDownloads() {
+            try {
+                const response = await fetch('../data/downloads.json');
+                const data = await response.json();
+                downloadsData = data.downloads;
+                renderDownloads(downloadsData);
+                setupSearch();
+            } catch (error) {
+                console.error('Error loading downloads:', error);
+            }
+        }
+
+        function renderDownloads(downloads) {
+            const tbody = document.getElementById('downloadsTableBody');
+            tbody.innerHTML = downloads.map(item => `
+                <tr>
+                    <td>
+                        <img src="${item.preview}" alt="${item.title}" class="preview-image">
+                    </td>
+                    <td>${item.title}</td>
+                    <td><span class="category-badge">${item.category}</span></td>
+                    <td>${item.description}</td>
+                    <td>
+                        <a href="${item.link}" class="download-link" target="_blank">${item.linkText}</a>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const filteredDownloads = downloadsData.filter(item => 
+                    item.title.toLowerCase().includes(searchTerm) ||
+                    item.category.toLowerCase().includes(searchTerm) ||
+                    item.description.toLowerCase().includes(searchTerm)
+                );
+                renderDownloads(filteredDownloads);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>wlinds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style/styles.css?v=1.1">
+    <link rel="stylesheet" href="../src/style/blog.css?v=1.1">
+    <script src="https://cdn.jsdelivr.net/npm/remarkable@2/dist/remarkable.min.js?v=1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/remarkable-math/dist/remarkable-math.min.js?v=1.1"></script>
+</head>
+
+<body class="main-body-blog">
+<div id="header-t"></div>
+<div class="main-blog-container">
+<div id="blog-article">
+    <script>
+        async function fetchAndRenderMarkdown() {
+            try {
+                const markdownText = await (await fetch('tmux.md')).text();
+                const htmlContent = new remarkable.Remarkable().render(markdownText);
+                const blogArticleDiv = document.createElement('div');
+                blogArticleDiv.className = 'blog-article';
+                blogArticleDiv.innerHTML = htmlContent;
+                document.getElementById('blog-article').appendChild(blogArticleDiv);
+            } catch (error) {
+                console.error('Error fetching and rendering Markdown:', error);
+            }
+        }
+        fetchAndRenderMarkdown();
+        </script>
+</div>
+</div>
+
+<div class="empty-block-400"></div>
+
+<div id="footyboy"></div>
+<script>
+    function includeHTML(url, containerId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById(containerId).innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching HTML:', error));
+    }
+    includeHTML('../footer.html', 'footyboy');
+    includeHTML('../header.html', 'header-t');
+</script>
+</body>
+</html>

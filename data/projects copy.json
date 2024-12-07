@@ -1,0 +1,106 @@
+{
+    "cards": [
+        {
+            "link": "https://github.com/wlinds/React-Vite-Web-Template-2024",
+            "image1": "../assets/images/repo-img/react-vite.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=React-Vite-Web-Template-2024&theme=radical",
+            "description": "Boilerplate code for modern webapps"
+        },
+        {
+            "link": "https://github.com/wlinds/notion-summarizer",
+            "image1": "../assets/images/repo-img/notion-api.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=notion-summarizer&theme=radical",
+            "description": "Custom Notion API"
+        },
+        {
+            "link": "https://github.com/wlinds/uci-dataset-loader",
+            "image1": "../assets/images/repo-img/uci.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=uci-dataset-loader&theme=radical",
+            "description": "Explore over 600 datasets fit for ML."
+        },
+        {
+            "link": "https://github.com/wlinds/ghs",
+            "image1": "../assets/images/repo-img/ghs_banner.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=ghs&theme=radical",
+            "description": "Dashboard with fun stats!"
+        },
+        {
+            "link": "https://github.com/wlinds/dadub",
+            "image1": "../assets/images/repo-img/dadub_banner.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=dadub&theme=radical",
+            "description": "Easily download files from Discord."
+        },
+        {
+            "link": "https://github.com/wlinds/card_wars",
+            "image1": "../assets/images/repo-img/card_wars_banner.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=card_wars&theme=radical",
+            "description": "Simulate fantasy card battles."
+        },
+        {
+            "link": "https://github.com/wlinds/iMessage-StatTracker",
+            "image1": "../assets/images/repo-img/stattracker-1.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=imessage-stattracker&theme=radical",
+            "description": "Analyze and plot your iMessages!"
+        },
+        {
+            "link": "https://github.com/wlinds/mccp",
+            "image1": "../assets/images/repo-img/mccp_banner.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=mccp&theme=radical",
+            "description": "Camera Manager & Image Augmentor"
+        },
+        {
+            "link": "https://github.com/wlinds/boten_anna",
+            "image1": "../assets/images/repo-img/boten_anna-social.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=boten_anna&theme=radical",
+            "description": "Utility bot for Telegram."
+        },
+        {
+            "link": "https://github.com/wlinds/amazun",
+            "image1": "../assets/images/repo-img/amazun-social.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=amazun&theme=radical",
+            "description": "Flask webapp hooked to SQL backend."
+        },
+        {
+            "link": "https://github.com/wlinds/ccdb",
+            "image1": "../assets/images/repo-img/ccdb copy.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=ccdb&theme=radical",
+            "description": "SQL project."
+        },
+        {
+            "link": "https://github.com/wlinds/RedViz",
+            "image1": "../assets/images/repo-img/redviz1.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=RedViz&theme=radical",
+            "description": "Discontinued due to API controversy. <a href='https://www.forbes.com/sites/antoniopequenoiv/2023/06/13/reddit-stands-by-controversial-api-changes-as-subreddit-protest-continues/?sh=e51d4012d5d2'>More Info</a>"
+        },
+        {
+            "link": "https://github.com/wlinds/tpme",
+            "image1": "../assets/images/repo-img/tpme.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=tpme&theme=radical",
+            "description": "Synthetic data generation."
+        },
+        {
+            "link": "https://github.com/wlinds/ITHS-AI22-TF",
+            "image1": "../assets/images/repo-img/deep_learning_banner.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=ITHS-AI22-TF&theme=radical",
+            "description": "Multiple models with TensorFlow & PyTorch."
+        },
+        {
+            "link": "https://github.com/wlinds/ITHS-AI-22-ML",
+            "image1": "../assets/images/repo-img/machine_learning_banner.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=ITHS-AI22-ML&theme=radical",
+            "description": "ML Essential Concepts & Model Implementations"
+        },
+        {
+            "link": "https://github.com/wlinds/bf_symphony",
+            "image1": "../assets/images/repo-img/bg_symphony.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=bf_symphony&theme=radical",
+            "description": "Mandelbrot generation with linear algebra."
+        },
+        {
+            "link": "https://github.com/wlinds/wth",
+            "image1": "../assets/images/repo-img/example.gif",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=wth&theme=radical",
+            "description": "Color screen inspector."
+        }
+    ]
+}

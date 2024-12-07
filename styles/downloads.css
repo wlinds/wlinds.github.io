@@ -1,0 +1,106 @@
+.downloads-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.search-container {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  background: rgb(24 24 37 / 40%);
+  border: 1px solid rgb(133 72 245 / 10%);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgb(133 72 245 / 30%);
+  background: rgb(24 24 37 / 60%);
+}
+
+.search-input::placeholder {
+  color: rgb(255 255 255 / 50%);
+}
+
+.downloads-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgb(24 24 37 / 40%);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgb(133 72 245 / 10%);
+}
+
+.downloads-table th {
+  background: rgb(24 24 37 / 60%);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 1px solid rgb(133 72 245 / 10%);
+}
+
+.downloads-table td {
+  padding: 1rem;
+  color: #cfd4da;
+  border-bottom: 1px solid rgb(133 72 245 / 10%);
+}
+
+.downloads-table tr:last-child td {
+  border-bottom: none;
+}
+
+.downloads-table tr:hover td {
+  background: rgb(133 72 245 / 10%);
+}
+
+.preview-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.download-link {
+  color: #8548f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.download-link:hover {
+  color: #b794f4;
+}
+
+.category-badge {
+  background: rgb(133 72 245 / 10%);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  color: #b794f4;
+}
+
+@media (width <= 768px) {
+  .downloads-container {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .downloads-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .preview-image {
+    width: 60px;
+    height: 60px;
+  }
+}

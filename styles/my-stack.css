@@ -1,0 +1,223 @@
+.my-stack {
+  padding: 2rem;
+  background: linear-gradient(
+    180deg,
+    rgb(24 24 37 / 30%) 0%,
+    rgb(13 13 19 / 10%) 100%
+  );
+  max-width: 1400px;
+  margin: 4rem auto;
+}
+
+.my-stack .main-h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, #8548f5, #b794f4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  overflow: visible;
+}
+
+.skills-category {
+  background: rgb(24 24 37 / 40%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgb(133 72 245 / 10%);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+  position: static;
+  overflow: visible;
+}
+
+.category-name {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgb(133 72 245 / 20%);
+}
+
+.skill-items {
+  display: grid;
+  gap: 1rem;
+  position: static;
+  overflow: visible;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: rgb(24 24 37 / 30%);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.skill-item:hover {
+  background: rgb(133 72 245 / 10%);
+}
+
+.skill-item:has(.skill-popover.active) {
+  z-index: 1000;
+}
+
+.skill-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.skill-info {
+  flex: 1;
+}
+
+.skill-name {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.skill-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #8b8b8b;
+}
+
+.skill-level {
+  color: #b794f4;
+}
+
+/* Popover */
+.skill-popover {
+  position: absolute;
+  width: 280px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(37 37 54 / 98%),
+    rgb(24 24 37 / 98%)
+  );
+  border: 1px solid rgb(133 72 245 / 20%);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 30%);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  top: -20px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+
+  /* Dynamic positioning, should work? */
+  --arrow-left: -6px;
+  --arrow-right: auto;
+  --arrow-transform: rotate(45deg);
+}
+
+.skill-popover::before {
+  content: "";
+  position: absolute;
+  left: var(--arrow-left);
+  right: var(--arrow-right);
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  border-left: 1px solid rgb(133 72 245 / 20%);
+  border-bottom: 1px solid rgb(133 72 245 / 20%);
+  transform: var(--arrow-transform);
+}
+
+.skill-popover.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.popover-title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(133 72 245 / 20%);
+}
+
+.popover-content {
+  color: #cfd4da;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.popover-stats {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgb(133 72 245 / 20%);
+  display: flex;
+  gap: 1rem;
+}
+
+.stat-item {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #8b8b8b;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  color: #b794f4;
+  font-weight: 500;
+}
+
+.stack-description {
+  margin-top: 3rem;
+  color: #cfd4da;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.stack-description h3 {
+  color: #fff;
+  font-size: 1.75rem;
+  margin: 2rem 0 1rem;
+  background: linear-gradient(to right, #8548f5, #b794f4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (width <= 768px) {
+  .my-stack .main-h2 {
+    font-size: 2rem;
+  }
+
+  .skill-popover {
+    position: fixed;
+    inset: auto auto 20px 50% !important;
+    transform: translateX(-50%) translateY(100%);
+    width: calc(100% - 40px);
+  }
+
+  .skill-popover.active {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .skill-popover::before {
+    display: none;
+  }
+}

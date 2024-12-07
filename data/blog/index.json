@@ -1,0 +1,20 @@
+[
+    {
+      "id": "ubuntu-server-guide",
+      "title": "Turn your old laptop into an Ubuntu server",
+      "publishDate": "2024-04-24",
+      "excerpt": "Got an old computer just laying around? This guide will turn your old crapbook into a versatile Linux server.",
+      "tags": ["Linux", "Tutorial", "Upcycling", "Networking", "SSH"],
+      "image": "assets/images/blog/linux-server.png",
+      "readTime": "12 min read"
+    },
+    {
+      "id": "power-apps-eval",
+      "title": "Pushing the boundaries of Microsoft Power Apps",
+      "publishDate": "2024-04-22",
+      "excerpt": "Evaluating the capabilities and limitations of Microsoft's low-code platform.",
+      "tags": ["Microsoft Power Apps", "Design", "Low Code"],
+      "image": "assets/images/blog/power-apps.png",
+      "readTime": "1 min read"
+    }
+  ]

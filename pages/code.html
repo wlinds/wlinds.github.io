@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>wlinds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/styles.css?v=1.2">
+    <link rel="stylesheet" href="../styles/cards_old.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/main.css">
+  </head>
+
+  <body class="main-body">
+    <header><div id="header-placeholder"></div></header>
+
+    <div id="t-header"></div>
+    <div class="cards-container">
+        <div class="cards-main" id="cardsContainer"></div>
+    </div>
+    
+    <footer id="footer" />
+    
+    <script src="../scripts/oldProjectsCardParser.js"></script>
+    <script src="../scripts/footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        
+        fetch('../components/header.html')
+            .then(response => {
+                return response.text();
+            })
+            .then(data => {
+                headerPlaceholder.innerHTML = data;
+
+                const menuToggle = document.getElementById('menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+    
+                if (menuToggle && mobileMenu) {
+                    menuToggle.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+    </script>
+</body>
+</html>

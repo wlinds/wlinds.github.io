@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | William Akilles Lindstedt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/about.css">
+    <link rel="stylesheet" href="../styles/header.css">
+</head>
+<body class="main-body">
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <div id="t-header"></div>
+
+    <div class="about-container">
+
+        <section class="contact-section">
+            <h2 class="about-header">Contact</h2>
+            <div class="contact-info" onclick="copyToClipboard(event, this)">
+                <span>akilles.dev@gmail.com</span>
+                <span class="info2">Click to copy email address</span>
+                <span class="verification"></span>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2 class="about-header">About me</h2>
+            <div class="about-content">
+                <p>I'm a developer interested in machine learning, data science and software design. Whether you're looking for someone to help give you advice on your next ML pipelines or just looking to build a simple static website, I've got you covered.</p>
+                <p>If you have a vision for a new project, but need talent to make that happen — I'm here to help. When you hire me, you tap into years of experience in everything from developing mobile & web applications, to Cloud Services administration and custom API development and integrations.</p>
+                <p>If you're struggling to maintain or upgrade your existing projects — I'll help with that too. I will work with you to create new user experiences and improve your marketing. I help you identify inefficiencies in your business operations and build custom software to automate your workflows.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2 class="about-header">Values</h2>
+            <div class="about-content">
+                <p>At the core of everything I do is a commitment to responsible AI development. Here's what that means to me:</p>
+                <ul>
+                    <li><strong>Data Integrity:</strong> I believe in using clean, unbiased data to train AI systems. This means scrutinizing data sources for errors and ensuring they represent the real world accurately.</li>
+                    <li><strong>Safety and Reliability:</strong> AI systems should be dependable and safe. I prioritize building robust AI that delivers consistent, trustworthy results.</li>
+                    <li><strong>Avoiding Bias:</strong> AI should be fair and impartial. I actively work to identify and mitigate potential biases in training data and algorithms. We all have biases, but AI shouldn't inherit them.</li>
+                </ul>
+                <p>By focusing on these values, I aim to create AI solutions that are not only powerful, but also ethical and trustworthy. We can build a future where AI empowers everyone, without discrimination or bias.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="../scripts/footer.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            fetch('../components/header.html')
+                .then(response => {
+                    return response.text();
+                })
+                .then(data => {
+                    headerPlaceholder.innerHTML = data;
+                    const menuToggle = document.getElementById('menu-toggle');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (menuToggle && mobileMenu) {
+                        menuToggle.addEventListener('click', () => {
+                            mobileMenu.classList.toggle('hidden');
+                        });
+                    }
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+
+        // Email copy functionality
+        function copyToClipboard(event, element) {
+            const email = element.querySelector('span').textContent;
+            const verification = element.querySelector('.verification');
+            
+            navigator.clipboard.writeText(email).then(() => {
+                verification.textContent = '✓ Copied!';
+                verification.classList.add('show');
+                
+                setTimeout(() => {
+                    verification.classList.remove('show');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                verification.textContent = '✗ Failed to copy';
+                verification.classList.add('show');
+            });
+        }
+    </script>
+</body>
+</html>

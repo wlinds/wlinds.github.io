@@ -2,7 +2,7 @@
     "Linear Regression": {
       "year": "1800s",
       "type": "supervised",
-      "img": "../assets/images/ml/linreg_dark.png",
+      "img": "../src/assets/ml/linreg_dark.png",
       "img_alt": "",
       "img_description": "Linear regression model from one of my projects, <a href=\"https://github.com/wlinds/uci-dataset-loader\">UCI Dataset Loader<\/a>.",
       "tags": ["Regression", "Classic", "Supervised", "Linear Model", "Simple", "Interpretability"],
@@ -28,7 +28,7 @@
     "Support Vector Machine (SVM)": {
       "year": "1960s",
       "type": "supervised",
-      "img": "../assets/images/ml/SVM_sigmoid_dark.png",
+      "img": "../src/assets/ml/SVM_sigmoid_dark.png",
       "img_alt": "",
       "img_description": "SVM with a sigmoid kernel, from a ML course at ITHS. The hyperparameter C determines the trade-off between maximizing the margin and minimizing the classification error.",
       "tags": ["Classification", "Supervised", "Margin Maximization", "Kernel Trick", "Large Margin"],
@@ -54,7 +54,7 @@
     "K-Nearest Neighbors (KNN)": {
       "year": "1950s",
       "type": "supervised",
-      "img": "../assets/images/ml/knn_plot_dark.png",
+      "img": "../src/assets/ml/knn_plot_dark.png",
       "img_alt": "",
       "img_description": "Regression plot & accuracy visualization from a K-NN model i wrote at ITHS. View the notebook here: <a href=\"https://github.com/wlinds/Python-William-Akilles-Lindstedt/blob/main/Labs/Labs%20ML%20PichuPika/PichuPika.ipynb\">Pichu/Pikachu Discriminator - Simplified Supervised ML Model (k-NN)<\/a>",
       "tags": ["Classification", "Distance-Based", "Lazy Learning", "Non-parametric", "Instance-Based"],
@@ -146,7 +146,7 @@
     "Convolutional Neural Networks (CNN)": {
       "year": "1980s",
       "type": "supervised",
-      "img": "../assets/images/ml/duck_anomaly_detection.png",
+      "img": "../src/assets/ml/duck_anomaly_detection.png",
       "img_alt": "",
       "img_description": "Visualization of an anomaly detection model with ResNet backbone I worked on during my internship at Plejd AB.",
       "tags": ["Deep Learning", "Image Recognition", "Supervised", "Convolutional Layers", "Feature Learning", "Anomaly Detection"],
@@ -211,7 +211,7 @@
     "Kolmogorov-Arnold Networks (KAN)": {
         "year": "2024",
         "type": "unsupervised",
-        "img": "../assets/images/ml/KAN-MLP_comparison.png",
+        "img": "../src/assets/ml/KAN-MLP_comparison.png",
         "img_alt": "",
         "img_description": "The dataset is a 1D regression task with 5 gaussian peaks (top row). Data around each peak is presented sequentially (instead of all at once) to KANs and MLPs. KANs can perfectly avoid catastrophic forgetting, while MLP display severe catastrophic forgetting.",
         "tags": ["Deep Learning", "Natural Language Processing", "Unsupervised", "Sequence Transduction"],
@@ -220,18 +220,6 @@
         "link": "/",
         "link_desc": ""
      
-      },
-    "Retrieval-Augmented Generation (RAG)": {
-        "year": "2020",
-        "type": "unsupervised",
-        "img": "",
-        "img_alt": "",
-        "img_description": "",
-        "tags": ["Natural Language Processing", "Information Retrieval", "Large Language Models", "Transformers", "Knowledge Base"],
-        "subheading": "Enhancing LLM outputs with external knowledge",
-        "paragraph": "Retrieval-Augmented Generation (RAG) is a hybrid architecture that combines the generative capabilities of Large Language Models (LLMs) with the ability to retrieve specific information from external knowledge sources. RAG operates in two main phases: first, it retrieves relevant documents or information from a knowledge base, and then it uses this retrieved context along with the input query to generate a response. This approach helps mitigate common LLM issues like hallucination and outdated knowledge by grounding responses in specific, retrievable sources. Unlike traditional language models that rely solely on their trained parameters, RAG can access and incorporate up-to-date information and domain-specific knowledge stored in external databases, making it particularly valuable for applications requiring accuracy and verifiability. The architecture was introduced by researchers at Facebook AI Research and has become increasingly important in practical applications of LLMs, especially in enterprise settings where accuracy and source attribution are crucial.",
-        "link": "/",
-        "link_desc": ""
-    }
+      }
   }
   
