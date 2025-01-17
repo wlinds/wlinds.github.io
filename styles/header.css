@@ -3,6 +3,7 @@
   border-bottom: 1px solid #252537;
   padding: 0.1rem;
   font-family: "Work Sans", sans-serif;
+  z-index: 999;
 }
 
 .header-main {

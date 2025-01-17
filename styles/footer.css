@@ -46,7 +46,7 @@
 .footer-link {
   color: #8548f5;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.65rem;
   transition: color 0.1s ease;
 }
 
@@ -57,7 +57,7 @@
 
 .persistent-footer {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   color: #cfd4da;
   border-top: 1px solid #252537;
   padding-top: 1rem;
