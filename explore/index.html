@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wlinds | Scatterplot</title>
+    <link rel="stylesheet" href="./scatter.css">
+
+</head>
+<body>
+    <!-- Parameter Controls -->
+    <div id="parameter-controls">
+        <div class="panel-content">
+            <h3 style="margin-top: 0;">Generate Random Points</h3>
+            <div class="control-group">
+                <label>Total Points <span id="totalNum-value" class="value-display">100</span></label>
+                <input type="range" id="totalNum" min="10" max="1000" value="100">
+            </div>
+            <div class="control-group">
+                <label>Spread <span id="spread-value" class="value-display">10</span></label>
+                <input type="range" id="spread" min="1" max="50" value="10">
+            </div>
+            <div class="control-group">
+                <label>Min Cluster Points <span id="minClusterPoints-value" class="value-display">1</span></label>
+                <input type="range" id="minClusterPoints" min="1" max="10" value="1">
+            </div>
+            <div class="control-group">
+                <label>Max Cluster Points <span id="maxClusterPoints-value" class="value-display">3</span></label>
+                <input type="range" id="maxClusterPoints" min="1" max="30" value="3">
+            </div>
+            <button id="generate-button">Regenerate Points</button>
+        </div>
+        <div class="panel-header">
+            <span>Generate Random Points</span>
+            <span class="toggle-icon">▼</span>
+        </div>
+    </div>
+    <!-- Info Display -->
+    <div id="info"></div>
+
+    <!-- Dimension Controls -->
+    <div id="dimension-controls">
+        <select id="xSelect"></select>
+        <select id="ySelect"></select>
+        <select id="zSelect"></select>
+    </div>
+
+    <div id="tooltip">
+        <button id="close-tooltip">✕</button>
+        <img id="tooltip-image" src="" alt="Tooltip Image">
+        <h3 id="tooltip-title"></h3>
+        <div id="tooltip-tags"></div>
+        <h4 id="tooltip-subtitle"></h4>
+        <p id="tooltip-description"></p>
+        <div id="tooltip-links"></div>
+    </div>
+    
+    <!-- Three.js Import Map -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <!-- App Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
