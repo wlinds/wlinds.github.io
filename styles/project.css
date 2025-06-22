@@ -1,0 +1,102 @@
+/* projects.css - Styles for featured projects section */
+
+.featured-projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.featured-project {
+  background: rgba(24, 24, 37, 0.4);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(133, 72, 245, 0.1);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.featured-project:hover {
+  border-color: rgba(133, 72, 245, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 5px;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary);
+}
+
+.project-info p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.project-link:hover {
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.project-info .icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.9;
+  margin-right: var(--spacing-xs);
+  transform: translateY(2.5px);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .featured-project {
+    padding: var(--spacing-md);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .project-icon {
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-projects {
+    gap: var(--spacing-sm);
+  }
+  
+  .featured-project {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .project-info {
+    width: 100%;
+  }
+}

@@ -1,0 +1,306 @@
+/* music.css - Styles for the music section */
+
+.my-music {
+  max-width: 1400px;
+  margin: var(--spacing-xxl) auto;
+  padding: var(--spacing-xl);
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 37, 0.3) 0%,
+    rgba(13, 13, 19, 0.1) 100%
+  );
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(133, 72, 245, 0.1);
+  transition: border-color var(--transition-normal);
+}
+
+.my-music:hover {
+  border-color: rgba(133, 72, 245, 0.2);
+}
+
+.my-music .heading-gradient {
+  text-align: left;
+  margin-bottom: var(--spacing-lg);
+}
+
+.my-music-content {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Tabs Container */
+.music-genres {
+  margin-top: var(--spacing-xl);
+}
+
+.player-tabs {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-sm);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(133, 72, 245, 0.3) transparent;
+}
+
+/* Tab Buttons */
+.tab-button {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  padding: var(--spacing-md);
+  border: 1px solid rgba(133, 72, 245, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.tab-button-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 24, 37, 0.4),
+    rgba(24, 24, 37, 0.9)
+  );
+  transition: all var(--transition-normal);
+}
+
+.tab-button-text {
+  z-index: 2;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+  display: block;
+  position: absolute;
+  bottom: var(--spacing-md);
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+}
+
+.tab-button:hover {
+  border-color: rgba(133, 72, 245, 0.3);
+  transform: translateY(-2px);
+}
+
+.tab-button:hover .tab-button-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(133, 72, 245, 0.2),
+    rgba(24, 24, 37, 0.9)
+  );
+}
+
+.tab-button.active {
+  border-color: rgba(133, 72, 245, 0.4);
+  box-shadow: 0 4px 20px rgba(133, 72, 245, 0.2);
+}
+
+.tab-button.active .tab-button-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(133, 72, 245, 0.3),
+    rgba(24, 24, 37, 0.9)
+  );
+}
+
+.player-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-normal);
+}
+
+.player-panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.player-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position: relative;
+  margin-top: 0;
+}
+
+.player-content.visible {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: var(--spacing-md);
+}
+
+/* Close button */
+.close-player {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(133, 72, 245, 0.3);
+  background: rgba(24, 24, 37, 0.8);
+  color: var(--color-text-primary);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.close-player:hover {
+  background: rgba(133, 72, 245, 0.2);
+  transform: rotate(90deg);
+}
+
+.soundcloud-player {
+  width: 100%;
+  background: rgba(24, 24, 37, 0.4);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  border: 1px solid rgba(133, 72, 245, 0.1);
+  transition: all var(--transition-normal);
+}
+
+.soundcloud-player:hover {
+  border-color: rgba(133, 72, 245, 0.3);
+}
+
+.player-header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+}
+
+.soundcloud-title {
+  color: var(--color-text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+.playlist-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  font-size: 0.9rem;
+}
+
+.genre {
+  color: var(--color-primary);
+}
+
+.tracks {
+  color: var(--color-text-muted);
+}
+
+/* iframe container */
+.soundcloud-player iframe {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Loading placeholder */
+.loading-placeholder {
+  padding: var(--spacing-md);
+  text-align: center;
+  color: var(--color-text-muted);
+  background: rgba(24, 24, 37, 0.4);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(133, 72, 245, 0.1);
+}
+
+/* Scrollbar Styling */
+.player-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.player-tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.player-tabs::-webkit-scrollbar-thumb {
+  background-color: rgba(133, 72, 245, 0.3);
+  border-radius: 6px;
+}
+
+/* Button Styling */
+.btn-div {
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .my-music {
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) auto;
+  }
+
+  .my-music .heading-gradient {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .my-music-content {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .player-tabs {
+    gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .tab-button {
+    width: 100px;
+    height: 100px;
+    padding: var(--spacing-sm);
+  }
+
+  .tab-button-text {
+    font-size: 0.8rem;
+    bottom: var(--spacing-sm);
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+  }
+
+  .player-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .player-content.visible {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .soundcloud-player {
+    padding: var(--spacing-sm);
+  }
+  
+  .player-content.visible {
+    max-height: 450px;
+  }
+}

@@ -1,0 +1,105 @@
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, rgba(133, 72, 245, 0.1), rgba(183, 148, 244, 0.1));
+  color: var(--color-primary);
+  border: 1px solid rgba(133, 72, 245, 0.2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, rgba(133, 72, 245, 0.2), rgba(183, 148, 244, 0.2));
+  transform: translateY(-2px);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  padding: var(--spacing-lg);
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-border-focused);
+}
+
+/* ===== Headings ===== */
+.heading {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+.heading-gradient {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-xl {
+  font-size: 2.5rem;
+}
+
+.heading-lg {
+  font-size: 2rem;
+}
+
+.heading-md {
+  font-size: 1.5rem;
+}
+
+.heading-sm {
+  font-size: 1.25rem;
+}
+
+/* ===== Tags ===== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  background: rgba(133, 72, 245, 0.1);
+  color: var(--color-primary-light);
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }

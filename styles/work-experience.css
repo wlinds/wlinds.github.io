@@ -1,0 +1,239 @@
+/* work-experience.css - Enhanced styling for the professional experience section */
+
+.professional-experience {
+  max-width: 1400px;
+  margin: var(--spacing-xxl) auto;
+  padding: var(--spacing-xl);
+}
+
+.professional-experience .heading-gradient {
+  text-align: left;
+  margin-bottom: var(--spacing-xl);
+}
+
+.experience-items {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+/* Enhanced card-based layout */
+.experience-item {
+  background: linear-gradient(
+    135deg,
+    rgba(24, 24, 37, 0.6) 0%,
+    rgba(24, 24, 37, 0.4) 100%
+  );
+  border: 1px solid rgba(133, 72, 245, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-lg);
+  position: relative;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-light));
+  opacity: 0.8;
+}
+
+.experience-item:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: rgba(217, 208, 233, 0.25);
+}
+
+/* Single-column layout */
+.experience-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.experience-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Job title and company */
+.experience-title {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.experience-company {
+  color: var(--color-primary-light);
+  transition: color var(--transition-fast);
+}
+
+.experience-company:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Period badge */
+.experience-period {
+  display: inline-block;
+  background: rgba(133, 72, 245, 0.1);
+  color: var(--color-primary-light);
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: var(--spacing-md);
+  border: 1px solid rgba(133, 72, 245, 0.1);
+  width: fit-content;
+}
+
+/* Description and technologies */
+.experience-description {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.technologies-container {
+  margin-top: var(--spacing-xs);
+}
+
+.technology-title {
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+}
+
+.technologies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.technology-tag {
+  background: rgba(133, 72, 245, 0.08);
+  color: var(--color-primary-light);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+  border: 1px solid rgba(133, 72, 245, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .professional-experience {
+    padding: var(--spacing-lg);
+  }
+  
+  .technology-tag {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .professional-experience {
+    padding: var(--spacing-md);
+  }
+  
+  .professional-experience .heading-gradient {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .experience-item {
+    padding: var(--spacing-md);
+  }
+  
+  .experience-title {
+    font-size: 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .technologies-list {
+    gap: var(--spacing-xs);
+  }
+  
+  .technology-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-item {
+    padding: var(--spacing-sm);
+  }
+  
+  .technologies-list {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .experience-title {
+    font-size: 1.1rem;
+  }
+  
+  .experience-period {
+    font-size: 0.75rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .experience-description {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .technology-title {
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-xs);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .experience-right {
+    margin-top: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .professional-experience {
+    padding: var(--spacing-md);
+  }
+  
+  .professional-experience .heading-gradient {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .experience-item {
+    padding: var(--spacing-md);
+  }
+  
+  .experience-title {
+    font-size: 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}

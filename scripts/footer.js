@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const footer = document.getElementById('footer');
     if (footer) {
         footer.innerHTML = `
-        <div class="footer-container">
+        <div class="container">
             <div class="footer-main">
+                <div class="footer-grid">
                     <div class="footer-column">
                         <h3 class="footer-title">About</h3>
                         <ul class="footer-links">
@@ -50,8 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
                             <li><a href="https://github.com/wlinds/uci-dataset-loader" class="footer-link">UCI Dataset Loader</a></li>
                         </ul>
                     </div>
+                </div>
             </div>
-            <div class="persistent-footer">
+            
+            <div class="footer-bottom">
                 <p>wlinds ©️ 2024 | <a href="https://github.com/wlinds/wlinds.github.io" class="footer-link">Source Code</a> | William Akilles Lindstedt</p>
             </div>
         </div>

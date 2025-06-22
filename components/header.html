@@ -1,54 +1,74 @@
-<header id="header">
-    <nav class="header-container">
-        <div class="header-main">
-                <div class="logo">
-                    <h1>🍍</h1><a href="/" class="logo-text">wlinds.github.io</a>
-                </div>
-
-            <!-- Navigation Links (Desktop) -->
-            <div class="header-right hidden-md">
-                <div class="nav-links">
-                    <a href="/" class="nav-btn">Home</a>
-                    <a href="/pages/blog/main.html" class="nav-btn">Blog</a>
-                    <a href="/pages/code.html" class="nav-btn hidden-lg">Code</a>
-                    <!-- <a href="/pages/music.html" class="nav-btn hidden-lg">Music</a> -->
-                    <a href="/pages/machine-learning-concepts.html" class="nav-btn hidden-lg">AI/ML Models</a>
-                    <a href="/pages/downloads.html" class="nav-btn hidden-lg">Downloads</a>
-                </div>
-
-                <div class="social-icons">
-                    <a href="https://bsky.app/profile/wlinds.bsky.social" target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/bluesky.svg" alt="Bluesky Icon" class="icon">
-                    </a>
-                    <a href="https://twitter.com/wlinds_" target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/x.svg" alt="Twitter" class="icon hidden-sm">
-                    </a>
-                    <a href="https://www.linkedin.com/in/williamlindstedt/" target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/linkedin.svg" alt="LinkedIn" class="icon hidden-sm">
-                    </a>
-                    <a href="https://github.com/wlinds" target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/github.svg" alt="GitHub" class="icon">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button class="menu-btn" id="menu-toggle">
-                <img src="/assets/icons/hamburger.svg" alt="Menu Icon">
-            </button>
+<!-- Header Component -->
+<header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="/" class="logo-link">
+            <h1 class="logo-emoji">🍍</h1>
+            <span class="logo-text">wlinds.se</span>
+          </a>
         </div>
-
-        <!-- Mobile Menu (Hidden by Default) -->
-        <div class="mobile-menu hidden" id="mobile-menu">
-            <div class="mobile-links">
-                <a href="/" class="mobile-btn">Home</a>
-                <a href="/pages/blog.html" class="mobile-btn">Blog</a>
-                <a href="/pages/code.html" class="mobile-btn">Code</a>
-                <!-- <a href="/pages/music.html" class="mobile-btn">Music</a> -->
-                <a href="/pages/machine-learning-concepts.html" class="mobile-btn">AI/ML Models</a>
-                <a href="/pages/downloads.html" class="mobile-btn">Downloads</a>
-            </div>
-        </div>
-        </div>
-    </nav>
-</header>
+        
+        <nav class="nav-desktop">
+          <ul class="nav-links">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/pages/blog/main.html" class="nav-link">Blog</a></li>
+            <li><a href="/pages/code.html" class="nav-link nav-link-lg-only">Projects</a></li>
+            <li><a href="/pages/machine-learning-concepts.html" class="nav-link nav-link-lg-only">AI/ML Models</a></li>
+            <li><a href="/pages/downloads.html" class="nav-link nav-link-lg-only">Downloads</a></li>
+          </ul>
+          
+          <div class="social-links">
+            <a href="https://bsky.app/profile/wlinds.bsky.social" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Bluesky">
+              <img src="/assets/icons/bluesky.svg" alt="Bluesky" class="social-icon">
+            </a>
+            <a href="https://twitter.com/wlinds_" target="_blank" rel="noopener noreferrer" class="social-link social-link-md-only" aria-label="Twitter/X">
+              <img src="/assets/icons/x.svg" alt="Twitter/X" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/williamlindstedt/" target="_blank" rel="noopener noreferrer" class="social-link social-link-md-only" aria-label="LinkedIn">
+              <img src="/assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/wlinds" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <img src="/assets/icons/github.svg" alt="GitHub" class="social-icon">
+            </a>
+          </div>
+        </nav>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span class="menu-icon"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <nav class="nav-mobile">
+          <ul class="mobile-links">
+            <li><a href="/" class="mobile-link">Home</a></li>
+            <li><a href="/pages/blog/main.html" class="mobile-link">Blog</a></li>
+            <li><a href="/pages/code.html" class="mobile-link">Projects</a></li>
+            <li><a href="/pages/machine-learning-concepts.html" class="mobile-link">AI/ML Models</a></li>
+            <li><a href="/pages/downloads.html" class="mobile-link">Downloads</a></li>
+          </ul>
+          
+          <div class="mobile-social">
+            <a href="https://bsky.app/profile/wlinds.bsky.social" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+              <img src="/assets/icons/bluesky.svg" alt="Bluesky" class="social-icon">
+              <span>Bluesky</span>
+            </a>
+            <a href="https://twitter.com/wlinds_" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+              <img src="/assets/icons/x.svg" alt="Twitter/X" class="social-icon">
+              <span>Twitter/X</span>
+            </a>
+            <a href="https://www.linkedin.com/in/williamlindstedt/" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+              <img src="/assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/wlinds" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+              <img src="/assets/icons/github.svg" alt="GitHub" class="social-icon">
+              <span>GitHub</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>

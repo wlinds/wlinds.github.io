@@ -1,0 +1,296 @@
+/* sidebar.css - Styles for sidebar elements */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.content-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.content-sidebar {
+  position: sticky;
+  top: calc(var(--spacing-lg) + 60px); /* Accounts for header height */
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-lg);
+}
+
+/* Side cards */
+.side-card {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 37, 0.8) 0%,
+    rgba(13, 13, 19, 0.9) 100%
+  );
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.side-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(133, 72, 245, 0.1);
+}
+
+.side-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.side-card-header {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+}
+
+.side-card-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(139, 139, 139, 0.3), transparent);
+  margin-left: 0.5rem;
+}
+
+.side-card-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.side-card-image {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.side-card:hover .side-card-image {
+  transform: scale(1.05);
+}
+
+.side-card-text {
+  flex: 1;
+  min-width: 0; /* Prevent text overflow */
+}
+
+.side-card-title {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+  margin: 0 0 0.25rem;
+  color: var(--color-text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.side-card-meta {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* GitHub stats card */
+.github-stats {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-xs);
+}
+
+/* Loading state */
+.side-card.loading .side-card-image,
+.side-card.loading .side-card-title,
+.side-card.loading .side-card-meta {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.side-card.loading .side-card-title {
+  height: 24px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.side-card.loading .side-card-meta {
+  height: 16px;
+  width: 80%;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-sidebar {
+    position: static;
+    max-height: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    padding-bottom: 0;
+  }
+}
+
+/* Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
+  .content-sidebar {
+    /* Make sidebar much more compact */
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    order: 1; /* Move after main content */
+  }
+  
+  /* Make sidebar cards much smaller and subtle */
+  .side-card {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    background: linear-gradient(
+      180deg,
+      rgba(24, 24, 37, 0.4) 0%,
+      rgba(13, 13, 19, 0.6) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .side-card:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 12px rgba(133, 72, 245, 0.05);
+  }
+  
+  /* Smaller header text */
+  .side-card-header {
+    font-size: 0.7rem;
+    margin-bottom: var(--spacing-xs);
+    opacity: 0.8;
+  }
+  
+  .side-card-header::after {
+    margin-left: 0.3rem;
+    opacity: 0.5;
+  }
+  
+  /* Compact content layout */
+  .side-card-content {
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+  
+  /* Smaller images */
+  .side-card-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+  }
+  
+  /* Smaller text */
+  .side-card-title {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .side-card-meta {
+    font-size: 0.65rem;
+    opacity: 0.7;
+  }
+  
+  /* GitHub stats - make much smaller */
+  .github-stats {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+    opacity: 0.8;
+  }
+}
+
+/* Small Mobile (up to 480px) - Even more subtle */
+@media (max-width: 480px) {
+  .content-sidebar {
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .side-card {
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+  }
+  
+  .side-card-header {
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .side-card-content {
+    gap: 0.6rem;
+  }
+  
+  .side-card-image {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .side-card-title {
+    font-size: 0.8rem;
+    font-weight: 400; /* Less bold */
+  }
+  
+  .side-card-meta {
+    font-size: 0.6rem;
+  }
+  
+  /* Option 1: Hide GitHub stats completely on small screens */
+  .desktop-only-cards {
+    display: none;
+  }
+}

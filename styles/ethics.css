@@ -1,0 +1,164 @@
+/* ethics.css - Styles for the ethics section */
+
+.my-ethics {
+  padding: var(--spacing-xl);
+  background: linear-gradient(
+    180deg, 
+    rgba(24, 24, 37, 0.3) 0%,
+    rgba(13, 13, 19, 0.1) 100%
+  );
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 1200px;
+  margin: var(--spacing-xxl) auto;
+  overflow: visible;
+  position: relative;
+  border: 1px solid rgba(133, 72, 245, 0.1);
+  transition: border-color var(--transition-normal);
+}
+
+.my-ethics:hover {
+  border-color: rgba(133, 72, 245, 0.2);
+}
+
+.my-ethics .heading-gradient {
+  text-align: left;
+  margin-bottom: var(--spacing-xl);
+}
+
+.my-ethics p {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Principles Grid */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+}
+
+/* Individual Principle Card */
+.principle {
+  background: rgba(24, 24, 37, 1);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(133, 72, 245, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principle:hover {
+  transform: translateY(-5px);
+  border-color: rgba(133, 72, 245, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.principle-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--spacing-md);
+  object-fit: contain;
+  opacity: 0.9;
+  transition: transform var(--transition-normal);
+}
+
+.principle:hover .principle-icon {
+  transform: scale(1.1);
+}
+
+.principle h3 {
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.principle p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 300px;
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+  .principles-grid {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    gap: var(--spacing-xl);
+  }
+
+  .principle:first-child {
+    margin-left: -1rem;
+  }
+
+  .principle:last-child {
+    margin-right: -1rem;
+  }
+}
+
+/* Tablet Adjustments */
+@media (max-width: 1023px) {
+  .principles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) auto;
+    width: 100%;
+  }
+
+  .principle {
+    padding: var(--spacing-md);
+  }
+  
+  .my-ethics .heading-gradient {
+    text-align: center;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .my-ethics {
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) var(--spacing-sm);
+    width: auto;
+  }
+
+  .my-ethics .heading-gradient {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: var(--spacing-md);
+  }
+
+  .principle-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .principle h3 {
+    font-size: 1.2rem;
+  }
+
+  .principle p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,193 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William Akilles Lindstedt - Full Stack Developer & ML Engineer</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="William Akilles Lindstedt | Full Stack Developer">
-    <meta property="og:description" content="AI, Data Science, Machine Learning, UX & Frontend">
-    <meta property="og:url" content="https://www.wlinds.github.io">
-
-    <meta property="og:url" content="https://wlinds.github.io">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="William Akilles Lindstedt | Full Stack Developer">
-    <meta property="og:description" content="AI, Data Science, Machine Learning, UX & Frontend">
-    <meta property="og:image" content="assets/images/og_img_800_800.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="wlinds.github.io">
-    <meta property="twitter:url" content="https://wlinds.github.io">
-    <meta name="twitter:title" content="William Akilles Lindstedt | Full Stack Developer">
-    <meta name="twitter:description" content="AI, Data Science, Machine Learning, UX & Frontend">
-    <meta name="twitter:image" content="assets/images/og_img_800_800.png">
-
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/side-cards.css">
-    <link rel="stylesheet" href="styles/my-stack.css">
-    <link rel="stylesheet" href="styles/work.css">
-
-    <link rel="stylesheet" href="styles/footer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="William Lindstedt - Developer, ML Engineer and Music Producer">
+  <title>William Akilles Lindstedt | Full Stack Developer & ML Engineer</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles/main.css">
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
 </head>
-<body class="main-body">
-    <header><div id="header-placeholder"></div></header>
-
-    <main class="main-content">
-        <!-- Left Content Section -->
-        <section class="left-main-content">
-            <!-- Hero Section -->
-            <div class="hero-container">
-                <div class="hero-blur"></div>
-                <h1 id="title"></h1>
-                <p id="description"></p>
-                <div class="tags-container"></div>
-                </div>
-                <!-- Tags from JS -->
-                </div>
-            </div>
-
-            <!-- Skills Section -->
-            <div class="my-coding">
-                <div>
-                    <h2 class="main-h2"></h2>
-                    <p class="my-coding-content"></p>
-                    <div class="btn-div">
-                        <a href="pages/code.html" class="btn-0"></a>
-                    </div>
-                    <h3>Featured repos</h3>
-                    <div id="featuredProjects" class="featuredProjects">
-                        <!-- Projects from JS -->
-                </div>
-                </div>
-            </div>
-        </section>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="/" class="logo-link">
+            <h1 class="logo-emoji">🍍</h1>
+            <span class="logo-text">wlinds.github.io</span>
+          </a>
+        </div>
         
-        <!-- Side Content -->
-        <aside class="side-content">
+        <nav class="nav-desktop">
+          <ul class="nav-links">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/pages/blog/main.html" class="nav-link">Blog</a></li>
+            <li><a href="/pages/code.html" class="nav-link nav-link-lg-only">Projects</a></li>
+            <li><a href="/pages/machine-learning-concepts.html" class="nav-link nav-link-lg-only">AI/ML Models</a></li>
+            <li><a href="/pages/downloads.html" class="nav-link nav-link-lg-only">Downloads</a></li>
+          </ul>
+          
+          <div class="social-links">
+            <a href="https://bsky.app/profile/wlinds.bsky.social" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Bluesky">
+              <img src="/assets/icons/bluesky.svg" alt="Bluesky" class="social-icon">
+            </a>
+            <a href="https://twitter.com/wlinds_" target="_blank" rel="noopener noreferrer" class="social-link social-link-md-only" aria-label="Twitter/X">
+              <img src="/assets/icons/x.svg" alt="Twitter/X" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/williamlindstedt/" target="_blank" rel="noopener noreferrer" class="social-link social-link-md-only" aria-label="LinkedIn">
+              <img src="/assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/wlinds" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <img src="/assets/icons/github.svg" alt="GitHub" class="social-icon">
+            </a>
+          </div>
+        </nav>
+        
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span class="menu-icon"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <nav class="nav-mobile">
+          <ul class="mobile-links">
+            <li><a href="/" class="mobile-link">Home</a></li>
+            <li><a href="/pages/blog/main.html" class="mobile-link">Blog</a></li>
+            <li><a href="/pages/code.html" class="mobile-link">Projects</a></li>
+            <li><a href="/pages/machine-learning-concepts.html" class="mobile-link">AI/ML Models</a></li>
+            <li><a href="/pages/downloads.html" class="mobile-link">Downloads</a></li>
+          </ul>
+          
+          <div class="mobile-social">
+            <a href="https://bsky.app/profile/wlinds.bsky.social" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+              <img src="/assets/icons/bluesky.svg" alt="Bluesky" class="social-icon">
+              <span>Bluesky</span>
+            </a>
+            <a href="https://twitter.com/wlinds_" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+              <img src="/assets/icons/x.svg" alt="Twitter/X" class="social-icon">
+              <span>Twitter/X</span>
+            </a>
+            <a href="https://www.linkedin.com/in/williamlindstedt/" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+              <img src="/assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/wlinds" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+              <img src="/assets/icons/github.svg" alt="GitHub" class="social-icon">
+              <span>GitHub</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-container">
+          <h1 class="hero-title">Hi! I'm Akilles.</h1>
+          <p class="hero-description">I code, make music and design things.</p>
+          
+          <div class="tags-container">
+            <div class="hero-tag">AI / ML</div>
+            <div class="hero-tag">Data Science</div>
+            <div class="hero-tag">DevOps</div>
+            <div class="hero-tag">MLOps</div>
+          </div>
+          
+          <div class="hero-blur"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <div class="main-content">
+      <div class="container">
+        <div class="content-grid">
+          <!-- Main Column -->
+          <div class="content-main">
+            <!-- Coding Section -->
+            <section class="section my-coding">
+              <div class="section-content">
+                <div class="section-header">
+                  <h2 class="heading heading-lg heading-gradient">My skills as a full stack developer</h2>
+                </div>
+                
+                <div class="section-body">
+                  <div class="flex gap-lg">
+                    <div class="section-image">
+                      <img src="assets/images/vscode-showcase.png" alt="Coding showcase" id="codingImage">
+                    </div>
+                    
+                    <div class="section-text">
+                      <div class="my-coding-content">
+                        <p>As of 2024, I'm working full-time as a Full Stack Developer in fintech. I like to create neat utility scripts, write APIs, visualize data with plots and experiment with machine learning models using Python.</p>
+                        
+                        <p>I'm also maintaining <a href='https://github.com/OpenAOI/anodet'>anodet</a>, an open source convolutional neural net anomaly detection model based on ResNet and PatchCore.</p>
+                        
+                        <p>While I'm currently in favor of backend development, I do have a passion for user interface and visual design. I enjoy building mockups and wireframes, creating digital marketing material and experimenting with different web frameworks.</p>
+                        
+                        <p>In 2024 I finished my studies at <a href='https://www.iths.se'>IT-Högskolan 🇸🇪</a>, where I graduated in machine learning.</p>
+                      </div>
+                      
+                      <div class="btn-div">
+                        <a href="https://github.com/wlinds" class="btn btn-primary">My repos</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="featured-projects" id="featuredProjects">
+                    <div class="featured-project">
+                      <img src="https://avatars.githubusercontent.com/u/20857232?s=200&v=4" alt="anodet" class="project-icon">
+                      <div class="project-info">
+                        <h3>anodet</h3>
+                        <p>Open source anomaly detection</p>
+                        <img src="/assets/icons/github.svg" alt="GitHub" class="icon">
+                        <a href="https://github.com/OpenAOI/anodet" target="_blank" class="project-link">View source code on Github</a>
+                      </div>
+                    </div>
+                    
+                    <div class="featured-project">
+                      <img src="assets/icons/UCI.jpg" alt="UCI Dataset Loader" class="project-icon">
+                      <div class="project-info">
+                        <h3>UCI Dataset Loader</h3>
+                        <p>Interface for performing data analysis tasks.</p>
+                        <img src="/assets/icons/github.svg" alt="GitHub" class="icon">
+                        <a href="https://github.com/wlinds/uci-dataset-loader" target="_blank" class="project-link">View source code on Github</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Ethics Section -->
+            <section class="section my-ethics">
+              <div class="section-content">
+                <div class="section-header">
+                  <h2 class="heading heading-lg heading-gradient">AI Ethics</h2>
+                </div>
+                
+                <div class="section-body">
+                  <p>I believe responsible AI is about owning up to the consequences of what we create. Whether it's avoiding bias in algorithms or being upfront about how data driven decisions are made, it's all about being accountable.<br><br>Then there's data integrity, the backbone of ethical AI. I make sure the data we feed our models is solid, reliable, and fair. Let's keep the data clean; garbage in, garbage out.</p>
+                  
+                  <div class="principles-grid" id="ethicsPrinciples">
+                    <div class="principle">
+                      <img src="assets/icons/data-integrity.svg" alt="Data Integrity" class="principle-icon">
+                      <h3>Data Integrity</h3>
+                      <p>Using clean, unbiased data to train AI systems</p>
+                    </div>
+                    
+                    <div class="principle">
+                      <img src="assets/icons/transparency.svg" alt="Transparency" class="principle-icon">
+                      <h3>Transparency</h3>
+                      <p>Being clear about AI decision-making processes</p>
+                    </div>
+                    
+                    <div class="principle">
+                      <img src="assets/icons/accountability.svg" alt="Accountability" class="principle-icon">
+                      <h3>Accountability</h3>
+                      <p>Taking responsibility for AI outcomes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Music Section -->
+            <section class="section my-music">
+              <div class="section-content">
+                <div class="section-header">
+                  <h2 class="heading heading-lg heading-gradient">I also produce music</h2>
+                </div>
+                
+                <div class="section-body">
+                  <div class="flex gap-lg">
+                    <div class="section-image">
+                      <img src="assets/images/ableton-showcase.png" alt="Music production" id="musicImage">
+                    </div>
+                    
+                    <div class="section-text">
+                      <div class="my-music-content">
+                        <p>I've been creating electronic music for over 10 years and I enjoy all aspects of it, from the creative composition and chord improvisation to the mathematical signal processing and mixing techniques.</p>
+                        
+                        <p>The genres I'm moving between are mainly dubstep, hip hop, some drum & bass and house. I've experimented with psy-trance and lofi hip hop and produced some video game music.</p>
+                        
+                        <p>Click an album below to have a listen, or follow me on SoundCloud to keep up with my latest releases!</p>
+                      </div>
+                      
+                      <div class="btn-div">
+                        <a href="https://soundcloud.com/lindstedt" target="_blank" class="btn btn-primary">Follow me on SoundCloud</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Music Genres -->
+                  <div id="musicGenres" class="music-genres">
+                    <!-- This will be populated by JavaScript -->
+                    <div class="loading-placeholder">Loading music playlists...</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Stack Section -->
+            <section class="section my-stack">
+              <div class="section-content">
+                <div class="section-header">
+                  <h2 class="heading heading-lg heading-gradient">#my-stack | What I work with</h2>
+                </div>
+                
+                <div class="section-body">
+                  <div id="stackDescription" class="stack-description">
+                    <h3>Machine Learning and Data Science</h3>
+                    <p>As a developer interested in machine learning, I have experience working with TensorFlow, Keras, PyTorch and scikit-learn for building and managing machine learning models. As my work involves cleaning and processing data, I'm well-versed in data pipelines.</p>
+                    
+                    <p>My data collection skills extend to web scraping with tools like Selenium and BeautifulSoup. For statistical analysis I rely heavily on Pandas. When it comes to data visualization, I'm proficient with matplotlib, seaborn, and plotly.</p>
+                    
+                    <h3>Web Development and Engineering</h3>
+                    <p>In terms of backend development, I've created APIs with Flask and SQLAlchemy, and I'm comfortable managing databases with PostgreSQL, MongoDB and GraphQL. As a Data Engineer, I've designed and managed scalable data pipelines and infrastructure using Azure DevOps and Google BigQuery.</p>
+                    
+                    <p>Though my work primarily focuses on data, I also enjoy web development, where I use frameworks like Anvil, Streamlit and React+Node.js. But I'm also comfortable with the oldschool stack of JS, HTML & CSS.</p>
+                  </div>
+                  
+                  <div id="skillsCategories" class="skills-categories mt-lg">
+                    <!-- This will be populated by JavaScript -->
+                    <div class="loading-placeholder">Loading skills...</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- Professional Experience Section -->
+            <section class="section professional-experience">
+                <div class="section-content">
+                <div class="section-header">
+                    <h2 class="heading heading-lg heading-gradient">Professional Experience</h2>
+                </div>
+                
+                <div class="section-body">
+                    <div class="experience-items">
+                    <!-- Experience Item 1 -->
+                    <div class="experience-item">
+                        <div class="experience-content">
+                        <div class="experience-left">
+                            <h3 class="experience-title">
+                            Full Stack Developer
+                            <span>at</span>
+                            <a href="https://cpssweden.se" target="_blank" rel="noopener" class="experience-company">CPS Sweden</a>
+                            </h3>
+                            <div class="experience-period">2024-present</div>
+                            <p class="experience-description">Developing and maintaining financial analysis applications. Building data pipelines, APIs and creating interactive dashboards for financial data visualization.</p>
+                            
+                            <div class="technologies-container">
+                            <h4 class="technology-title">Technologies</h4>
+                            <div class="technologies-list">
+                                <span class="technology-tag">Python</span>
+                                <span class="technology-tag">TypeScript</span>
+                                <span class="technology-tag">React</span>
+                                <span class="technology-tag">SQL</span>
+                                <span class="technology-tag">REST APIs</span>
+                                <span class="technology-tag">BigQuery</span>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 2 -->
+                    <div class="experience-item">
+                        <div class="experience-content">
+                        <div class="experience-left">
+                            <h3 class="experience-title">
+                            ML Engineer Intern
+                            <span>at</span>
+                            <a href="https://plejd.se" target="_blank" rel="noopener" class="experience-company">Plejd AB</a>
+                            </h3>
+                            <div class="experience-period">2023-2024</div>
+                            <p class="experience-description">Developed computer vision solutions for quality control in manufacturing. Created and trained machine learning models for anomaly detection in electronic components.</p>
+                            
+                            <div class="technologies-container">
+                            <h4 class="technology-title">Technologies</h4>
+                            <div class="technologies-list">
+                                <span class="technology-tag">PyTorch</span>
+                                <span class="technology-tag">OpenCV</span>
+                                <span class="technology-tag">Python</span>
+                                <span class="technology-tag">TensorFlow</span>
+                                <span class="technology-tag">Docker</span>
+                                <span class="technology-tag">Git</span>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 3 -->
+                    <div class="experience-item">
+                        <div class="experience-content">
+                        <div class="experience-left">
+                            <h3 class="experience-title">
+                            ML Engineer Intern
+                            <span>at</span>
+                            <a href="https://brightskills.se" target="_blank" rel="noopener" class="experience-company">Bright Skills AB</a>
+                            </h3>
+                            <div class="experience-period">2023</div>
+                            <p class="experience-description">Integrated AI solutions and wrote APIs in low-code environments. Developed automated solutions for data processing and analysis in the education sector.</p>
+                            
+                            <div class="technologies-container">
+                            <h4 class="technology-title">Technologies</h4>
+                            <div class="technologies-list">
+                                <span class="technology-tag">Azure DevOps</span>
+                                <span class="technology-tag">Python</span>
+                                <span class="technology-tag">C#</span>
+                                <span class="technology-tag">PowerApps</span>
+                                <span class="technology-tag">Power Automate</span>
+                                <span class="technology-tag">SQL</span>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            
+            <!-- Blog Highlights Section -->
+            <section class="section blog-highlights">
+              <div class="section-content">
+                <div class="section-header">
+                  <h2 class="heading heading-lg heading-gradient">Featured Articles</h2>
+                  <p class="blog-description">Technical tutorials and insights</p>
+                </div>
+                
+                <div class="section-body">
+                  <div class="blog-items">
+                    <div class="blog-item">
+                      <h3><a href="/blog/ubuntu-server-guide.html" target="_blank">Turn your old laptop into an Ubuntu server</a></h3>
+                      <p>A comprehensive guide to setting up a home server</p>
+                      <p><small>April 24, 2024</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          
+          <!-- Sidebar Column -->
+          <div class="content-sidebar">
+            <!-- Latest Blog Post -->
+            <div class="side-card">
+              <div class="side-card-header">Latest Blog Post</div>
+              <a href="/pages/blog/main.html" class="side-card-content">
+                <img id="latestBlogImage" src="assets/images/blog/linux-server.png" alt="Latest blog post" class="side-card-image">
+                <div class="side-card-text">
+                  <h3 id="latestBlogTitle" class="side-card-title">Turn your old laptop into an Ubuntu server</h3>
+                  <p id="latestBlogMeta" class="side-card-meta">April 24, 2024 · 12 min read</p>
+                </div>
+              </a>
+            </div>
+            
             <!-- Latest Music -->
             <div class="side-card">
-                <a href="https://soundcloud.com/lindstedt/tracks" id="latestMusicLink">
-                    <h3 class="side-card-header">Latest Release</h3>
-                    <div class="side-card-content">
-                        <img src="assets/images/placeholder-album.png" 
-                             alt="Latest album" 
-                             class="side-card-image" 
-                             id="latestMusicImage">
-                        <div class="side-card-text">
-                            <h4 class="side-card-title" id="latestMusicTitle">Loading...</h4>
-                            <div class="side-card-meta" id="latestMusicMeta">Loading...</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Latest Blog -->
-            <div class="side-card">
-                <a href="/pages/blog/main.html" id="latestBlogLink">
-                    <h3 class="side-card-header">Latest Post</h3>
-                    <div class="side-card-content">
-                        <img src="assets/images/blog/linux-server.png" 
-                             alt="Blog thumbnail" 
-                             class="side-card-image" 
-                             id="latestBlogImage">
-                        <div class="side-card-text">
-                            <h4 class="side-card-title" id="latestBlogTitle">Loading...</h4>
-                            <div class="side-card-meta" id="latestBlogMeta">Loading...</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Desktop only -->
-            <div class="desktop-only-cards">
-
-                <div class="side-card">
-                <h3 class="side-card-header">Placholder Activity</h3>
-                <div class="side-card-content">
-                    <img src="assets/images/404.png" alt="Stats" class="side-card-image">
-                    <div class="side-card-text">
-                    <h4 class="side-card-title">Something here, idk</h4>
-                    <p class="side-card-meta">Key: 42 • Value: 42 • Pair: 42</p>
-                    </div>
+              <div class="side-card-header">Latest Music</div>
+              <a href="https://soundcloud.com/lindstedt" target="_blank" class="side-card-content">
+                <img id="latestMusicImage" src="https://i1.sndcdn.com/artworks-8BvH7qbxY3yUz0iy-UnSRCw-t500x500.jpg" alt="Latest music" class="side-card-image">
+                <div class="side-card-text">
+                  <h3 id="latestMusicTitle" class="side-card-title">Shovelware Vol 2 - Basmatiris (2024)</h3>
+                  <p id="latestMusicMeta" class="side-card-meta">November 30, 2024 · Electronic · 22 tracks</p>
                 </div>
-                </div>
-                <div class="simple-side">
-                <a href="https://wiki.wetfish.net">
-                <h3 class="side-card-header">Wetfish.net</h3>
-                    <img src="https://ads.wetfish.net/haveYOU.gif" alt="Current project" class="simple-side-image">
-                    </div>
-                </div>
-                </div>
-                </a>
-                
+              </a>
             </div>
+            
+            <!-- GitHub Stats -->
+            <div class="side-card desktop-only-cards">
+              <div class="side-card-header">GitHub Activity</div>
+              <div class="side-card-content">
+                <img src="https://github-readme-stats.vercel.app/api?username=wlinds&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" class="github-stats">
+              </div>
             </div>
-        </aside>
-    </main>
-
-    <!-- Ethics -->
-    <div class="my-ethics">
-        <h2 class="main-h2"></h2>
-        <p class="my-ethics-content"></p>
-        <div id="ethicsPrinciples" class="principles-grid">
-            <!-- Principles will be populated by JavaScript -->
+          </div>
         </div>
+      </div>
     </div>
+  </main>
 
-    <!-- My Stack -->
-    <section class="my-stack">
-        <div class="logo-stack">
-            <h2 class="main-h2"></h2>
-            <!-- Changed from skills-grid to skills-container for clarity -->
-            <div id="skillsCategories" class="skills-container">
-            </div>
-        </div>
-        <div id="stackDescription" class="stack-description"></div>
-        </section>
+  <footer id="footer"></footer>
 
-    <!-- <section class="testimonials">
-        <h2 class="main-h2"></h2>
-        <div class="testimonial-items">
+    <!-- Make sure you have this script import -->
+    <script src="/scripts/footer.js"></script>
 
-        </div>
-    </section> -->
-    
-    <section class="professional-experience">
-        <h2 class="main-h2"></h2>
-        <div class="experience-items">
-        </div>
-    </section>
-
-    <!-- Music Section -->
-    <div class="my-music">
-        <div>
-            <h2 class="main-h2"></h2>
-            <div class="my-music-content"></div>
-            <div id="musicGenres">
-            </div>
-            <div class="btn-div">
-                <a href="#" class="btn-0">CTA</a>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 
-    <section class="blog-highlights">
-        <h2 class="main-h2"></h2>
-        <p class="blog-description"></p>
-        <div class="blog-items">
-        </div>
-    </section>
-    -->
-
-    <footer id="footer" />
-    <script src="scripts/main.js"></script>
-    <script src="scripts/sideContent.js"></script>
-    <script src="scripts/footer.js"></script>
-    <script src="scripts/musicLoader.js"></script>
+  <!-- Scripts -->
+  <script src="/scripts/main.js"></script>
 </body>
 </html>
