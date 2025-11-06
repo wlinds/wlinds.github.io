@@ -1,6 +1,12 @@
 {
     "cards": [
         {
+            "link": "https://github.com/wlinds/sr-player",
+            "image1": "../assets/images/repo-img/sr-player.png",
+            "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=sr-player&theme=radical",
+            "description": "Lightweight desktop app for streaming Sveriges Radio channels."
+        },
+        {
             "link": "https://github.com/wlinds/React-Vite-Web-Template-2024",
             "image1": "../assets/images/repo-img/react-vite.png",
             "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=React-Vite-Web-Template-2024&theme=radical",
