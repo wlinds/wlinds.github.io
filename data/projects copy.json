@@ -1,10 +1,10 @@
 {
     "cards": [
         {
-            "link": "https://github.com/wlinds/sr-player",
+            "link": "https://srplayer.se",
             "image1": "../assets/images/repo-img/sr-player.png",
             "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=sr-player&theme=radical",
-            "description": "Lightweight desktop app for streaming Sveriges Radio channels."
+            "description": "Lightweight desktop app for Sveriges Radio."
         },
         {
             "link": "https://github.com/wlinds/React-Vite-Web-Template-2024",
