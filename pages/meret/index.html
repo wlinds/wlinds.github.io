@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meret - Lossless Audio Recorder for iOS</title>
+    <meta name="description" content="Record lossless audio on your iPhone. Transfer to your DAW in seconds over WiFi. No cables, no cloud, no compression.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #081329;
+            min-height: 100vh;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 27px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            margin-bottom: 24px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+        
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            color: #fed06e;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            color: #8899aa;
+            font-size: 1rem;
+            max-width: 400px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+        
+        .app-store-badge {
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        
+        .app-store-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .app-store-badge img {
+            height: 50px;
+        }
+        
+        .card {
+            background: #061e4e;
+            padding: 32px;
+            margin-bottom: 24px;
+            border-opacity: 0.3;
+        }
+        
+        .card h2 {
+            color: #fed06e;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 500px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .feature {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            line-height: 1;
+        }
+        
+        .feature h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        
+        .feature p {
+            font-size: 0.9rem;
+            color: #8899aa;
+            line-height: 1.4;
+        }
+        
+        .specs {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #8899aa;
+        }
+        
+        .specs span {
+            display: inline-block;
+            background: #081329;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin: 4px;
+            border: 1px solid #0e6ff4;
+        }
+        
+        .highlight {
+            color: #fed06e;
+            font-weight: 500;
+            border-color: #fed06e !important;
+        }
+        
+        .footer {
+            margin-top: 48px;
+            text-align: center;
+            color: #556677;
+            font-size: 0.85rem;
+        }
+        
+        .footer a {
+            color: #8899aa;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: #fed06e;
+        }
+        
+        .divider {
+            color: #334455;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="app-icon">
+                <img src="meret-logo.png" alt="Meret App Icon">
+            </div>
+            <h1>Meret</h1>
+            <p class="tagline">Lossless Audio Recorder</p>
+            <p class="subtitle">
+                Record in WAV or ALAC. Transfer to your DAW over WiFi. 
+                No cables, no cloud, no compression.
+            </p>
+            <a href="#" class="app-store-badge">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store">
+            </a>
+        </div>
+        
+        <div class="card">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <span class="feature-icon"></span>
+                    <div>
+                        <h3>Lossless Recording</h3>
+                        <p>WAV, ALAC, or AAC. Up to 96kHz/24-bit.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon"></span>
+                    <div>
+                        <h3>WiFi Transfer</h3>
+                        <p>Download files directly to your computer.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon"></span>
+                    <div>
+                        <h3>Pro Meters</h3>
+                        <p>Real-time peak levels with clipping detection.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon"></span>
+                    <div>
+                        <h3>Privacy First</h3>
+                        <p>No cloud. No accounts. Your files stay yours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Specs</h2>
+            <div class="specs">
+                <span>WAV</span>
+                <span>ALAC</span>
+                <span>AAC</span>
+                <span>44.1kHz</span>
+                <span>48kHz</span>
+                <span class="highlight">96kHz</span>
+                <span>16-bit</span>
+                <span class="highlight">24-bit</span>
+                <span>Stereo</span>
+                <span>Bonjour</span>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Perfect For</h2>
+            <p style="color: #aabbcc; line-height: 1.7;">
+                Musicians capturing ideas. Podcasters recording interviews. 
+                Field recorders and sound designers. Audio engineers who need quick capture. 
+                Anyone who's tired of Voice Memos quality.
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2026 William Akilles Lindstedt</p>
+            <p style="margin-top: 12px;">
+                <a href="mailto:akilles@wlinds.se">Contact</a>
+                <span class="divider">·</span>
+                <a href="privacy.html">Privacy Policy</a>
+                <span class="divider">·</span>
+                <a href="support.html">Support</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
