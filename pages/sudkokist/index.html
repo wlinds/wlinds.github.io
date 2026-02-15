@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudokist - Clean Sudoku for iOS</title>
+    <meta name="description" content="Sudokist -- a small, offline Sudoku app for iOS. No ads.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            min-height: 100vh;
+            color: #334155;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 27px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            margin-bottom: 24px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+        
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            color: #0f172a;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            color: #3b82f6;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            color: #64748b;
+            font-size: 1rem;
+            max-width: 400px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+        
+        .app-store-badge {
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        
+        .app-store-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .app-store-badge img {
+            height: 50px;
+        }
+        
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .card h2 {
+            color: #3b82f6;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 500px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .feature h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+        
+        .feature p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        .footer {
+            margin-top: 48px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+        
+        .footer a {
+            color: #64748b;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: #3b82f6;
+        }
+        
+        .divider {
+            color: #cbd5e1;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="app-icon">
+                <img src="./sudokist-app-icon.png" alt="Sudokist App Icon">
+            </div>
+            <h1>Sudokist</h1>
+            <p class="tagline">Sudoku for iOS</p>
+            <p class="subtitle">
+                A small, offline Sudoku app. No ads, no bloat.
+            </p>
+            <a href="#" class="app-store-badge">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+            </a>
+        </div>
+        
+        <div class="card">
+            <h2>Why Sudokist</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">&lt;20MB</div>
+                    <div class="stat-label">App Size</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Ads</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Difficulty Levels</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div>
+                        <h3>Offline puzzles</h3>
+                        <p>Generated on-device. No internet needed.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div>
+                        <h3>Notes</h3>
+                        <p>Mark candidates per cell.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div>
+                        <h3>Highlighting</h3>
+                        <p>Related cells and matching numbers.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div>
+                        <h3>Statistics</h3>
+                        <p>Times and completion rates per difficulty.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div>
+                        <h3>Undo</h3>
+                        <p>Step back as many moves as you need.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div>
+                        <h3>Dark mode</h3>
+                        <p>Follows system appearance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>About</h2>
+            <p style="color: #64748b; line-height: 1.7;">
+                Most Sudoku apps are oversized, ad-heavy, and full of unnecessary mechanics. Sudokist is the opposite -- a lightweight app that does one thing well.
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2026 William Akilles Lindstedt</p>
+            <p style="margin-top: 12px;">
+                <a href="mailto:akilles.dev@gmail.com">Contact</a>
+                <span class="divider">·</span>
+                <a href="privacy.html">Privacy Policy</a>
+                <span class="divider">·</span>
+                <a href="support.html">Support</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
