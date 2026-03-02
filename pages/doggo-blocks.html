@@ -62,6 +62,38 @@
             height: 50px;
         }
 
+        .badge-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .android-beta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #3ddc84;
+            color: white;
+            text-decoration: none;
+            border-radius: 24px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(61, 220, 132, 0.3);
+        }
+
+        .android-beta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(61, 220, 132, 0.4);
+        }
+
+        .android-beta-icon {
+            font-size: 1.2rem;
+        }
+
         /* Bento Grid Container */
         .bento-grid {
             display: grid;
@@ -417,9 +449,15 @@
                 <img src="../assets/doggo-blocks/new_logo.png" alt="Doggo Blocks">
             </div>
             <p class="tagline">Discover 20 adorable dog breeds. Drag blocks. Solve puzzles.</p>
-            <a href="https://apps.apple.com/app/id6758318578" class="app-store-badge">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
-            </a>
+            <div class="badge-container">
+                <a href="https://apps.apple.com/app/id6758318578" class="app-store-badge">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+                </a>
+                <a href="https://groups.google.com/g/doggo-blocks/members" class="android-beta-button">
+                    <span class="android-beta-icon">Android</span>
+                    <span>Beta</span>
+                </a>
+            </div>
         </div>
 
         <div class="bento-grid">
