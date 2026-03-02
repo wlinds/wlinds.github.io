@@ -255,25 +255,62 @@
             padding: 4px;
         }
 
-        /* Achievements section */
-        .achievements-card {
+        /* Global stats section */
+        .global-stats-card {
             grid-column: 1 / -1;
-            background: white;
-            padding: 24px;
-            transform: rotate(0.5deg);
+            background: linear-gradient(135deg, #f1e53c 0%, #764ba2 100%);
+            padding: 28px;
+            transform: rotate(-0.5deg);
+            color: white;
         }
 
-        .achievements-card h2 {
+        .global-stats-card h2 {
             font-size: 1.1rem;
             font-weight: 700;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .global-stats-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.6;
+        }
+
+        /* Achievements section - separate from grid */
+        .achievements-section {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+
+        .achievements-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .achievements-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
             color: #0f172a;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .achievements-section > p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.95rem;
         }
 
         .achievements-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 16px;
         }
 
         .achievement-badge {
@@ -281,16 +318,17 @@
             align-items: center;
             justify-content: center;
             aspect-ratio: 1;
-            background: #f9f5f0;
-            border-radius: 12px;
-            padding: 8px;
+            background: white;
+            border-radius: 16px;
+            padding: 12px;
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .achievement-badge:hover {
-            transform: scale(1.08);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
         .achievement-badge img {
@@ -557,10 +595,98 @@
                 </ul>
             </div>
 
-            <!-- Achievements section -->
-            <div class="scrapbook-card achievements-card">
-                <h2>Achievements to Unlock</h2>
-                <div class="achievements-grid">
+            <!-- Global stats & leaderboard -->
+            <div class="scrapbook-card global-stats-card">
+                <h2>Global Leaderboard &amp; Achievements</h2>
+                <p>Compete globally with players worldwide. Track your best scores, unlock achievements, and climb the leaderboards across different difficulty levels and game modes.</p>
+            </div>
+
+            <!-- Gameplay screenshots interspersed -->
+            <div class="scrapbook-card dog-card" style="grid-column: span 2; grid-row: span 1; max-width: none;">
+                <img src="../assets/doggo-blocks/49F297F2-F111-4C83-9B10-DD59B96DCA28_1_201_a.jpeg" alt="Gameplay Screenshot">
+            </div>
+
+            <!-- More dog cards -->
+            <div class="scrapbook-card dog-card" data-breed="rottweiler">
+                <img src="../assets/doggo-blocks/3-rottweiler.jpg" alt="Rottweiler">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="poodle">
+                <img src="../assets/doggo-blocks/5-poodle.jpg" alt="Poodle">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="germanShepherd">
+                <img src="../assets/doggo-blocks/10-german-shepherd.jpg" alt="German Shepherd">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="dachshund">
+                <img src="../assets/doggo-blocks/13-dachshund.jpg" alt="Dachshund">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="bulldog">
+                <img src="../assets/doggo-blocks/17-bulldog.jpg" alt="Bulldog">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="beagle">
+                <img src="../assets/doggo-blocks/19-beagle.jpg" alt="Beagle">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="samoyed">
+                <img src="../assets/doggo-blocks/2-samoyed.jpg" alt="Samoyed">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="pug">
+                <img src="../assets/doggo-blocks/4-pug.jpg" alt="Pug">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="havanese">
+                <img src="../assets/doggo-blocks/8-havanese.jpg" alt="Havanese">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="dalmatian">
+                <img src="../assets/doggo-blocks/12-dalmatian.jpg" alt="Dalmatian">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="chihuahua">
+                <img src="../assets/doggo-blocks/14-chihuahua.jpg" alt="Chihuahua">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="cavalier">
+                <img src="../assets/doggo-blocks/16-cavalier.jpg" alt="Cavalier King Charles">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="borderCollie">
+                <img src="../assets/doggo-blocks/18-border-collie.jpg" alt="Border Collie">
+            </div>
+            <div class="scrapbook-card dog-card" data-breed="australianShepherd">
+                <img src="../assets/doggo-blocks/20-australian-shepherd.jpg" alt="Australian Shepherd">
+            </div>
+
+            <!-- More gameplay screenshots -->
+            <div class="scrapbook-card dog-card" style="grid-column: span 2; grid-row: span 1; max-width: none;">
+                <img src="../assets/doggo-blocks/F9950098-A66E-403D-BBA1-E9688E0834D0_1_201_a.jpeg" alt="Gameplay Screenshot">
+            </div>
+            <div class="scrapbook-card dog-card" style="grid-column: span 2; grid-row: span 1; max-width: none;">
+                <img src="../assets/doggo-blocks/15E69AB9-A895-4A98-831D-A325B8148BB8_1_105_c.jpeg" alt="Collection Screen">
+            </div>
+        </div>
+
+        <!-- Modal for dog facts -->
+        <div class="modal" id="dogModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-header">
+                    <img id="modalImage" src="" alt="" class="modal-breed-image">
+                    <h2 id="modalTitle" class="modal-title"></h2>
+                </div>
+                <ul class="modal-facts" id="modalFacts"></ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 William Akilles Lindstedt</p>
+            <p style="margin-top: 8px;">
+                <a href="mailto:akilles.dev@gmail.com">Contact</a>
+                <span class="footer-divider">·</span>
+                <a href="doggo-blocks-privacy-policy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Achievements Section -->
+    <div class="achievements-section">
+        <div class="achievements-container">
+            <h2>Achievements to Unlock</h2>
+            <p>Earn badges by completing milestones. From your first puzzle solved to becoming a Puzzle Master, track your progress with our achievement system.</p>
+            <div class="achievements-grid">
                     <div class="achievement-badge" title="First Step">
                         <img src="../assets/doggo-blocks/achievements/first_step2.png" alt="First Step">
                     </div>
@@ -632,71 +758,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- More dog cards -->
-            <div class="scrapbook-card dog-card" data-breed="rottweiler">
-                <img src="../assets/doggo-blocks/3-rottweiler.jpg" alt="Rottweiler">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="poodle">
-                <img src="../assets/doggo-blocks/5-poodle.jpg" alt="Poodle">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="germanShepherd">
-                <img src="../assets/doggo-blocks/10-german-shepherd.jpg" alt="German Shepherd">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="dachshund">
-                <img src="../assets/doggo-blocks/13-dachshund.jpg" alt="Dachshund">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="bulldog">
-                <img src="../assets/doggo-blocks/17-bulldog.jpg" alt="Bulldog">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="beagle">
-                <img src="../assets/doggo-blocks/19-beagle.jpg" alt="Beagle">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="samoyed">
-                <img src="../assets/doggo-blocks/2-samoyed.jpg" alt="Samoyed">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="pug">
-                <img src="../assets/doggo-blocks/4-pug.jpg" alt="Pug">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="havanese">
-                <img src="../assets/doggo-blocks/8-havanese.jpg" alt="Havanese">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="dalmatian">
-                <img src="../assets/doggo-blocks/12-dalmatian.jpg" alt="Dalmatian">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="chihuahua">
-                <img src="../assets/doggo-blocks/14-chihuahua.jpg" alt="Chihuahua">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="cavalier">
-                <img src="../assets/doggo-blocks/16-cavalier.jpg" alt="Cavalier King Charles">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="borderCollie">
-                <img src="../assets/doggo-blocks/18-border-collie.jpg" alt="Border Collie">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="australianShepherd">
-                <img src="../assets/doggo-blocks/20-australian-shepherd.jpg" alt="Australian Shepherd">
-            </div>
-        </div>
-
-        <!-- Modal for dog facts -->
-        <div class="modal" id="dogModal">
-            <div class="modal-content">
-                <button class="modal-close" id="modalClose">&times;</button>
-                <div class="modal-header">
-                    <img id="modalImage" src="" alt="" class="modal-breed-image">
-                    <h2 id="modalTitle" class="modal-title"></h2>
-                </div>
-                <ul class="modal-facts" id="modalFacts"></ul>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2026 William Akilles Lindstedt</p>
-            <p style="margin-top: 8px;">
-                <a href="mailto:akilles.dev@gmail.com">Contact</a>
-                <span class="footer-divider">·</span>
-                <a href="doggo-blocks-privacy-policy.html">Privacy Policy</a>
-            </p>
         </div>
     </div>
 
