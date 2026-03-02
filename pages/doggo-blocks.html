@@ -255,6 +255,50 @@
             padding: 4px;
         }
 
+        /* Achievements section */
+        .achievements-card {
+            grid-column: 1 / -1;
+            background: white;
+            padding: 24px;
+            transform: rotate(0.5deg);
+        }
+
+        .achievements-card h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 12px;
+        }
+
+        .achievement-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1;
+            background: #f9f5f0;
+            border-radius: 12px;
+            padding: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .achievement-badge:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .achievement-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         /* Feature list card */
         .features-card {
             grid-column: span 2;
@@ -511,6 +555,82 @@
                     <li>Track your high scores</li>
                     <li>Light &amp; dark mode support</li>
                 </ul>
+            </div>
+
+            <!-- Achievements section -->
+            <div class="scrapbook-card achievements-card">
+                <h2>Achievements to Unlock</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-badge" title="First Step">
+                        <img src="../assets/doggo-blocks/achievements/first_step2.png" alt="First Step">
+                    </div>
+                    <div class="achievement-badge" title="Getting Started">
+                        <img src="../assets/doggo-blocks/achievements/getting_started2.png" alt="Getting Started">
+                    </div>
+                    <div class="achievement-badge" title="Combo Starter">
+                        <img src="../assets/doggo-blocks/achievements/combo_starter2.png" alt="Combo Starter">
+                    </div>
+                    <div class="achievement-badge" title="Breed Matcher">
+                        <img src="../assets/doggo-blocks/achievements/breed_matcher2.png" alt="Breed Matcher">
+                    </div>
+                    <div class="achievement-badge" title="Breed Expert">
+                        <img src="../assets/doggo-blocks/achievements/breed_expert2.png" alt="Breed Expert">
+                    </div>
+                    <div class="achievement-badge" title="Breed Master">
+                        <img src="../assets/doggo-blocks/achievements/breed_master2.png" alt="Breed Master">
+                    </div>
+                    <div class="achievement-badge" title="Purebred">
+                        <img src="../assets/doggo-blocks/achievements/purebred2.png" alt="Purebred">
+                    </div>
+                    <div class="achievement-badge" title="Breed Collector">
+                        <img src="../assets/doggo-blocks/achievements/breed_collector2.png" alt="Breed Collector">
+                    </div>
+                    <div class="achievement-badge" title="Line Clearer">
+                        <img src="../assets/doggo-blocks/achievements/line_clearer2.png" alt="Line Clearer">
+                    </div>
+                    <div class="achievement-badge" title="Line Master">
+                        <img src="../assets/doggo-blocks/achievements/line_master2.png" alt="Line Master">
+                    </div>
+                    <div class="achievement-badge" title="Line Expert">
+                        <img src="../assets/doggo-blocks/achievements/line_expert2.png" alt="Line Expert">
+                    </div>
+                    <div class="achievement-badge" title="Block Enthusiast">
+                        <img src="../assets/doggo-blocks/achievements/block_enthusiast2.png" alt="Block Enthusiast">
+                    </div>
+                    <div class="achievement-badge" title="Block Legend">
+                        <img src="../assets/doggo-blocks/achievements/block_legend2.png" alt="Block Legend">
+                    </div>
+                    <div class="achievement-badge" title="Combo King">
+                        <img src="../assets/doggo-blocks/achievements/combo_king2.png" alt="Combo King">
+                    </div>
+                    <div class="achievement-badge" title="Combo Legend">
+                        <img src="../assets/doggo-blocks/achievements/coombo_legend2.png" alt="Combo Legend">
+                    </div>
+                    <div class="achievement-badge" title="Quadruple Clear">
+                        <img src="../assets/doggo-blocks/achievements/quadruple_clear2.png" alt="Quadruple Clear">
+                    </div>
+                    <div class="achievement-badge" title="Full House">
+                        <img src="../assets/doggo-blocks/achievements/full_house2.png" alt="Full House">
+                    </div>
+                    <div class="achievement-badge" title="Best in Show">
+                        <img src="../assets/doggo-blocks/achievements/best_in_show2.png" alt="Best in Show">
+                    </div>
+                    <div class="achievement-badge" title="Dedicated Player">
+                        <img src="../assets/doggo-blocks/achievements/dedicated_player2.png" alt="Dedicated Player">
+                    </div>
+                    <div class="achievement-badge" title="Regular Player">
+                        <img src="../assets/doggo-blocks/achievements/regular_player2.png" alt="Regular Player">
+                    </div>
+                    <div class="achievement-badge" title="Doggo Addict">
+                        <img src="../assets/doggo-blocks/achievements/doggo_addict2.png" alt="Doggo Addict">
+                    </div>
+                    <div class="achievement-badge" title="Doggo Champion">
+                        <img src="../assets/doggo-blocks/achievements/doggo_champion2.png" alt="Doggo Champion">
+                    </div>
+                    <div class="achievement-badge" title="Puzzle Master">
+                        <img src="../assets/doggo-blocks/achievements/puzzle_master2.png" alt="Puzzle Master">
+                    </div>
+                </div>
             </div>
 
             <!-- More dog cards -->
