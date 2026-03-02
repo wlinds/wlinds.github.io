@@ -97,15 +97,22 @@
         /* Bento Grid Container */
         .bento-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(6, 1fr);
             gap: 20px;
             padding: 0;
             margin-bottom: 40px;
         }
 
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 16px;
+            }
+        }
+
         @media (max-width: 768px) {
             .bento-grid {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                grid-template-columns: repeat(4, 1fr);
                 gap: 16px;
             }
         }
@@ -134,8 +141,8 @@
 
         /* Polaroid hero card */
         .polaroid-hero {
-            grid-column: 1 / -1;
-            grid-row: span 1;
+            grid-column: span 2;
+            grid-row: span 2;
             padding: 12px;
             padding-bottom: 48px;
             transform: rotate(-1.5deg);
@@ -258,30 +265,33 @@
         /* Global stats section */
         .global-stats-card {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, #f1e53c 0%, #764ba2 100%);
+            background: white;
             padding: 28px;
             transform: rotate(-0.5deg);
-            color: white;
+            color: #333;
         }
 
         .global-stats-card h2 {
             font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 16px;
-            color: white;
+            color: #0f172a;
         }
 
         .global-stats-card p {
             font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.95);
+            color: #555;
             line-height: 1.6;
         }
 
         /* Achievements section - separate from grid */
         .achievements-section {
-            margin-top: 60px;
-            padding: 40px 20px;
-            background: #f5f5f5;
+            margin-top: 80px;
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f8f7f2 0%, #f0f0f8 100%);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .achievements-container {
@@ -290,45 +300,101 @@
         }
 
         .achievements-section h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #0f172a;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             text-align: center;
         }
 
-        .achievements-section > p {
+        .achievements-container > p {
             text-align: center;
-            color: #666;
-            margin-bottom: 32px;
+            color: #0f172a;
+            margin-bottom: 48px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-weight: 600;
+            letter-spacing: 0.3px;
         }
 
         .achievements-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
         }
 
-        .achievement-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            aspect-ratio: 1;
-            background: white;
-            border-radius: 16px;
-            padding: 12px;
-            transition: transform 0.2s, box-shadow 0.2s;
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        .achievement-coin {
+            --coin-size: 110px;
+            --border-width: 4px;
+
+            --orange-highlight: #ffdb96;
+            --orange-base: #f5a742;
+            --orange-mid: #e8963a;
+            --orange-dark: #d47c2a;
+            --orange-shadow: #b85c1a;
+
+            position: relative;
+            width: var(--coin-size);
+            height: var(--coin-size);
+            border-radius: 50%;
+            padding: var(--border-width);
+            box-sizing: border-box;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+            box-shadow:
+                0 12px 20px -6px rgba(184, 92, 26, 0.3),
+                0 4px 8px -2px rgba(0, 0, 0, 0.15);
+
+            background: conic-gradient(
+                from var(--angle),
+                var(--orange-mid) 0deg,
+                var(--orange-highlight) 45deg,
+                var(--orange-dark) 90deg,
+                var(--orange-highlight) 135deg,
+                var(--orange-shadow) 180deg,
+                var(--orange-highlight) 225deg,
+                var(--orange-dark) 270deg,
+                var(--orange-highlight) 315deg,
+                var(--orange-mid) 360deg
+            );
+
+            animation: sweep-light 10s linear infinite;
         }
 
-        .achievement-badge:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        .achievement-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .achievement-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+.achievement-coin:hover {
+            transform: scale(1.08) translateY(-4px);
+            animation: sweep-light 4s linear infinite;
+        }
+
+        @keyframes sweep-light {
+            from { --angle: 0deg; }
+            to { --angle: 360deg; }
         }
 
         .achievement-badge img {
@@ -405,113 +471,16 @@
             opacity: 0.6;
         }
 
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
-            z-index: 100;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 16px;
-            padding: 32px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            animation: slideUp 0.3s ease;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .modal-breed-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            object-fit: contain;
-            background: #f5f5f5;
-            padding: 4px;
-        }
-
-        .modal-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #0f172a;
-        }
-
-        .modal-facts {
-            list-style: none;
-            margin-bottom: 24px;
-        }
-
-        .modal-facts li {
-            padding: 12px;
-            margin-bottom: 8px;
-            background: #f9f5f0;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            color: #555;
-            line-height: 1.5;
-            border-left: 4px solid #f1e53c;
-        }
-
-        .modal-close {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #666;
-            cursor: pointer;
-            padding: 8px;
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            transition: color 0.2s;
-        }
-
-        .modal-close:hover {
-            color: #333;
-        }
-
-        .modal-content {
-            position: relative;
-        }
-
-        /* Responsive adjustments */
+/* Responsive adjustments */
         @media (max-width: 768px) {
             .polaroid-hero {
-                grid-column: span 1;
+                grid-column: 1 / -1;
                 grid-row: span 1;
                 padding-bottom: 32px;
             }
 
             .features-card {
-                grid-column: span 1;
+                grid-column: 1 / -1;
             }
 
             .info-card {
@@ -541,7 +510,7 @@
                 </a>
                 <a href="https://groups.google.com/g/doggo-blocks/members" class="android-beta-button">
                     <span class="android-beta-icon">Android</span>
-                    <span>Beta</span>
+                    <span>Closed testing</span>
                 </a>
             </div>
         </div>
@@ -549,37 +518,27 @@
         <div class="bento-grid">
             <!-- Featured Hero Card -->
             <div class="scrapbook-card polaroid-hero">
-                <img src="../assets/doggo-blocks/wide-screenshot-combo-collection.jpeg" alt="Doggo Blocks Gameplay" class="polaroid-hero-image">
+                <img src="../assets/doggo-blocks/AAD6C804-78C6-4352-9D2A-0347D65CF940_1_201_a.jpeg" alt="Doggo Blocks Gameplay" class="polaroid-hero-image">
             </div>
 
             <!-- Dog breed cards (samples) -->
-            <div class="scrapbook-card dog-card" data-breed="shibaInu">
+            <div class="scrapbook-card dog-card">
                 <img src="../assets/doggo-blocks/1-shiba-inu.jpg" alt="Shiba Inu">
             </div>
-            <div class="scrapbook-card dog-card" data-breed="labrador">
+            <div class="scrapbook-card dog-card">
                 <img src="../assets/doggo-blocks/6-labrador.jpg" alt="Labrador">
             </div>
-            <div class="scrapbook-card dog-card" data-breed="husky">
+            <div class="scrapbook-card dog-card">
                 <img src="../assets/doggo-blocks/7-husky.jpg" alt="Husky">
             </div>
-            <div class="scrapbook-card dog-card" data-breed="goldenRetriever">
+            <div class="scrapbook-card dog-card">
                 <img src="../assets/doggo-blocks/9-goled-retriever.jpg" alt="Golden Retriever">
             </div>
-            <div class="scrapbook-card dog-card" data-breed="frenchBulldog">
+            <div class="scrapbook-card dog-card">
                 <img src="../assets/doggo-blocks/11-french-bulldog.jpg" alt="French Bulldog">
             </div>
-            <div class="scrapbook-card dog-card" data-breed="corgi">
+            <div class="scrapbook-card dog-card">
                 <img src="../assets/doggo-blocks/15-corgi.jpg" alt="Corgi">
-            </div>
-
-            <!-- Info cards -->
-            <div class="scrapbook-card info-card">
-                <h2>No Ads</h2>
-                <p>Pure puzzle gameplay. No interruptions.</p>
-            </div>
-            <div class="scrapbook-card info-card">
-                <h2>Offline</h2>
-                <p>Play anywhere, anytime. No internet needed.</p>
             </div>
 
             <!-- Features section -->
@@ -601,77 +560,9 @@
                 <p>Compete globally with players worldwide. Track your best scores, unlock achievements, and climb the leaderboards across different difficulty levels and game modes.</p>
             </div>
 
-            <!-- Gameplay screenshots interspersed -->
-            <div class="scrapbook-card dog-card" style="grid-column: span 2; grid-row: span 1; max-width: none;">
-                <img src="../assets/doggo-blocks/AAD6C804-78C6-4352-9D2A-0347D65CF940_1_201_a.jpeg" alt="Gameplay Screenshot">
-            </div>
-
-            <!-- More dog cards -->
-            <div class="scrapbook-card dog-card" data-breed="rottweiler">
-                <img src="../assets/doggo-blocks/3-rottweiler.jpg" alt="Rottweiler">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="poodle">
-                <img src="../assets/doggo-blocks/5-poodle.jpg" alt="Poodle">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="germanShepherd">
-                <img src="../assets/doggo-blocks/10-german-shepherd.jpg" alt="German Shepherd">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="dachshund">
-                <img src="../assets/doggo-blocks/13-dachshund.jpg" alt="Dachshund">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="bulldog">
-                <img src="../assets/doggo-blocks/17-bulldog.jpg" alt="Bulldog">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="beagle">
-                <img src="../assets/doggo-blocks/19-beagle.jpg" alt="Beagle">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="samoyed">
-                <img src="../assets/doggo-blocks/2-samoyed.jpg" alt="Samoyed">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="pug">
-                <img src="../assets/doggo-blocks/4-pug.jpg" alt="Pug">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="havanese">
-                <img src="../assets/doggo-blocks/8-havanese.jpg" alt="Havanese">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="dalmatian">
-                <img src="../assets/doggo-blocks/12-dalmatian.jpg" alt="Dalmatian">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="chihuahua">
-                <img src="../assets/doggo-blocks/14-chihuahua.jpg" alt="Chihuahua">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="cavalier">
-                <img src="../assets/doggo-blocks/16-cavalier.jpg" alt="Cavalier King Charles">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="borderCollie">
-                <img src="../assets/doggo-blocks/18-border-collie.jpg" alt="Border Collie">
-            </div>
-            <div class="scrapbook-card dog-card" data-breed="australianShepherd">
-                <img src="../assets/doggo-blocks/20-australian-shepherd.jpg" alt="Australian Shepherd">
-            </div>
-
-            <!-- More gameplay screenshots -->
-            <div class="scrapbook-card dog-card" style="grid-column: span 2; grid-row: span 1; max-width: none;">
-                <img src="../assets/doggo-blocks/F9950098-A66E-403D-BBA1-E9688E0834D0_1_201_a.jpeg" alt="Gameplay Screenshot">
-            </div>
-            <div class="scrapbook-card dog-card" style="grid-column: span 2; grid-row: span 1; max-width: none;">
-                <img src="../assets/doggo-blocks/15E69AB9-A895-4A98-831D-A325B8148BB8_1_105_c.jpeg" alt="Collection Screen">
-            </div>
         </div>
 
-        <!-- Modal for dog facts -->
-        <div class="modal" id="dogModal">
-            <div class="modal-content">
-                <button class="modal-close" id="modalClose">&times;</button>
-                <div class="modal-header">
-                    <img id="modalImage" src="" alt="" class="modal-breed-image">
-                    <h2 id="modalTitle" class="modal-title"></h2>
-                </div>
-                <ul class="modal-facts" id="modalFacts"></ul>
-            </div>
-        </div>
-
-        <div class="footer">
+<div class="footer">
             <p>&copy; 2026 William Akilles Lindstedt</p>
             <p style="margin-top: 8px;">
                 <a href="mailto:akilles.dev@gmail.com">Contact</a>
@@ -687,74 +578,120 @@
             <h2>Achievements to Unlock</h2>
             <p>Earn badges by completing milestones. From your first puzzle solved to becoming a Puzzle Master, track your progress with our achievement system.</p>
             <div class="achievements-grid">
-                    <div class="achievement-badge" title="First Step">
-                        <img src="../assets/doggo-blocks/achievements/first_step2.png" alt="First Step">
+                    <div class="achievement-coin" title="First Step">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/first_step2.png" alt="First Step">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Getting Started">
-                        <img src="../assets/doggo-blocks/achievements/getting_started2.png" alt="Getting Started">
+                    <div class="achievement-coin" title="Getting Started">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/getting_started2.png" alt="Getting Started">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Combo Starter">
-                        <img src="../assets/doggo-blocks/achievements/combo_starter2.png" alt="Combo Starter">
+                    <div class="achievement-coin" title="Combo Starter">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/combo_starter2.png" alt="Combo Starter">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Breed Matcher">
-                        <img src="../assets/doggo-blocks/achievements/breed_matcher2.png" alt="Breed Matcher">
+                    <div class="achievement-coin" title="Breed Matcher">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/breed_matcher2.png" alt="Breed Matcher">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Breed Expert">
-                        <img src="../assets/doggo-blocks/achievements/breed_expert2.png" alt="Breed Expert">
+                    <div class="achievement-coin" title="Breed Expert">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/breed_expert2.png" alt="Breed Expert">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Breed Master">
-                        <img src="../assets/doggo-blocks/achievements/breed_master2.png" alt="Breed Master">
+                    <div class="achievement-coin" title="Breed Master">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/breed_master2.png" alt="Breed Master">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Purebred">
-                        <img src="../assets/doggo-blocks/achievements/purebred2.png" alt="Purebred">
+                    <div class="achievement-coin" title="Purebred">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/purebred2.png" alt="Purebred">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Breed Collector">
-                        <img src="../assets/doggo-blocks/achievements/breed_collector2.png" alt="Breed Collector">
+                    <div class="achievement-coin" title="Breed Collector">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/breed_collector2.png" alt="Breed Collector">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Line Clearer">
-                        <img src="../assets/doggo-blocks/achievements/line_clearer2.png" alt="Line Clearer">
+                    <div class="achievement-coin" title="Line Clearer">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/line_clearer2.png" alt="Line Clearer">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Line Master">
-                        <img src="../assets/doggo-blocks/achievements/line_master2.png" alt="Line Master">
+                    <div class="achievement-coin" title="Line Master">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/line_master2.png" alt="Line Master">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Line Expert">
-                        <img src="../assets/doggo-blocks/achievements/line_expert2.png" alt="Line Expert">
+                    <div class="achievement-coin" title="Line Expert">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/line_expert2.png" alt="Line Expert">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Block Enthusiast">
-                        <img src="../assets/doggo-blocks/achievements/block_enthusiast2.png" alt="Block Enthusiast">
+                    <div class="achievement-coin" title="Block Enthusiast">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/block_enthusiast2.png" alt="Block Enthusiast">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Block Legend">
-                        <img src="../assets/doggo-blocks/achievements/block_legend2.png" alt="Block Legend">
+                    <div class="achievement-coin" title="Block Legend">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/block_legend2.png" alt="Block Legend">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Combo King">
-                        <img src="../assets/doggo-blocks/achievements/combo_king2.png" alt="Combo King">
+                    <div class="achievement-coin" title="Combo King">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/combo_king2.png" alt="Combo King">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Combo Legend">
-                        <img src="../assets/doggo-blocks/achievements/coombo_legend2.png" alt="Combo Legend">
+                    <div class="achievement-coin" title="Combo Legend">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/coombo_legend2.png" alt="Combo Legend">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Quadruple Clear">
-                        <img src="../assets/doggo-blocks/achievements/quadruple_clear2.png" alt="Quadruple Clear">
+                    <div class="achievement-coin" title="Quadruple Clear">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/quadruple_clear2.png" alt="Quadruple Clear">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Full House">
-                        <img src="../assets/doggo-blocks/achievements/full_house2.png" alt="Full House">
+                    <div class="achievement-coin" title="Full House">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/full_house2.png" alt="Full House">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Best in Show">
-                        <img src="../assets/doggo-blocks/achievements/best_in_show2.png" alt="Best in Show">
+                    <div class="achievement-coin" title="Best in Show">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/best_in_show2.png" alt="Best in Show">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Dedicated Player">
-                        <img src="../assets/doggo-blocks/achievements/dedicated_player2.png" alt="Dedicated Player">
+                    <div class="achievement-coin" title="Dedicated Player">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/dedicated_player2.png" alt="Dedicated Player">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Regular Player">
-                        <img src="../assets/doggo-blocks/achievements/regular_player2.png" alt="Regular Player">
+                    <div class="achievement-coin" title="Regular Player">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/regular_player2.png" alt="Regular Player">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Doggo Addict">
-                        <img src="../assets/doggo-blocks/achievements/doggo_addict2.png" alt="Doggo Addict">
+                    <div class="achievement-coin" title="Doggo Addict">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/doggo_addict2.png" alt="Doggo Addict">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Doggo Champion">
-                        <img src="../assets/doggo-blocks/achievements/doggo_champion2.png" alt="Doggo Champion">
+                    <div class="achievement-coin" title="Doggo Champion">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/doggo_champion2.png" alt="Doggo Champion">
+                        </div>
                     </div>
-                    <div class="achievement-badge" title="Puzzle Master">
-                        <img src="../assets/doggo-blocks/achievements/puzzle_master2.png" alt="Puzzle Master">
+                    <div class="achievement-coin" title="Puzzle Master">
+                        <div class="achievement-inner">
+                            <img src="../assets/doggo-blocks/achievements/puzzle_master2.png" alt="Puzzle Master">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -762,258 +699,6 @@
     </div>
 
     <script>
-        // Dog facts data
-        const dogFacts = {
-          "labrador": {
-            "name": "Labrador",
-            "image": "../assets/doggo-blocks/6-labrador.jpg",
-            "facts": [
-              "Labs have webbed toes, making them excellent swimmers",
-              "They were originally bred to help fishermen haul nets in Newfoundland",
-              "A Lab's nose has 300 million scent receptors - humans have just 5 million",
-              "Labs are the most popular dog breed in the US for over 30 years running"
-            ]
-          },
-          "poodle": {
-            "name": "Poodle",
-            "image": "../assets/doggo-blocks/5-poodle.jpg",
-            "facts": [
-              "Poodles are the second most intelligent dog breed after Border Collies",
-              "Their fancy haircuts were originally designed to protect joints while swimming",
-              "The name 'Poodle' comes from the German word 'pudeln' meaning 'to splash'",
-              "Elvis Presley loved Poodles and gave them as gifts to women he dated"
-            ]
-          },
-          "bulldog": {
-            "name": "Bulldog",
-            "image": "../assets/doggo-blocks/17-bulldog.jpg",
-            "facts": [
-              "Bulldogs can't swim - their heavy heads make them sink",
-              "They were originally bred for bull-baiting in 13th century England",
-              "Most Bulldogs are born via C-section due to their large heads",
-              "Winston Churchill was often compared to a Bulldog for his tenacity"
-            ]
-          },
-          "beagle": {
-            "name": "Beagle",
-            "image": "../assets/doggo-blocks/19-beagle.jpg",
-            "facts": [
-              "Beagles have about 220 million scent receptors",
-              "Snoopy from Peanuts is the world's most famous Beagle",
-              "They were bred small enough to be carried in saddlebags during hunts",
-              "Beagles are used at airports to sniff out contraband food"
-            ]
-          },
-          "husky": {
-            "name": "Husky",
-            "image": "../assets/doggo-blocks/7-husky.jpg",
-            "facts": [
-              "Huskies can run up to 100 miles per day in sled teams",
-              "They have a special double coat that keeps them warm at -60°F",
-              "Huskies' eyes can be brown, blue, or one of each (heterochromia)",
-              "In 1925, Huskies ran 674 miles to deliver medicine to Nome, Alaska"
-            ]
-          },
-          "corgi": {
-            "name": "Corgi",
-            "image": "../assets/doggo-blocks/15-corgi.jpg",
-            "facts": [
-              "Queen Elizabeth II owned more than 30 Corgis during her reign",
-              "Welsh legend says Corgis were gifts from woodland fairies",
-              "Their name means 'dwarf dog' in Welsh",
-              "Corgis were bred to herd cattle by nipping at their heels"
-            ]
-          },
-          "dachshund": {
-            "name": "Dachshund",
-            "image": "../assets/doggo-blocks/13-dachshund.jpg",
-            "facts": [
-              "Dachshund means 'badger dog' in German - they were bred to hunt them",
-              "Their long bodies let them dig into badger burrows",
-              "A Dachshund was the first Olympic mascot (Munich 1972)",
-              "Picasso had a Dachshund named Lump who appeared in his artwork"
-            ]
-          },
-          "goldenRetriever": {
-            "name": "Golden Retriever",
-            "image": "../assets/doggo-blocks/9-goled-retriever.jpg",
-            "facts": [
-              "Goldens have 'soft mouths' that can carry eggs without breaking them",
-              "They were bred in Scotland to retrieve waterfowl during hunts",
-              "A Golden named Augie holds the record for most tennis balls in mouth (6)",
-              "They're the 4th smartest dog breed"
-            ]
-          },
-          "shibaInu": {
-            "name": "Shiba Inu",
-            "image": "../assets/doggo-blocks/1-shiba-inu.jpg",
-            "facts": [
-              "Shiba Inu is the most popular companion dog in Japan",
-              "They're known for the 'Shiba scream' - a unique high-pitched vocalization",
-              "Shibas are one of the oldest dog breeds, dating back 3,000 years",
-              "The 'Doge' meme features a Shiba Inu named Kabosu"
-            ]
-          },
-          "frenchBulldog": {
-            "name": "French Bulldog",
-            "image": "../assets/doggo-blocks/11-french-bulldog.jpg",
-            "facts": [
-              "Frenchies can't swim due to their front-heavy bodies",
-              "They were bred in England but became popular in France",
-              "Their bat-like ears are a defining feature of the breed",
-              "French Bulldogs snore loudly due to their flat faces"
-            ]
-          },
-          "germanShepherd": {
-            "name": "German Shepherd",
-            "image": "../assets/doggo-blocks/10-german-shepherd.jpg",
-            "facts": [
-              "German Shepherds are the world's leading police and military dogs",
-              "Rin Tin Tin was a German Shepherd who starred in 27 Hollywood films",
-              "They can learn a new command after only 5 repetitions",
-              "A German Shepherd named Buddy was America's first guide dog (1928)"
-            ]
-          },
-          "rottweiler": {
-            "name": "Rottweiler",
-            "image": "../assets/doggo-blocks/3-rottweiler.jpg",
-            "facts": [
-              "Rottweilers descended from Roman cattle-driving dogs",
-              "They were used to pull carts for butchers in Germany",
-              "Rottweilers have one of the strongest bite forces of any dog",
-              "Despite their tough image, they're known as 'gentle giants' with family"
-            ]
-          },
-          "samoyed": {
-            "name": "Samoyed",
-            "image": "../assets/doggo-blocks/2-samoyed.jpg",
-            "facts": [
-              "Samoyeds are known as 'smiling dogs' due to their upturned mouths",
-              "Their white coats shed so much, people spin it into yarn",
-              "They were bred by Siberian nomads to herd reindeer",
-              "Samoyeds slept with their owners to keep them warm at night"
-            ]
-          },
-          "pug": {
-            "name": "Pug",
-            "image": "../assets/doggo-blocks/4-pug.jpg",
-            "facts": [
-              "Pugs were bred to be lap dogs for Chinese emperors",
-              "A group of Pugs is called a 'grumble'",
-              "Napoleon's wife Josephine had a Pug that bit him on their wedding night",
-              "Pugs sleep about 14 hours a day - more than most dogs"
-            ]
-          },
-          "havanese": {
-            "name": "Havanese",
-            "image": "../assets/doggo-blocks/8-havanese.jpg",
-            "facts": [
-              "Havanese is the national dog of Cuba",
-              "They were favorites of Cuban aristocrats in the 1800s",
-              "Their silky coat doesn't shed, making them hypoallergenic",
-              "Ernest Hemingway owned Havanese while living in Cuba"
-            ]
-          },
-          "dalmatian": {
-            "name": "Dalmatian",
-            "image": "../assets/doggo-blocks/12-dalmatian.jpg",
-            "facts": [
-              "Dalmatian puppies are born completely white - spots develop later",
-              "They were bred to run alongside horse-drawn carriages",
-              "About 30% of Dalmatians are deaf in one or both ears",
-              "Dalmatians are the official mascots of firehouses since the 1700s"
-            ]
-          },
-          "chihuahua": {
-            "name": "Chihuahua",
-            "image": "../assets/doggo-blocks/14-chihuahua.jpg",
-            "facts": [
-              "Chihuahuas are the smallest dog breed in the world",
-              "They're named after the Mexican state of Chihuahua",
-              "Chihuahuas have the largest brain relative to body size of any dog",
-              "Ancient Aztecs believed Chihuahuas could guide souls to the afterlife"
-            ]
-          },
-          "cavalier": {
-            "name": "Cavalier King Charles",
-            "image": "../assets/doggo-blocks/16-cavalier.jpg",
-            "facts": [
-              "Named after King Charles II who was obsessed with them",
-              "They were bred to warm laps in drafty castles",
-              "Cavaliers are sometimes called 'comforter spaniels'",
-              "King Charles II decreed they must be allowed in any public place"
-            ]
-          },
-          "borderCollie": {
-            "name": "Border Collie",
-            "image": "../assets/doggo-blocks/18-border-collie.jpg",
-            "facts": [
-              "Border Collies are considered the smartest dog breed",
-              "A Border Collie named Chaser learned over 1,000 words",
-              "They can run up to 30 mph while herding sheep",
-              "Their intense stare is called 'the eye' and controls livestock"
-            ]
-          },
-          "australianShepherd": {
-            "name": "Australian Shepherd",
-            "image": "../assets/doggo-blocks/20-australian-shepherd.jpg",
-            "facts": [
-              "Despite the name, Australian Shepherds were developed in California",
-              "They're rodeo favorites for their herding and trick abilities",
-              "Aussies often have heterochromia (two different colored eyes)",
-              "They need 2+ hours of exercise daily or they'll herd your children"
-            ]
-          }
-        };
-
-        const modal = document.getElementById('dogModal');
-        const modalClose = document.getElementById('modalClose');
-        const dogCards = document.querySelectorAll('.dog-card');
-
-        function showModal(breed) {
-            const data = dogFacts[breed];
-            if (!data) return;
-
-            document.getElementById('modalImage').src = data.image;
-            document.getElementById('modalImage').alt = data.name;
-            document.getElementById('modalTitle').textContent = data.name;
-
-            const factsList = document.getElementById('modalFacts');
-            factsList.innerHTML = '';
-            data.facts.forEach(fact => {
-                const li = document.createElement('li');
-                li.textContent = fact;
-                factsList.appendChild(li);
-            });
-
-            modal.classList.add('active');
-        }
-
-        function closeModal() {
-            modal.classList.remove('active');
-        }
-
-        dogCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const breed = card.dataset.breed;
-                showModal(breed);
-            });
-        });
-
-        modalClose.addEventListener('click', closeModal);
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
     </script>
 </body>
 </html>
