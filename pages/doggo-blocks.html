@@ -134,8 +134,8 @@
 
         /* Polaroid hero card */
         .polaroid-hero {
-            grid-column: span 2;
-            grid-row: span 2;
+            grid-column: 1 / -1;
+            grid-row: span 1;
             padding: 12px;
             padding-bottom: 48px;
             transform: rotate(-1.5deg);
@@ -143,6 +143,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-height: 400px;
         }
 
         .polaroid-hero::before {
@@ -461,9 +462,9 @@
         </div>
 
         <div class="bento-grid">
-            <!-- Featured Gameplay Screenshot -->
+            <!-- Featured Hero Card -->
             <div class="scrapbook-card polaroid-hero">
-                <img src="../assets/doggo-blocks/wide-screenshot-combo-collection.jpeg" alt="Doggo Blocks Gameplay" class="polaroid-hero-image">
+                <img src="../assets/doggo-blocks/splashscreen.png" alt="Doggo Blocks - Cute corgi on blocks" class="polaroid-hero-image">
             </div>
 
             <!-- Dog breed cards (samples) -->
