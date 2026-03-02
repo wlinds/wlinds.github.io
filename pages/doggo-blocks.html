@@ -3,145 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doggo Blocks - Puzzle with adorable dogs!</title>
-    <meta name="description" content="Unleash your puzzle skills with Doggo Blocks — the adorable block puzzle game featuring your favorite dog breeds!">
+    <title>Doggo Blocks - Block puzzle with 20 adorable dog breeds</title>
+    <meta name="description" content="Doggo Blocks — a fun, cozy block puzzle game featuring 20 adorable dog breeds. Play offline, no ads, no time pressure.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(135deg, #f1e53c 0%, #764ba2 100%);
             min-height: 100vh;
+            padding: 40px 20px;
             color: #333;
         }
-        
-        .container {
-            max-width: 600px;
+
+        .page-wrapper {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 24px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            margin-bottom: 24px;
-        }
-        
-        h1 {
-            color: white;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        
-        .tagline {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.2rem;
-            margin-bottom: 32px;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 32px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-            margin-bottom: 24px;
-        }
-        
-        .description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 24px;
-        }
-        
-        .features {
-            text-align: left;
-            margin-bottom: 24px;
-            list-style: none;
         }
 
-        .features li {
-            padding: 8px 0;
-            padding-left: 28px;
-            position: relative;
-            color: #444;
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
         }
-        
-        .features li::before {
-            content: "🐕";
-            position: absolute;
-            left: 0;
+
+        .logo-container {
+            margin-bottom: 24px;
         }
-        
+
+        .logo-container img {
+            height: 80px;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
         .app-store-badge {
             display: inline-block;
             transition: transform 0.2s;
         }
-        
+
         .app-store-badge:hover {
             transform: scale(1.05);
         }
-        
+
         .app-store-badge img {
-            height: 54px;
+            height: 50px;
         }
-        
+
+        /* Bento Grid Container */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .bento-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+        }
+
+        /* Base scrapbook card */
+        .scrapbook-card {
+            position: relative;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 4px 14px rgba(120, 105, 90, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .scrapbook-card:hover {
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0 6px 18px rgba(120, 105, 90, 0.2);
+        }
+
+        /* Polaroid hero card */
+        .polaroid-hero {
+            grid-column: span 2;
+            grid-row: span 2;
+            padding: 12px;
+            padding-bottom: 48px;
+            transform: rotate(-1.5deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .polaroid-hero::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(3deg);
+            width: 80px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(2px);
+            border-left: 2px dotted rgba(0, 0, 0, 0.1);
+            border-right: 2px dotted rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            z-index: 5;
+        }
+
+        .polaroid-hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        /* Info cards with torn paper effect */
+        .info-card {
+            grid-column: span 1;
+            background: #fffdf8;
+            padding: 20px;
+            transform: rotate(1deg);
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% 93%,
+                97% 100%,
+                92% 94%,
+                87% 100%,
+                82% 95%,
+                77% 100%,
+                72% 96%,
+                67% 100%,
+                62% 95%,
+                57% 100%,
+                52% 96%,
+                47% 100%,
+                42% 94%,
+                37% 100%,
+                32% 95%,
+                27% 100%,
+                22% 96%,
+                17% 100%,
+                12% 95%,
+                7% 100%,
+                2% 95%,
+                0% 100%
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-card h2 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-card p {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* Dog breed sticker cards */
+        .dog-card {
+            position: relative;
+            background: transparent;
+            box-shadow: none;
+            filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.12));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1;
+        }
+
+        .dog-card:nth-child(even) {
+            transform: rotate(4deg);
+        }
+
+        .dog-card:nth-child(odd) {
+            transform: rotate(-3deg);
+        }
+
+        .dog-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 4px;
+        }
+
+        /* Feature list card */
+        .features-card {
+            grid-column: span 2;
+            background: white;
+            padding: 24px;
+            transform: rotate(-0.5deg);
+        }
+
+        .features-card h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            list-style: none;
+        }
+
+        @media (max-width: 480px) {
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .features-list li {
+            font-size: 0.9rem;
+            color: #555;
+            padding: 8px;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.3;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 4px;
+            color: #f1e53c;
+            font-weight: 700;
+        }
+
+        /* Footer */
         .footer {
-            margin-top: 40px;
-            color: rgba(255,255,255,0.7);
+            text-align: center;
+            margin-top: 48px;
+            color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
         }
-        
+
         .footer a {
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.95);
             text-decoration: none;
+            transition: opacity 0.2s;
         }
-        
+
         .footer a:hover {
-            text-decoration: underline;
+            opacity: 0.7;
+        }
+
+        .footer-divider {
+            margin: 0 8px;
+            opacity: 0.6;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .polaroid-hero {
+                grid-column: span 1;
+                grid-row: span 1;
+                padding-bottom: 32px;
+            }
+
+            .features-card {
+                grid-column: span 1;
+            }
+
+            .info-card {
+                grid-column: span 1;
+            }
+
+            .header {
+                margin-bottom: 32px;
+            }
+
+            .bento-grid {
+                margin-bottom: 24px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="../assets/icons/Doggoblocka1AppIcon.png" alt="Doggo Blocks App Icon" class="app-icon">
-        <h1>Doggo Blocks</h1>
-        <p class="tagline">Puzzle with adorable dogs!</p>
-        
-        <div class="card">
-            <p class="description">
-                Unleash your puzzle skills with Doggo Blocks — the adorable block puzzle game 
-                featuring your favorite dog breeds! Drag and drop colorful blocks onto the grid, 
-                complete rows and columns to clear them, and discover 20 lovable breeds.
-            </p>
-            
-            <ul class="features">
-                <li>Simple, addictive one-touch gameplay</li>
-                <li>20 adorable dog breeds to discover</li>
-                <li>Beautiful, clean design</li>
-                <li>No time pressure - play at your own pace</li>
-                <li>Perfect for quick breaks or long sessions</li>
-            </ul>
-            
+    <div class="page-wrapper">
+        <div class="header">
+            <div class="logo-container">
+                <img src="../assets/doggo-blocks/new_logo.png" alt="Doggo Blocks">
+            </div>
+            <p class="tagline">Discover 20 adorable dog breeds. Drag blocks. Solve puzzles.</p>
             <a href="https://apps.apple.com/app/id6758318578" class="app-store-badge">
                 <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
             </a>
         </div>
-        
+
+        <div class="bento-grid">
+            <!-- Featured Gameplay Screenshot -->
+            <div class="scrapbook-card polaroid-hero">
+                <img src="../assets/doggo-blocks/wide-screenshot-combo-collection.jpeg" alt="Doggo Blocks Gameplay" class="polaroid-hero-image">
+            </div>
+
+            <!-- Dog breed cards (samples) -->
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/1-shiba-inu.jpg" alt="Shiba Inu">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/6-labrador.jpg" alt="Labrador">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/7-husky.jpg" alt="Husky">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/9-goled-retriever.jpg" alt="Golden Retriever">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/11-french-bulldog.jpg" alt="French Bulldog">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/15-corgi.jpg" alt="Corgi">
+            </div>
+
+            <!-- Info cards -->
+            <div class="scrapbook-card info-card">
+                <h2>No Ads</h2>
+                <p>Pure puzzle gameplay. No interruptions.</p>
+            </div>
+            <div class="scrapbook-card info-card">
+                <h2>Offline</h2>
+                <p>Play anywhere, anytime. No internet needed.</p>
+            </div>
+
+            <!-- Features section -->
+            <div class="scrapbook-card features-card">
+                <h2>What You Get</h2>
+                <ul class="features-list">
+                    <li>20 unique dog breeds to unlock</li>
+                    <li>Relaxing, no-pressure gameplay</li>
+                    <li>Simple one-touch controls</li>
+                    <li>Unlimited puzzle generation</li>
+                    <li>Track your high scores</li>
+                    <li>Light &amp; dark mode support</li>
+                </ul>
+            </div>
+
+            <!-- More dog cards -->
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/3-rottweiler.jpg" alt="Rottweiler">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/5-poodle.jpg" alt="Poodle">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/10-german-shepherd.jpg" alt="German Shepherd">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/13-dachshund.jpg" alt="Dachshund">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/17-bulldog.jpg" alt="Bulldog">
+            </div>
+            <div class="scrapbook-card dog-card">
+                <img src="../assets/doggo-blocks/19-beagle.jpg" alt="Beagle">
+            </div>
+        </div>
+
         <div class="footer">
             <p>&copy; 2026 William Akilles Lindstedt</p>
             <p style="margin-top: 8px;">
-                <a href="mailto:akilles.dev@gmail.com">Contact</a> · 
+                <a href="mailto:akilles.dev@gmail.com">Contact</a>
+                <span class="footer-divider">·</span>
                 <a href="doggo-blocks-privacy-policy.html">Privacy Policy</a>
             </p>
         </div>
