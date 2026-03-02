@@ -1,0 +1,122 @@
+{
+  "labrador": {
+    "name": "Labrador",
+    "image": "../assets/doggo-blocks/6-labrador.jpg",
+    "facts": [
+      "Labs have webbed toes, making them excellent swimmers",
+      "They were originally bred to help fishermen haul nets in Newfoundland",
+      "A Lab's nose has 300 million scent receptors - humans have just 5 million",
+      "Labs are the most popular dog breed in the US for over 30 years running"
+    ]
+  },
+  "poodle": {
+    "name": "Poodle",
+    "image": "../assets/doggo-blocks/5-poodle.jpg",
+    "facts": [
+      "Poodles are the second most intelligent dog breed after Border Collies",
+      "Their fancy haircuts were originally designed to protect joints while swimming",
+      "The name 'Poodle' comes from the German word 'pudeln' meaning 'to splash'",
+      "Elvis Presley loved Poodles and gave them as gifts to women he dated"
+    ]
+  },
+  "bulldog": {
+    "name": "Bulldog",
+    "image": "../assets/doggo-blocks/17-bulldog.jpg",
+    "facts": [
+      "Bulldogs can't swim - their heavy heads make them sink",
+      "They were originally bred for bull-baiting in 13th century England",
+      "Most Bulldogs are born via C-section due to their large heads",
+      "Winston Churchill was often compared to a Bulldog for his tenacity"
+    ]
+  },
+  "beagle": {
+    "name": "Beagle",
+    "image": "../assets/doggo-blocks/19-beagle.jpg",
+    "facts": [
+      "Beagles have about 220 million scent receptors",
+      "Snoopy from Peanuts is the world's most famous Beagle",
+      "They were bred small enough to be carried in saddlebags during hunts",
+      "Beagles are used at airports to sniff out contraband food"
+    ]
+  },
+  "husky": {
+    "name": "Husky",
+    "image": "../assets/doggo-blocks/7-husky.jpg",
+    "facts": [
+      "Huskies can run up to 100 miles per day in sled teams",
+      "They have a special double coat that keeps them warm at -60°F",
+      "Huskies' eyes can be brown, blue, or one of each (heterochromia)",
+      "In 1925, Huskies ran 674 miles to deliver medicine to Nome, Alaska"
+    ]
+  },
+  "corgi": {
+    "name": "Corgi",
+    "image": "../assets/doggo-blocks/15-corgi.jpg",
+    "facts": [
+      "Queen Elizabeth II owned more than 30 Corgis during her reign",
+      "Welsh legend says Corgis were gifts from woodland fairies",
+      "Their name means 'dwarf dog' in Welsh",
+      "Corgis were bred to herd cattle by nipping at their heels"
+    ]
+  },
+  "dachshund": {
+    "name": "Dachshund",
+    "image": "../assets/doggo-blocks/13-dachshund.jpg",
+    "facts": [
+      "Dachshund means 'badger dog' in German - they were bred to hunt them",
+      "Their long bodies let them dig into badger burrows",
+      "A Dachshund was the first Olympic mascot (Munich 1972)",
+      "Picasso had a Dachshund named Lump who appeared in his artwork"
+    ]
+  },
+  "goldenRetriever": {
+    "name": "Golden Retriever",
+    "image": "../assets/doggo-blocks/9-goled-retriever.jpg",
+    "facts": [
+      "Goldens have 'soft mouths' that can carry eggs without breaking them",
+      "They were bred in Scotland to retrieve waterfowl during hunts",
+      "A Golden named Augie holds the record for most tennis balls in mouth (6)",
+      "They're the 4th smartest dog breed"
+    ]
+  },
+  "shibaInu": {
+    "name": "Shiba Inu",
+    "image": "../assets/doggo-blocks/1-shiba-inu.jpg",
+    "facts": [
+      "Shiba Inu is the most popular companion dog in Japan",
+      "They're known for the 'Shiba scream' - a unique high-pitched vocalization",
+      "Shibas are one of the oldest dog breeds, dating back 3,000 years",
+      "The 'Doge' meme features a Shiba Inu named Kabosu"
+    ]
+  },
+  "frenchBulldog": {
+    "name": "French Bulldog",
+    "image": "../assets/doggo-blocks/11-french-bulldog.jpg",
+    "facts": [
+      "Frenchies can't swim due to their front-heavy bodies",
+      "They were bred in England but became popular in France",
+      "Their bat-like ears are a defining feature of the breed",
+      "French Bulldogs snore loudly due to their flat faces"
+    ]
+  },
+  "germanShepherd": {
+    "name": "German Shepherd",
+    "image": "../assets/doggo-blocks/10-german-shepherd.jpg",
+    "facts": [
+      "German Shepherds are the world's leading police and military dogs",
+      "Rin Tin Tin was a German Shepherd who starred in 27 Hollywood films",
+      "They can learn a new command after only 5 repetitions",
+      "A German Shepherd named Buddy was America's first guide dog (1928)"
+    ]
+  },
+  "rottweiler": {
+    "name": "Rottweiler",
+    "image": "../assets/doggo-blocks/3-rottweiler.jpg",
+    "facts": [
+      "Rottweilers descended from Roman cattle-driving dogs",
+      "They were used to pull carts for butchers in Germany",
+      "Rottweilers have one of the strongest bite forces of any dog",
+      "Despite their tough image, they're known as 'gentle giants' with family"
+    ]
+  }
+}

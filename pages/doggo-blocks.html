@@ -208,6 +208,10 @@
             transform: rotate(-3deg);
         }
 
+        .dog-card {
+            cursor: pointer;
+        }
+
         .dog-card img {
             width: 100%;
             height: 100%;
@@ -283,6 +287,103 @@
             opacity: 0.6;
         }
 
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .modal-breed-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: contain;
+            background: #f5f5f5;
+            padding: 4px;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .modal-facts {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .modal-facts li {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #f9f5f0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+            border-left: 4px solid #f1e53c;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #666;
+            cursor: pointer;
+            padding: 8px;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .modal-content {
+            position: relative;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .polaroid-hero {
@@ -328,22 +429,22 @@
             </div>
 
             <!-- Dog breed cards (samples) -->
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="shibaInu">
                 <img src="../assets/doggo-blocks/1-shiba-inu.jpg" alt="Shiba Inu">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="labrador">
                 <img src="../assets/doggo-blocks/6-labrador.jpg" alt="Labrador">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="husky">
                 <img src="../assets/doggo-blocks/7-husky.jpg" alt="Husky">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="goldenRetriever">
                 <img src="../assets/doggo-blocks/9-goled-retriever.jpg" alt="Golden Retriever">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="frenchBulldog">
                 <img src="../assets/doggo-blocks/11-french-bulldog.jpg" alt="French Bulldog">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="corgi">
                 <img src="../assets/doggo-blocks/15-corgi.jpg" alt="Corgi">
             </div>
 
@@ -371,23 +472,35 @@
             </div>
 
             <!-- More dog cards -->
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="rottweiler">
                 <img src="../assets/doggo-blocks/3-rottweiler.jpg" alt="Rottweiler">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="poodle">
                 <img src="../assets/doggo-blocks/5-poodle.jpg" alt="Poodle">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="germanShepherd">
                 <img src="../assets/doggo-blocks/10-german-shepherd.jpg" alt="German Shepherd">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="dachshund">
                 <img src="../assets/doggo-blocks/13-dachshund.jpg" alt="Dachshund">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="bulldog">
                 <img src="../assets/doggo-blocks/17-bulldog.jpg" alt="Bulldog">
             </div>
-            <div class="scrapbook-card dog-card">
+            <div class="scrapbook-card dog-card" data-breed="beagle">
                 <img src="../assets/doggo-blocks/19-beagle.jpg" alt="Beagle">
+            </div>
+        </div>
+
+        <!-- Modal for dog facts -->
+        <div class="modal" id="dogModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-header">
+                    <img id="modalImage" src="" alt="" class="modal-breed-image">
+                    <h2 id="modalTitle" class="modal-title"></h2>
+                </div>
+                <ul class="modal-facts" id="modalFacts"></ul>
             </div>
         </div>
 
@@ -400,5 +513,180 @@
             </p>
         </div>
     </div>
+
+    <script>
+        // Dog facts data
+        const dogFacts = {
+          "labrador": {
+            "name": "Labrador",
+            "image": "../assets/doggo-blocks/6-labrador.jpg",
+            "facts": [
+              "Labs have webbed toes, making them excellent swimmers",
+              "They were originally bred to help fishermen haul nets in Newfoundland",
+              "A Lab's nose has 300 million scent receptors - humans have just 5 million",
+              "Labs are the most popular dog breed in the US for over 30 years running"
+            ]
+          },
+          "poodle": {
+            "name": "Poodle",
+            "image": "../assets/doggo-blocks/5-poodle.jpg",
+            "facts": [
+              "Poodles are the second most intelligent dog breed after Border Collies",
+              "Their fancy haircuts were originally designed to protect joints while swimming",
+              "The name 'Poodle' comes from the German word 'pudeln' meaning 'to splash'",
+              "Elvis Presley loved Poodles and gave them as gifts to women he dated"
+            ]
+          },
+          "bulldog": {
+            "name": "Bulldog",
+            "image": "../assets/doggo-blocks/17-bulldog.jpg",
+            "facts": [
+              "Bulldogs can't swim - their heavy heads make them sink",
+              "They were originally bred for bull-baiting in 13th century England",
+              "Most Bulldogs are born via C-section due to their large heads",
+              "Winston Churchill was often compared to a Bulldog for his tenacity"
+            ]
+          },
+          "beagle": {
+            "name": "Beagle",
+            "image": "../assets/doggo-blocks/19-beagle.jpg",
+            "facts": [
+              "Beagles have about 220 million scent receptors",
+              "Snoopy from Peanuts is the world's most famous Beagle",
+              "They were bred small enough to be carried in saddlebags during hunts",
+              "Beagles are used at airports to sniff out contraband food"
+            ]
+          },
+          "husky": {
+            "name": "Husky",
+            "image": "../assets/doggo-blocks/7-husky.jpg",
+            "facts": [
+              "Huskies can run up to 100 miles per day in sled teams",
+              "They have a special double coat that keeps them warm at -60°F",
+              "Huskies' eyes can be brown, blue, or one of each (heterochromia)",
+              "In 1925, Huskies ran 674 miles to deliver medicine to Nome, Alaska"
+            ]
+          },
+          "corgi": {
+            "name": "Corgi",
+            "image": "../assets/doggo-blocks/15-corgi.jpg",
+            "facts": [
+              "Queen Elizabeth II owned more than 30 Corgis during her reign",
+              "Welsh legend says Corgis were gifts from woodland fairies",
+              "Their name means 'dwarf dog' in Welsh",
+              "Corgis were bred to herd cattle by nipping at their heels"
+            ]
+          },
+          "dachshund": {
+            "name": "Dachshund",
+            "image": "../assets/doggo-blocks/13-dachshund.jpg",
+            "facts": [
+              "Dachshund means 'badger dog' in German - they were bred to hunt them",
+              "Their long bodies let them dig into badger burrows",
+              "A Dachshund was the first Olympic mascot (Munich 1972)",
+              "Picasso had a Dachshund named Lump who appeared in his artwork"
+            ]
+          },
+          "goldenRetriever": {
+            "name": "Golden Retriever",
+            "image": "../assets/doggo-blocks/9-goled-retriever.jpg",
+            "facts": [
+              "Goldens have 'soft mouths' that can carry eggs without breaking them",
+              "They were bred in Scotland to retrieve waterfowl during hunts",
+              "A Golden named Augie holds the record for most tennis balls in mouth (6)",
+              "They're the 4th smartest dog breed"
+            ]
+          },
+          "shibaInu": {
+            "name": "Shiba Inu",
+            "image": "../assets/doggo-blocks/1-shiba-inu.jpg",
+            "facts": [
+              "Shiba Inu is the most popular companion dog in Japan",
+              "They're known for the 'Shiba scream' - a unique high-pitched vocalization",
+              "Shibas are one of the oldest dog breeds, dating back 3,000 years",
+              "The 'Doge' meme features a Shiba Inu named Kabosu"
+            ]
+          },
+          "frenchBulldog": {
+            "name": "French Bulldog",
+            "image": "../assets/doggo-blocks/11-french-bulldog.jpg",
+            "facts": [
+              "Frenchies can't swim due to their front-heavy bodies",
+              "They were bred in England but became popular in France",
+              "Their bat-like ears are a defining feature of the breed",
+              "French Bulldogs snore loudly due to their flat faces"
+            ]
+          },
+          "germanShepherd": {
+            "name": "German Shepherd",
+            "image": "../assets/doggo-blocks/10-german-shepherd.jpg",
+            "facts": [
+              "German Shepherds are the world's leading police and military dogs",
+              "Rin Tin Tin was a German Shepherd who starred in 27 Hollywood films",
+              "They can learn a new command after only 5 repetitions",
+              "A German Shepherd named Buddy was America's first guide dog (1928)"
+            ]
+          },
+          "rottweiler": {
+            "name": "Rottweiler",
+            "image": "../assets/doggo-blocks/3-rottweiler.jpg",
+            "facts": [
+              "Rottweilers descended from Roman cattle-driving dogs",
+              "They were used to pull carts for butchers in Germany",
+              "Rottweilers have one of the strongest bite forces of any dog",
+              "Despite their tough image, they're known as 'gentle giants' with family"
+            ]
+          }
+        };
+
+        const modal = document.getElementById('dogModal');
+        const modalClose = document.getElementById('modalClose');
+        const dogCards = document.querySelectorAll('.dog-card');
+
+        function showModal(breed) {
+            const data = dogFacts[breed];
+            if (!data) return;
+
+            document.getElementById('modalImage').src = data.image;
+            document.getElementById('modalImage').alt = data.name;
+            document.getElementById('modalTitle').textContent = data.name;
+
+            const factsList = document.getElementById('modalFacts');
+            factsList.innerHTML = '';
+            data.facts.forEach(fact => {
+                const li = document.createElement('li');
+                li.textContent = fact;
+                factsList.appendChild(li);
+            });
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        dogCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const breed = card.dataset.breed;
+                showModal(breed);
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
