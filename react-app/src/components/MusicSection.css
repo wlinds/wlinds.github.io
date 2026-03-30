@@ -1,0 +1,247 @@
+.my-music {
+  max-width: 1400px;
+  margin: 12rem auto;
+  padding: 2rem;
+  background: linear-gradient(
+    180deg,
+    rgb(24 24 37 / 30%) 0%,
+    rgb(13 13 19 / 10%) 100%
+  );
+  border-radius: 24px;
+}
+
+.my-music-content {
+  color: #cfd4da;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.player-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(133 72 245 / 30%) transparent;
+}
+
+.player-tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.player-tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.player-tabs::-webkit-scrollbar-thumb {
+  background-color: rgb(133 72 245 / 30%);
+  border-radius: 6px;
+}
+
+.tab-button {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  padding: 1rem;
+  border: 1px solid rgb(133 72 245 / 10%);
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-family: inherit;
+}
+
+.tab-button-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgb(24 24 37 / 40%),
+    rgb(24 24 37 / 90%)
+  );
+  transition: all 0.3s ease;
+}
+
+.tab-button-text {
+  z-index: 2;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  display: block;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+}
+
+.tab-button:hover {
+  border-color: rgb(133 72 245 / 30%);
+}
+
+.tab-button:hover .tab-button-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgb(133 72 245 / 20%),
+    rgb(24 24 37 / 90%)
+  );
+}
+
+.tab-button.active {
+  border-color: rgb(133 72 245 / 40%);
+  box-shadow: 0 4px 20px rgb(133 72 245 / 20%);
+}
+
+.tab-button.active .tab-button-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgb(133 72 245 / 30%),
+    rgb(24 24 37 / 90%)
+  );
+}
+
+.player-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position: relative;
+  margin-top: 0;
+}
+
+.player-content.visible {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+
+.close-player {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgb(133 72 245 / 30%);
+  background: rgb(24 24 37 / 80%);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-player:hover {
+  background: rgb(133 72 245 / 20%);
+  transform: rotate(90deg);
+}
+
+.player-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.player-panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.soundcloud-player {
+  width: 100%;
+  background: rgb(24 24 37 / 40%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgb(133 72 245 / 10%);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.soundcloud-player:hover {
+  border-color: rgb(133 72 245 / 30%);
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.soundcloud-title {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.playlist-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.genre {
+  color: #8548f5;
+}
+
+.tracks {
+  color: #8b8b8b;
+}
+
+.soundcloud-player iframe {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  background: rgb(0 0 0 / 20%);
+}
+
+@media (width <= 768px) {
+  .my-music {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .my-music-content {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .player-tabs {
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .tab-button {
+    width: 100px;
+    height: 100px;
+    padding: 0.75rem;
+  }
+
+  .tab-button-text {
+    font-size: 0.8rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .player-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

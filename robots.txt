@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://wlinds.github.io/sitemap.xml

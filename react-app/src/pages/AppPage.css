@@ -1,0 +1,339 @@
+/* Shared styles for app landing, privacy, and support pages */
+
+/* Landing page */
+.app-page {
+  min-height: 100vh;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.app-page-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.app-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.app-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 27px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+
+.app-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.app-hero .app-tagline {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.app-hero .app-subtitle {
+  font-size: 1rem;
+  max-width: 420px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+.app-store-badge {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.app-store-badge:hover {
+  transform: scale(1.05);
+}
+
+.app-store-badge img {
+  height: 50px;
+}
+
+/* Cards */
+.app-card {
+  background: rgb(255 255 255 / 6%);
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.25rem;
+}
+
+.app-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.app-feature h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.app-feature p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.app-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.app-stat {
+  text-align: center;
+}
+
+.app-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.app-stat-label {
+  font-size: 0.85rem;
+}
+
+.app-specs {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.app-spec-tag {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.app-card p.app-about-text {
+  line-height: 1.7;
+  margin: 0;
+}
+
+.app-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  text-align: left;
+}
+
+.app-features-list li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+}
+
+.app-features-list li::before {
+  content: "--";
+  position: absolute;
+  left: 0;
+}
+
+/* Footer */
+.app-page-footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.app-page-footer a {
+  text-decoration: none;
+}
+
+.app-page-footer a:hover {
+  text-decoration: underline;
+}
+
+.app-footer-links {
+  margin-top: 0.75rem;
+}
+
+.app-footer-divider {
+  margin: 0 0.5rem;
+}
+
+/* Privacy & Support pages */
+.app-legal {
+  min-height: 100vh;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.app-legal-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+  line-height: 1.7;
+}
+
+.app-legal-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.app-legal-container .app-legal-name {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.app-legal-container .app-legal-date {
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.app-legal-container h2 {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.app-legal-container p {
+  margin-bottom: 1rem;
+}
+
+.app-legal-highlight {
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+}
+
+.app-legal-highlight p {
+  margin: 0;
+}
+
+.app-legal-back {
+  display: inline-block;
+  margin-top: 3rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.app-legal-back:hover {
+  text-decoration: underline;
+}
+
+/* FAQ items */
+.app-faq {
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.app-faq h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.app-faq p {
+  margin: 0;
+}
+
+.app-contact-box {
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  border: 1px solid;
+}
+
+.app-contact-box h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.app-contact-box p {
+  margin-bottom: 1rem;
+}
+
+.app-email-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.app-email-btn:hover {
+  opacity: 0.85;
+}
+
+/* Theme: dark (Meret, default) */
+.app-page.theme-dark {
+  background: #0d0d13;
+  color: #cfd4da;
+}
+
+.theme-dark .app-hero h1 { color: #fff; }
+.theme-dark .app-hero .app-tagline { color: var(--accent); }
+.theme-dark .app-hero .app-subtitle { color: #8899aa; }
+.theme-dark .app-card-title { color: var(--accent); }
+.theme-dark .app-feature h3 { color: #fff; }
+.theme-dark .app-feature p { color: #8899aa; }
+.theme-dark .app-stat-value { color: var(--accent); }
+.theme-dark .app-stat-label { color: #8899aa; }
+.theme-dark .app-spec-tag { border-color: var(--accent); color: #8899aa; }
+.theme-dark .app-spec-tag.highlight { color: var(--accent); border-color: var(--accent); }
+.theme-dark .app-card p.app-about-text { color: #aabbcc; }
+.theme-dark .app-features-list li { color: #aabbcc; }
+.theme-dark .app-page-footer { color: #556677; }
+.theme-dark .app-page-footer a { color: #8899aa; }
+.theme-dark .app-page-footer a:hover { color: var(--accent); }
+
+.theme-dark.app-legal { background: #0d0d13; color: #aabbcc; }
+.theme-dark .app-legal-container h1 { color: #fff; }
+.theme-dark .app-legal-container h2 { color: #fff; }
+.theme-dark .app-legal-name { color: var(--accent); }
+.theme-dark .app-legal-date { color: #667788; }
+.theme-dark .app-legal-highlight { background: rgb(255 255 255 / 4%); border-left-color: var(--accent); }
+.theme-dark .app-legal-highlight p { color: #e0e0e0; }
+.theme-dark .app-legal-back { color: var(--accent); }
+.theme-dark .app-legal-container a { color: var(--accent); }
+.theme-dark .app-faq { background: rgb(255 255 255 / 5%); }
+.theme-dark .app-faq h3 { color: #fff; }
+.theme-dark .app-faq p { color: #8899aa; }
+.theme-dark .app-contact-box { border-color: var(--accent); background: rgb(255 255 255 / 3%); }
+.theme-dark .app-contact-box p { color: #8899aa; }
+.theme-dark .app-contact-box h2 { color: #fff; }
+.theme-dark .app-email-btn { background: var(--accent); color: #0d0d13; }
+
+/* Responsive */
+@media (width <= 500px) {
+  .app-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width <= 768px) {
+  .app-page-container {
+    padding: 2.5rem 1rem 4rem;
+  }
+
+  .app-legal-container {
+    padding: 2.5rem 1rem 4rem;
+  }
+
+  .app-hero h1 {
+    font-size: 2rem;
+  }
+}

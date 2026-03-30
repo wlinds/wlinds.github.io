@@ -1,0 +1,126 @@
+.side-content {
+  position: sticky;
+  top: 2rem;
+  width: 420px;
+  margin-left: 2rem;
+}
+
+.side-card {
+  background: linear-gradient(
+    180deg,
+    rgb(24 24 37 / 80%) 0%,
+    rgb(13 13 19 / 90%) 100%
+  );
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 5%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
+}
+
+.side-card:hover {
+  transform: translateY(-2px);
+  border-color: rgb(255 255 255 / 10%);
+  box-shadow: 0 8px 30px rgb(133 72 245 / 10%);
+}
+
+.side-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.side-card-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8b8b8b;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.side-card-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgb(139 139 139 / 30%), transparent);
+  margin-left: 0.5rem;
+}
+
+.side-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.side-card-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: rgb(255 255 255 / 5%);
+  transition: transform 0.3s ease;
+}
+
+.side-card:hover .side-card-image {
+  transform: scale(1.05);
+}
+
+.side-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.side-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 0.25rem;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.side-card-meta {
+  font-size: 0.66rem;
+  color: #8b8b8b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (width <= 768px) {
+  .side-content {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    top: 0;
+  }
+
+  .side-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+      90deg,
+      rgb(24 24 37 / 60%) 0%,
+      rgb(13 13 19 / 70%) 100%
+    );
+  }
+
+  .side-card-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .side-card-content {
+    align-items: flex-start;
+  }
+
+  .desktop-only-cards {
+    display: none;
+  }
+}

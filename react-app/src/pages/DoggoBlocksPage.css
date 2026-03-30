@@ -1,0 +1,405 @@
+.doggo-body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #f1e53c 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.doggo-page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+.doggo-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.doggo-logo-container {
+  margin-bottom: 24px;
+}
+
+.doggo-logo-container img {
+  height: 80px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.doggo-tagline {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.doggo-badge-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.doggo-app-store-badge {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.doggo-app-store-badge:hover {
+  transform: scale(1.05);
+}
+
+.doggo-app-store-badge img {
+  height: 50px;
+}
+
+.doggo-android-badge {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.doggo-android-badge:hover {
+  transform: scale(1.05);
+}
+
+.doggo-android-badge img {
+  height: 74px;
+  margin: -12px 0;
+}
+
+/* Bento grid */
+.doggo-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Base scrapbook card */
+.doggo-scrapbook-card {
+  position: relative;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(120, 105, 90, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.doggo-scrapbook-card:hover {
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(120, 105, 90, 0.2);
+}
+
+/* Polaroid hero */
+.doggo-polaroid-hero {
+  grid-column: span 2;
+  grid-row: span 2;
+  padding: 12px;
+  padding-bottom: 48px;
+  transform: rotate(-1.5deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 200px;
+}
+
+.doggo-polaroid-hero::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(3deg);
+  width: 80px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  border-left: 2px dotted rgba(0, 0, 0, 0.1);
+  border-right: 2px dotted rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  z-index: 5;
+}
+
+.doggo-polaroid-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Dog breed cards */
+.doggo-dog-card {
+  position: relative;
+  background: transparent;
+  box-shadow: none;
+  filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.doggo-dog-card:nth-child(even) {
+  transform: rotate(4deg);
+}
+
+.doggo-dog-card:nth-child(odd) {
+  transform: rotate(-3deg);
+}
+
+.doggo-dog-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
+/* Features card */
+.doggo-features-card {
+  grid-column: span 2;
+  background: white;
+  padding: 24px;
+  transform: rotate(-0.5deg);
+}
+
+.doggo-features-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.doggo-features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doggo-features-list li {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 8px 8px 8px 24px;
+  position: relative;
+  line-height: 1.3;
+}
+
+.doggo-features-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 4px;
+  color: #f1e53c;
+  font-weight: 700;
+}
+
+/* Global stats card */
+.doggo-global-stats-card {
+  grid-column: 1 / -1;
+  background: white;
+  padding: 28px;
+  transform: rotate(-0.5deg);
+  color: #333;
+}
+
+.doggo-global-stats-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.doggo-global-stats-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer */
+.doggo-footer {
+  text-align: center;
+  margin-top: 48px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.doggo-footer a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.doggo-footer a:hover {
+  opacity: 0.7;
+}
+
+.doggo-footer-links {
+  margin-top: 8px;
+}
+
+.doggo-footer-divider {
+  margin: 0 8px;
+  opacity: 0.6;
+}
+
+/* Achievements section */
+.doggo-achievements-section {
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f7f2 0%, #f0f0f8 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.doggo-achievements-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.doggo-achievements-container > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.doggo-achievements-container > p {
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.doggo-achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+@property --doggo-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.doggo-achievement-coin {
+  --coin-size: 110px;
+  --border-width: 4px;
+  --orange-highlight: #ffdb96;
+  --orange-base: #f5a742;
+  --orange-mid: #e8963a;
+  --orange-dark: #d47c2a;
+  --orange-shadow: #b85c1a;
+
+  position: relative;
+  width: var(--coin-size);
+  height: var(--coin-size);
+  border-radius: 50%;
+  padding: var(--border-width);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:
+    0 12px 20px -6px rgba(184, 92, 26, 0.3),
+    0 4px 8px -2px rgba(0, 0, 0, 0.15);
+  background: conic-gradient(
+    from var(--doggo-angle),
+    var(--orange-mid) 0deg,
+    var(--orange-highlight) 45deg,
+    var(--orange-dark) 90deg,
+    var(--orange-highlight) 135deg,
+    var(--orange-shadow) 180deg,
+    var(--orange-highlight) 225deg,
+    var(--orange-dark) 270deg,
+    var(--orange-highlight) 315deg,
+    var(--orange-mid) 360deg
+  );
+  animation: doggo-sweep-light 10s linear infinite;
+  margin: 0 auto;
+}
+
+.doggo-achievement-coin:hover {
+  transform: scale(1.08) translateY(-4px);
+  animation: doggo-sweep-light 4s linear infinite;
+}
+
+.doggo-achievement-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.doggo-achievement-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes doggo-sweep-light {
+  from {
+    --doggo-angle: 0deg;
+  }
+  to {
+    --doggo-angle: 360deg;
+  }
+}
+
+/* Responsive */
+@media (width <= 1024px) {
+  .doggo-bento-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (width <= 768px) {
+  .doggo-bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .doggo-polaroid-hero {
+    grid-column: 1 / -1;
+    grid-row: span 1;
+    padding-bottom: 32px;
+  }
+
+  .doggo-features-card {
+    grid-column: 1 / -1;
+  }
+
+  .doggo-header {
+    margin-bottom: 32px;
+  }
+
+  .doggo-bento-grid {
+    margin-bottom: 24px;
+  }
+}
+
+@media (width <= 480px) {
+  .doggo-bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .doggo-features-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "anatomy-of-plots",
+    "fileName": "anatomy_of_plots.md",
+    "title": "The Anatomy of Plots",
+    "publishDate": "2025-03-28",
+    "excerpt": "Breaking down what makes a plot readable, informative, and honest -- axes, legends, color, chart types, and common mistakes.",
+    "tags": ["Data Visualization", "Design"],
+    "image": "/assets/images/blog/plot-anatomy.svg",
+    "readTime": "5 min read"
+  },
+  {
+    "slug": "tmux-cheat-sheet",
+    "fileName": "tmux.md",
+    "title": "tmux cheat sheet",
+    "publishDate": "2024-04-25",
+    "excerpt": "A quick reference for tmux commands -- sessions, windows, panes, and key bindings.",
+    "tags": ["Linux", "Terminal", "Reference"],
+    "image": "/assets/images/blog/tmux.jpg",
+    "readTime": "3 min read"
+  },
+  {
+    "slug": "ubuntu-server-guide",
+    "fileName": "tutorial_ubuntu_server.md",
+    "title": "Turn your old laptop into an Ubuntu server",
+    "publishDate": "2024-04-24",
+    "excerpt": "Got an old computer just laying around? This guide will turn your old crapbook into a versatile Linux server.",
+    "tags": ["Linux", "Tutorial", "Upcycling", "Networking", "SSH"],
+    "image": "/assets/images/blog/linux-server.png",
+    "readTime": "12 min read"
+  }
+]

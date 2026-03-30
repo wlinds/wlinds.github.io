@@ -1,0 +1,125 @@
+.my-ethics {
+  padding: 2rem;
+  background: linear-gradient(
+    180deg,
+    rgb(24 24 37 / 30%) 0%,
+    rgb(13 13 19 / 10%) 100%
+  );
+  border-radius: 24px;
+  width: 900px;
+  max-width: calc(100% - 2rem);
+  margin: 12rem auto;
+  overflow: visible;
+  position: relative;
+}
+
+.my-ethics-content {
+  color: #cfd4da;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (width >= 1024px) {
+  .principles-grid {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    max-width: 1200px;
+    gap: 3rem;
+  }
+
+  .principle:first-child {
+    margin-left: -1rem;
+  }
+
+  .principle:last-child {
+    margin-right: -1rem;
+  }
+}
+
+.principle {
+  background: rgb(24 24 37 / 40%);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgb(133 72 245 / 10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principle:hover {
+  border-color: rgb(133 72 245 / 30%);
+}
+
+.principle-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+}
+
+.principle h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.principle p {
+  font-size: 1rem;
+  color: #cfd4da;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 300px;
+}
+
+@media screen and (width <= 1023px) {
+  .principles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    width: 100%;
+  }
+
+  .principle {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .my-ethics {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+    width: auto;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .principle-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+  }
+
+  .principle h3 {
+    font-size: 1.2rem;
+  }
+
+  .principle p {
+    font-size: 0.95rem;
+  }
+}
