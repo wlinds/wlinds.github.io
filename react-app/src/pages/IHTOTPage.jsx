@@ -3,14 +3,24 @@ import "./AppPage.css";
 
 export default function IHTOTPage() {
   return (
-    <div className="app-page theme-dark" style={{ "--accent": "#f87171" }}>
-      <div className="app-page-container">
-        <div className="app-hero">
+    <div className="app-page theme-dark ihtot-page" style={{ "--accent": "#f87171" }}>
+      <video
+        className="ihtot-bg-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        src="/assets/videos/IHTOT-early-demo.mp4"
+      />
+      <div className="ihtot-bg-overlay" />
+
+      <div className="ihtot-hero-split">
+        <div className="ihtot-hero-text">
           <h1>Invaders Hate This One Trick</h1>
           <p className="app-tagline">Block-stacking survival</p>
           <p className="app-subtitle">
             Stack blocks around your Core while a beat-synced invader tries to
-            destroy it. Like Space Invaders, but inverted -- you're the one
+            destroy it. Like Space Invaders, but inverted. You're the one
             being shot at.
           </p>
           <a href="#" className="app-store-badge">
@@ -20,7 +30,20 @@ export default function IHTOTPage() {
             />
           </a>
         </div>
+        <div className="ihtot-hero-video">
+          <div className="ihtot-phone-frame">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              src="/assets/videos/IHTOT-early-demo.mp4"
+            />
+          </div>
+        </div>
+      </div>
 
+      <div className="app-page-container">
         <div className="app-card">
           <h2 className="app-card-title">How to Play</h2>
           <div className="app-feature-grid">
@@ -53,9 +76,9 @@ export default function IHTOTPage() {
 
         <div className="app-card">
           <h2 className="app-card-title">Features</h2>
-          <ul className="app-features-list">
+          <ul className="app-features-list ihtot-features">
             <li>Beat-synced audio and invader mechanics</li>
-            <li>Fortification system -- match colors for defense bonuses</li>
+            <li>Fortification system: match colors for defense bonuses</li>
             <li>4 upgrades: Shield, Power, Luck, Magnet</li>
             <li>Multi-stage progression with evolving invader phases</li>
             <li>Adaptive zoom and dynamic visual effects</li>
@@ -68,7 +91,7 @@ export default function IHTOTPage() {
           <p className="app-about-text">
             Stack blocks to fortify your Core, choose upgrades between stages,
             and outlast an invader that gets smarter and more aggressive as you
-            progress. Every drop rotates the structure -- plan accordingly.
+            progress. Every drop rotates the structure. Plan accordingly.
           </p>
         </div>
 

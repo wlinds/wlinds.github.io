@@ -88,7 +88,7 @@ export default function SudokistPage() {
           <h2 className="app-card-title">About</h2>
           <p className="app-about-text">
             Most Sudoku apps are oversized, ad-heavy, and full of unnecessary
-            mechanics. Sudokist is the opposite -- a lightweight app that does
+            mechanics. Sudokist is the opposite: a lightweight app that does
             one thing well.
           </p>
         </div>

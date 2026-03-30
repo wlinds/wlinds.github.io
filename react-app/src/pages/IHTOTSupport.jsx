@@ -48,7 +48,7 @@ export default function IHTOTSupport() {
         <div className="app-faq">
           <h3>Why does the structure rotate?</h3>
           <p>
-            The structure rotates 90 degrees after every drop -- clockwise if the
+            The structure rotates 90 degrees after every drop. Clockwise if the
             piece landed right of center, counter-clockwise if left. This is a
             core mechanic that keeps the game dynamic.
           </p>

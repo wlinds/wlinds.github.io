@@ -38,7 +38,7 @@ export default function AboutPage() {
           </p>
           <p>
             If you have a vision for a new project, but need talent to make that
-            happen -- I'm here to help. When you hire me, you tap into years of
+            happen, I'm here to help. When you hire me, you tap into years of
             experience in everything from developing mobile & web applications,
             to Cloud Services administration and custom API development and
             integrations.

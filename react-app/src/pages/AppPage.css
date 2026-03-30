@@ -1,5 +1,134 @@
 /* Shared styles for app landing, privacy, and support pages */
 
+/* IHTOT page */
+.ihtot-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background video -- hidden on desktop, visible on mobile */
+.ihtot-bg-video {
+  display: none;
+}
+
+.ihtot-bg-overlay {
+  display: none;
+}
+
+.ihtot-page .app-page-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Desktop hero: two-column split */
+.ihtot-hero-split {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+}
+
+.ihtot-hero-text {
+  flex: 1;
+  max-width: 460px;
+}
+
+.ihtot-hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.ihtot-hero-text .app-tagline {
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.ihtot-hero-text .app-subtitle {
+  color: #8899aa;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* Phone frame with video */
+.ihtot-hero-video {
+  flex-shrink: 0;
+}
+
+.ihtot-phone-frame {
+  width: 280px;
+  height: 520px;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 4px solid #2a2a3a;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(248, 113, 113, 0.08);
+}
+
+.ihtot-phone-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-features-list.ihtot-features li::before {
+  content: "\1F47E";
+}
+
+/* Mobile: show background video, hide phone frame */
+@media (width <= 768px) {
+  .ihtot-bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .ihtot-bg-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+  }
+
+  .ihtot-hero-split {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.5rem 2rem;
+    text-align: center;
+  }
+
+  .ihtot-hero-text {
+    max-width: 100%;
+  }
+
+  .ihtot-hero-text .app-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
+
+  .ihtot-hero-video {
+    display: none;
+  }
+}
+
 /* Landing page */
 .app-page {
   min-height: 100vh;
@@ -144,7 +273,7 @@
 }
 
 .app-features-list li::before {
-  content: "--";
+  content: "\2022";
   position: absolute;
   left: 0;
 }
