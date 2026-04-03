@@ -3,30 +3,49 @@
         {
             "link": "/doggo-blocks",
             "internal": true,
-            "image1": "/assets/doggo-blocks/new_logo.png",
+            "type": "mobile",
+            "icon": "/assets/images/doggoblocks-icon.png",
+            "title": "Doggo Blocks",
             "description": "Block puzzle game featuring 20 adorable dog breeds. iOS & Android.",
             "tags": ["iOS", "Android", "Swift", "Kotlin"]
         },
         {
             "link": "/ihtot",
             "internal": true,
-            "image1": "/assets/icons/Doggoblocka1AppIcon.png",
+            "type": "mobile",
+            "icon": "/assets/images/ihtot-icon.png",
+            "title": "Invaders Hate This One Trick",
+            "banner": "In review",
             "description": "Block-stacking survival with beat-synced audio and invader mechanics.",
             "tags": ["iOS", "Swift", "SceneKit"]
         },
         {
             "link": "/meret",
             "internal": true,
-            "image1": "/assets/images/meret/meret-logo.png",
+            "type": "mobile",
+            "icon": "/assets/images/meret/meret-logo.png",
+            "title": "Meret",
             "description": "Lossless audio recorder for iOS. WAV, ALAC, WiFi transfer.",
             "tags": ["iOS", "Swift", "AVAudioEngine"]
         },
         {
             "link": "/sudokist",
             "internal": true,
-            "image1": "/assets/images/sudokist/sudokist-app-icon.png",
+            "type": "mobile",
+            "icon": "/assets/images/sudokist/sudokist-app-icon.png",
+            "title": "Sudokist",
             "description": "Clean, offline Sudoku app. No ads, no bloat.",
             "tags": ["iOS", "Swift"]
+        },
+        {
+            "link": "/plantplanner",
+            "internal": true,
+            "type": "mobile",
+            "icon": "/assets/images/plantplanner/plantplanner-app-icon.png",
+            "title": "Plant Planner",
+            "banner": "In development",
+            "description": "Zone-based plant planning for Swedish and Nordic climates.",
+            "tags": ["iOS", "Android", "React Native"]
         },
         {
             "link": "https://srplayer.se",

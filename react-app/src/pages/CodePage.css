@@ -9,6 +9,7 @@
   margin-right: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
   grid-gap: 10px;
   justify-items: center;
   padding-bottom: 32px;
@@ -24,12 +25,14 @@
   padding-bottom: 20px;
   background-color: #161e26;
   max-width: 380px;
+  width: 100%;
   cursor: pointer;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease forwards;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes fadeInUp {
@@ -63,4 +66,105 @@
 
 .card p a {
   color: #8548f5;
+}
+
+/* Mobile app cards */
+.card-mobile {
+  text-decoration: none;
+}
+
+.card-mobile-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+  flex: 1;
+}
+
+.card-mobile-banner {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: rgb(133 72 245 / 80%);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.card-mobile-icon {
+  width: 120px !important;
+  height: 120px;
+  border-radius: 27px;
+  object-fit: cover;
+  margin-bottom: 0;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 25%);
+}
+
+.card-mobile-stat {
+  margin: 0 3px;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 5px;
+  background: rgb(255 255 255 / 3%);
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-mobile-stat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-mobile-stat-icon {
+  width: 20px !important;
+  height: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 0 !important;
+}
+
+.card-mobile-title {
+  color: #b794f4;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-mobile-desc {
+  font-size: 0.8rem;
+  color: #cfd4da;
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.card-mobile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.card-mobile-tech {
+  font-size: 0.7rem;
+  color: #8899aa;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card-mobile-tech::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8548f5;
 }
