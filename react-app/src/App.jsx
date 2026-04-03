@@ -19,6 +19,9 @@ import SudokistSupport from "./pages/SudokistSupport";
 import IHTOTPage from "./pages/IHTOTPage";
 import IHTOTPrivacy from "./pages/IHTOTPrivacy";
 import IHTOTSupport from "./pages/IHTOTSupport";
+import PlantPlannerPage from "./pages/PlantPlannerPage";
+import PlantPlannerPrivacy from "./pages/PlantPlannerPrivacy";
+import PlantPlannerSupport from "./pages/PlantPlannerSupport";
 import CodePage from "./pages/CodePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -48,6 +51,9 @@ export default function App() {
       <Route path="/ihtot" element={<IHTOTPage />} />
       <Route path="/ihtot-privacy" element={<IHTOTPrivacy />} />
       <Route path="/ihtot-support" element={<IHTOTSupport />} />
+      <Route path="/plantplanner" element={<PlantPlannerPage />} />
+      <Route path="/plantplanner-privacy" element={<PlantPlannerPrivacy />} />
+      <Route path="/plantplanner-support" element={<PlantPlannerSupport />} />
 
       {/* All other pages use the shared Header/Footer layout */}
       <Route element={<MainLayout />}>
