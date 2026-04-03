@@ -1,6 +1,34 @@
 {
     "cards": [
         {
+            "link": "/doggo-blocks",
+            "internal": true,
+            "image1": "/assets/doggo-blocks/new_logo.png",
+            "description": "Block puzzle game featuring 20 adorable dog breeds. iOS & Android.",
+            "tags": ["iOS", "Android", "Swift", "Kotlin"]
+        },
+        {
+            "link": "/ihtot",
+            "internal": true,
+            "image1": "/assets/icons/Doggoblocka1AppIcon.png",
+            "description": "Block-stacking survival with beat-synced audio and invader mechanics.",
+            "tags": ["iOS", "Swift", "SceneKit"]
+        },
+        {
+            "link": "/meret",
+            "internal": true,
+            "image1": "/assets/images/meret/meret-logo.png",
+            "description": "Lossless audio recorder for iOS. WAV, ALAC, WiFi transfer.",
+            "tags": ["iOS", "Swift", "AVAudioEngine"]
+        },
+        {
+            "link": "/sudokist",
+            "internal": true,
+            "image1": "/assets/images/sudokist/sudokist-app-icon.png",
+            "description": "Clean, offline Sudoku app. No ads, no bloat.",
+            "tags": ["iOS", "Swift"]
+        },
+        {
             "link": "https://srplayer.se",
             "image1": "../assets/images/repo-img/sr-player.png",
             "image2": "https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=wlinds&repo=sr-player&theme=radical",
