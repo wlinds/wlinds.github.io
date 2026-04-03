@@ -22,6 +22,7 @@ import IHTOTSupport from "./pages/IHTOTSupport";
 import PlantPlannerPage from "./pages/PlantPlannerPage";
 import PlantPlannerPrivacy from "./pages/PlantPlannerPrivacy";
 import PlantPlannerSupport from "./pages/PlantPlannerSupport";
+import PlantPlannerDeleteAccount from "./pages/PlantPlannerDeleteAccount";
 import CodePage from "./pages/CodePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -54,6 +55,7 @@ export default function App() {
       <Route path="/plantplanner" element={<PlantPlannerPage />} />
       <Route path="/plantplanner-privacy" element={<PlantPlannerPrivacy />} />
       <Route path="/plantplanner-support" element={<PlantPlannerSupport />} />
+      <Route path="/plantplanner-delete-account" element={<PlantPlannerDeleteAccount />} />
 
       {/* All other pages use the shared Header/Footer layout */}
       <Route element={<MainLayout />}>

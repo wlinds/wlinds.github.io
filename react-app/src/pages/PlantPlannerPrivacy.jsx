@@ -6,20 +6,18 @@ export default function PlantPlannerPrivacy() {
     <div className="app-legal theme-plant" style={{ "--accent": "#4a7c59" }}>
       <div className="app-legal-container">
         <h1>Privacy Policy</h1>
-        <p className="app-legal-name">PlantPlanner</p>
+        <p className="app-legal-name">Plant Planner</p>
         <p className="app-legal-date">Last updated: April 2026</p>
 
-        <div className="app-legal-highlight">
-          <p>
-            <strong>TL;DR:</strong> PlantPlanner uses your location to determine
-            your growing zone. We don't store it on any server. Your plants,
-            photos, and progress stay on your device.
-          </p>
-        </div>
+        <p>
+          <strong>TL;DR:</strong> Plant Planner uses your location to determine
+          your growing zone. We don't store it on any server. Your plants,
+          photos, and progress stay on your device.
+        </p>
 
         <h2>Overview</h2>
         <p>
-          PlantPlanner is designed to help you grow plants, not to collect your
+          Plant Planner is designed to help you grow plants, not to collect your
           data. Your privacy is a core design principle.
         </p>
 
@@ -48,7 +46,7 @@ export default function PlantPlannerPrivacy() {
 
         <h2>Analytics</h2>
         <p>
-          PlantPlanner does not use any analytics, tracking, or advertising
+          Plant Planner does not use any analytics, tracking, or advertising
           services.
         </p>
 
@@ -60,7 +58,7 @@ export default function PlantPlannerPrivacy() {
 
         <h2>Children's Privacy</h2>
         <p>
-          PlantPlanner is rated 4+ and is suitable for all ages. We do not
+          Plant Planner is rated 4+ and is suitable for all ages. We do not
           knowingly collect any information from children.
         </p>
 
@@ -77,7 +75,7 @@ export default function PlantPlannerPrivacy() {
         </p>
 
         <Link to="/plantplanner" className="app-legal-back">
-          &larr; Back to PlantPlanner
+          &larr; Back to Plant Planner
         </Link>
       </div>
     </div>

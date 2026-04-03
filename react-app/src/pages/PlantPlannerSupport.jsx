@@ -6,11 +6,11 @@ export default function PlantPlannerSupport() {
     <div className="app-legal theme-plant" style={{ "--accent": "#4a7c59" }}>
       <div className="app-legal-container">
         <h1>Support</h1>
-        <p className="app-legal-name">PlantPlanner</p>
+        <p className="app-legal-name">Plant Planner</p>
 
         <h2>Getting Started</h2>
         <p>
-          When you first open PlantPlanner, allow location access or enter your
+          When you first open Plant Planner, allow location access or enter your
           location manually. The app uses this to determine your hardiness zone
           and show you plants that grow well in your area.
         </p>
@@ -20,7 +20,7 @@ export default function PlantPlannerSupport() {
         <div className="app-faq">
           <h3>How does the app know what I can grow?</h3>
           <p>
-            PlantPlanner uses your location to determine your hardiness zone
+            Plant Planner uses your location to determine your hardiness zone
             (klimatzon in Swedish). Each plant in the database has zone
             compatibility data, so the app only shows plants that can thrive
             where you live.
@@ -57,7 +57,7 @@ export default function PlantPlannerSupport() {
         <div className="app-faq">
           <h3>Is the app available in Swedish?</h3>
           <p>
-            Yes. PlantPlanner supports both Swedish and English. The language
+            Yes. Plant Planner supports both Swedish and English. The language
             follows your device settings, or you can change it in the app's
             settings.
           </p>
@@ -75,7 +75,7 @@ export default function PlantPlannerSupport() {
           <h2>Still need help?</h2>
           <p>Send us an email and we'll get back to you.</p>
           <a
-            href="mailto:akilles.dev@gmail.com?subject=PlantPlanner Support"
+            href="mailto:akilles.dev@gmail.com?subject=Plant Planner Support"
             className="app-email-btn"
           >
             Contact Support
@@ -83,7 +83,7 @@ export default function PlantPlannerSupport() {
         </div>
 
         <Link to="/plantplanner" className="app-legal-back">
-          &larr; Back to PlantPlanner
+          &larr; Back to Plant Planner
         </Link>
       </div>
     </div>

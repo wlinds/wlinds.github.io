@@ -105,6 +105,8 @@ export default function PlantPlannerPage() {
             <Link to="/plantplanner-privacy">Privacy Policy</Link>
             <span className="app-footer-divider">&middot;</span>
             <Link to="/plantplanner-support">Support</Link>
+            <span className="app-footer-divider">&middot;</span>
+            <Link to="/plantplanner-delete-account">Delete Account</Link>
           </p>
         </div>
       </div>

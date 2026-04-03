@@ -449,12 +449,12 @@
 /* Theme: plant (PlantPlanner) */
 .app-page.theme-plant {
   background: linear-gradient(180deg, #f4f7f0 0%, #e8ede2 100%);
-  color: #2d3a2e;
+  color: #1a1a1a;
 }
 
 .theme-plant .app-hero h1 { color: #1a2e1a; }
 .theme-plant .app-hero .app-tagline { color: var(--accent); }
-.theme-plant .app-hero .app-subtitle { color: #5a6b5a; }
+.theme-plant .app-hero .app-subtitle { color: #2a2a2a; }
 .theme-plant .app-icon { border-radius: 0; background: transparent; box-shadow: none; object-fit: contain; }
 .theme-plant h1,
 .theme-plant .app-card-title,
@@ -465,32 +465,34 @@
 .theme-plant .app-card { background: rgb(255 255 255 / 70%); border-color: rgb(74 124 89 / 12%); }
 .theme-plant .app-card-title { color: var(--accent); }
 .theme-plant .app-feature h3 { color: #1a2e1a; }
-.theme-plant .app-feature p { color: #5a6b5a; }
+.theme-plant .app-feature p { color: #1a1a1a; }
 .theme-plant .app-stat-value { color: var(--accent); }
-.theme-plant .app-stat-label { color: #5a6b5a; }
+.theme-plant .app-stat-label { color: #1a1a1a; }
 .theme-plant .app-spec-tag { border-color: rgb(74 124 89 / 30%); color: #3d5a3d; }
 .theme-plant .app-spec-tag.highlight { color: var(--accent); border-color: var(--accent); font-weight: 600; }
-.theme-plant .app-card p.app-about-text { color: #4a5e4a; }
+.theme-plant .app-card p.app-about-text { color: #1a1a1a; }
 .theme-plant .app-page-footer { color: #8a9a8a; }
 .theme-plant .app-page-footer a { color: #5a6b5a; }
 .theme-plant .app-page-footer a:hover { color: var(--accent); }
 
-.theme-plant.app-legal { background: linear-gradient(180deg, #f4f7f0 0%, #e8ede2 100%); color: #4a5e4a; }
+.theme-plant.app-legal { background: linear-gradient(180deg, #f4f7f0 0%, #e8ede2 100%); color: #1a1a1a; }
+.theme-plant .app-legal-container p { color: #1a1a1a; }
 .theme-plant .app-legal-container h1 { color: #1a2e1a; }
 .theme-plant .app-legal-container h2 { color: #1a2e1a; }
 .theme-plant .app-legal-name { color: var(--accent); }
-.theme-plant .app-legal-date { color: #8a9a8a; }
+.theme-plant .app-legal-date { color: #444; }
 .theme-plant .app-legal-highlight { background: rgb(74 124 89 / 8%); border-left-color: var(--accent); }
-.theme-plant .app-legal-highlight p { color: #2d3a2e; }
+.theme-plant .app-legal-highlight p { color: #1a1a1a; }
 .theme-plant .app-legal-back { color: var(--accent); }
 .theme-plant .app-legal-container a { color: var(--accent); }
 .theme-plant .app-faq { background: rgb(74 124 89 / 6%); }
 .theme-plant .app-faq h3 { color: #1a2e1a; }
-.theme-plant .app-faq p { color: #5a6b5a; }
+.theme-plant .app-faq p { color: #1a1a1a; }
 .theme-plant .app-contact-box { border-color: var(--accent); background: rgb(74 124 89 / 5%); }
-.theme-plant .app-contact-box p { color: #5a6b5a; }
+.theme-plant .app-contact-box p { color: #1a1a1a; }
 .theme-plant .app-contact-box h2 { color: #1a2e1a; }
-.theme-plant .app-email-btn { background: var(--accent); color: #fff; }
+.theme-plant .app-email-btn,
+.theme-plant .app-legal-container .app-email-btn { background: var(--accent); color: #fff; }
 
 /* App screenshots row */
 .app-screenshots-row {
