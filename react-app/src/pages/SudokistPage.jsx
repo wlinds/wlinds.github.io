@@ -16,7 +16,7 @@ export default function SudokistPage() {
           <p className="app-subtitle">
             A small, offline Sudoku app. No ads, no bloat.
           </p>
-          <a href="#" className="app-store-badge">
+          <a href="https://apps.apple.com/dk/app/sudokist/id6759222472" className="app-store-badge">
             <img
               src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83"
               alt="Download on the App Store"
@@ -28,7 +28,7 @@ export default function SudokistPage() {
           <h2 className="app-card-title">Why Sudokist</h2>
           <div className="app-stats">
             <div className="app-stat">
-              <div className="app-stat-value">&lt;20MB</div>
+              <div className="app-stat-value">1.5MB</div>
               <div className="app-stat-label">App Size</div>
             </div>
             <div className="app-stat">

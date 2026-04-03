@@ -17,7 +17,7 @@ export default function MeretPage() {
             Record in WAV or ALAC. Transfer to your DAW over WiFi. No cables, no
             cloud, no compression.
           </p>
-          <a href="#" className="app-store-badge">
+          <a href="https://apps.apple.com/dk/app/meret-pro-audio-capture/id6758951462" className="app-store-badge">
             <img
               src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83"
               alt="Download on the App Store"
