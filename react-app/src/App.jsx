@@ -7,6 +7,7 @@ import DownloadsPage from "./pages/DownloadsPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import MLConceptsPage from "./pages/MLConceptsPage";
+import CurveFittingPage from "./pages/CurveFittingPage";
 import DoggoBlocksPage from "./pages/DoggoBlocksPage";
 import DoggoBlocksPrivacy from "./pages/DoggoBlocksPrivacy";
 import DoggoBlocksSupport from "./pages/DoggoBlocksSupport";
@@ -66,6 +67,7 @@ export default function App() {
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/code" element={<CodePage />} />
         <Route path="/ml-concepts" element={<MLConceptsPage />} />
+        <Route path="/curve-fitting" element={<CurveFittingPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

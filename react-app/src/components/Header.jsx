@@ -22,6 +22,7 @@ export default function Header() {
               <Link to="/blog" className="nav-btn">Blog</Link>
               <Link to="/code" className="nav-btn hidden-lg">Code</Link>
               <Link to="/ml-concepts" className="nav-btn hidden-lg">AI/ML Models</Link>
+              <Link to="/curve-fitting" className="nav-btn hidden-lg">Curve Fitting</Link>
               <Link to="/downloads" className="nav-btn hidden-lg">Downloads</Link>
             </div>
 
@@ -53,6 +54,7 @@ export default function Header() {
               <Link to="/blog" className="mobile-btn" onClick={() => setMobileOpen(false)}>Blog</Link>
               <Link to="/code" className="mobile-btn" onClick={() => setMobileOpen(false)}>Code</Link>
               <Link to="/ml-concepts" className="mobile-btn" onClick={() => setMobileOpen(false)}>AI/ML Models</Link>
+              <Link to="/curve-fitting" className="mobile-btn" onClick={() => setMobileOpen(false)}>Curve Fitting</Link>
               <Link to="/downloads" className="mobile-btn" onClick={() => setMobileOpen(false)}>Downloads</Link>
             </div>
           </div>

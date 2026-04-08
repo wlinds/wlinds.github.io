@@ -1,0 +1,384 @@
+.curve-fit-page {
+  min-height: calc(100vh - 60px);
+  padding: 2rem 1.5rem 4rem;
+  background: #0d0d13;
+}
+
+.curve-fit-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.curve-fit-page .intro {
+  color: #cfd4da;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 820px;
+}
+
+.curve-fit-page .intro code {
+  background: rgb(133 72 245 / 12%);
+  color: #b794f4;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Plot */
+.plot-wrapper {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgb(24 24 37 / 80%) 0%,
+    rgb(13 13 19 / 80%) 100%
+  );
+  border: 1px solid rgb(133 72 245 / 20%);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.plot-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.plot-bg {
+  fill: rgb(13 13 19 / 50%);
+}
+
+.grid-line {
+  stroke: rgb(233 236 242 / 6%);
+  stroke-width: 1;
+}
+
+.axis-line {
+  stroke: rgb(233 236 242 / 25%);
+  stroke-width: 1;
+}
+
+.tick-label {
+  fill: #8b8b8b;
+  font-size: 11px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.curve-line {
+  fill: none;
+  stroke: #8548f5;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 6px rgb(133 72 245 / 60%));
+}
+
+.error-line {
+  stroke: #ff5db1;
+  stroke-width: 1.25;
+  stroke-dasharray: 3 3;
+  opacity: 0.75;
+}
+
+.data-point {
+  fill: #4fd1c5;
+  stroke: #0d0d13;
+  stroke-width: 1.5;
+  animation: curve-pt-in 180ms ease-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes curve-pt-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  60% {
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.loss-display {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  background: rgb(13 13 19 / 85%);
+  border: 1px solid rgb(133 72 245 / 35%);
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  backdrop-filter: blur(10px);
+}
+
+.loss-label {
+  font-size: 0.7rem;
+  color: #8b8b8b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.loss-value {
+  font-size: 1.35rem;
+  color: #b794f4;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dials */
+.dials-section,
+.midi-section {
+  background: linear-gradient(
+    180deg,
+    rgb(24 24 37 / 80%) 0%,
+    rgb(13 13 19 / 80%) 100%
+  );
+  border: 1px solid rgb(133 72 245 / 20%);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-head h2,
+.midi-section h2 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin: 0;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.control-btn {
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgb(133 72 245 / 25%);
+  background: rgb(24 24 37 / 90%);
+  color: #e9ecf2;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+  background: rgb(133 72 245 / 20%);
+  border-color: rgb(133 72 245 / 50%);
+}
+
+.dials-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.dial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 10px;
+  background: rgb(13 13 19 / 50%);
+  border: 1px solid rgb(255 255 255 / 4%);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.dial.mapped {
+  border-color: rgb(79 209 197 / 35%);
+}
+
+.dial.learning {
+  border-color: rgb(255 93 177 / 60%);
+  background: rgb(255 93 177 / 5%);
+  animation: pulse-learn 1s ease-in-out infinite;
+}
+
+@keyframes pulse-learn {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(255 93 177 / 30%);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgb(255 93 177 / 0%);
+  }
+}
+
+.dial-label {
+  font-size: 0.85rem;
+  color: #b794f4;
+  font-weight: 500;
+}
+
+.dial-knob {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgb(133 72 245 / 35%),
+    rgb(24 24 37 / 95%) 70%
+  );
+  border: 2px solid rgb(133 72 245 / 40%);
+  position: relative;
+  cursor: ns-resize;
+  transition: transform 0.08s linear;
+}
+
+.dial-indicator {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  width: 2px;
+  height: 14px;
+  background: #b794f4;
+  transform: translateX(-50%);
+  border-radius: 1px;
+  box-shadow: 0 0 4px rgb(183 148 244 / 80%);
+}
+
+.dial-slider {
+  width: 100%;
+  accent-color: #8548f5;
+  cursor: pointer;
+}
+
+.dial-value {
+  font-size: 0.75rem;
+  color: #cfd4da;
+  font-variant-numeric: tabular-nums;
+  font-family: monospace;
+}
+
+.dial-learn {
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgb(255 255 255 / 10%);
+  background: transparent;
+  color: #8b8b8b;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+}
+
+.dial-learn:hover {
+  color: #b794f4;
+  border-color: rgb(133 72 245 / 40%);
+}
+
+.dial-learn.learning {
+  color: #ff5db1;
+  border-color: rgb(255 93 177 / 60%);
+}
+
+.dial.mapped .dial-learn {
+  color: #4fd1c5;
+  border-color: rgb(79 209 197 / 30%);
+}
+
+/* MIDI section */
+.midi-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #8b8b8b;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.midi-select {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  background: rgb(13 13 19 / 80%);
+  border: 1px solid rgb(133 72 245 / 25%);
+  color: #e9ecf2;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.midi-select:focus {
+  outline: none;
+  border-color: rgb(133 72 245 / 60%);
+}
+
+.midi-hint {
+  margin-top: 0.85rem;
+  font-size: 0.85rem;
+  color: #8b8b8b;
+}
+
+.midi-error {
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  background: rgb(255 93 177 / 10%);
+  border: 1px solid rgb(255 93 177 / 30%);
+  color: #ff9fcc;
+  font-size: 0.85rem;
+}
+
+.mapping-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.85rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.4rem;
+}
+
+.mapping-list li {
+  font-size: 0.85rem;
+  color: #cfd4da;
+  padding: 0.4rem 0.6rem;
+  background: rgb(79 209 197 / 8%);
+  border: 1px solid rgb(79 209 197 / 25%);
+  border-radius: 6px;
+}
+
+.mapping-list code {
+  color: #4fd1c5;
+}
+
+/* Mobile */
+@media screen and (width <= 900px) {
+  .dials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (width <= 560px) {
+  .curve-fit-page {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .dials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .loss-display {
+    top: 0.9rem;
+    right: 0.9rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .loss-value {
+    font-size: 1rem;
+  }
+}
